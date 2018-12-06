@@ -188,8 +188,8 @@ body {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 14px;
   line-height: 2;
-  color: #555;
-  background: #fff;
+  color: #222;
+  background: #dbd8c7;
 }
 @media (max-width: 767px) {
   body {
@@ -277,7 +277,7 @@ p {
   margin: 0 0 20px 0;
 }
 a {
-  color: #555;
+  color: #222;
   text-decoration: none;
   outline: none;
   border-bottom: 1px solid #999;
@@ -498,7 +498,7 @@ code {
 code {
   padding: 2px 4px;
   word-wrap: break-word;
-  color: #555;
+  color: #222;
   background: #eee;
   border-radius: 3px;
   font-size: 13px;
@@ -921,7 +921,7 @@ pre .javascript .function {
 }
 .post-body .tabs ul.nav-tabs li.tab.active a {
   cursor: default;
-  color: #555;
+  color: #222;
 }
 .post-body .tabs .tab-content {
   background-color: #fff;
@@ -940,7 +940,7 @@ pre .javascript .function {
   display: inline-block;
   padding: 0 20px;
   font-size: 14px;
-  color: #555;
+  color: #222;
   background: transparent;
   border: 2px solid #222;
   text-decoration: none;
@@ -967,7 +967,7 @@ pre .javascript .function {
   display: block;
   width: 22px;
   height: 2px;
-  background: #555;
+  background: #222;
   border-radius: 1px;
 }
 .btn-bar+.btn-bar {
@@ -1136,7 +1136,7 @@ pre .javascript .function {
 .site-subtitle {
   margin-top: 10px;
   font-size: 13px;
-  color: #999;
+  color: #222;
 }
 .use-motion .brand {
   opacity: 0;
@@ -1577,7 +1577,7 @@ pre .javascript .function {
   display: block;
   line-height: 25px;
   font-size: 14px;
-  color: #555;
+  color: #222;
   border-bottom: none;
 }
 .post-nav-item a:hover {
@@ -1822,7 +1822,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #2fa1ff;
+  background: #bdffad;
 }
 .links-of-blogroll {
   font-size: 13px;
