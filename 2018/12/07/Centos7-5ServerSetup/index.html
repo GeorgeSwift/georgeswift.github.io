@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="Got a Centos7.5 server , so let’s setup">
+<meta name="description" content="Got a Centos7.5 server , so let’s setup2.Login1234#1.loginssh root@xxx.xxx.xxx.xxx#2.patitionfdisk -l">
 <meta name="keywords" content="Centos,WebServer,Setup,Python,Fail2Ban">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Centos7.5ServerSetup">
 <meta property="og:url" content="https://yoursite.com/2018/12/07/Centos7-5ServerSetup/index.html">
 <meta property="og:site_name" content="Heaven &amp; Kate">
-<meta property="og:description" content="Got a Centos7.5 server , so let’s setup">
+<meta property="og:description" content="Got a Centos7.5 server , so let’s setup2.Login1234#1.loginssh root@xxx.xxx.xxx.xxx#2.patitionfdisk -l">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-06T22:59:51.000Z">
+<meta property="og:updated_time" content="2018-12-07T02:54:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Centos7.5ServerSetup">
-<meta name="twitter:description" content="Got a Centos7.5 server , so let’s setup">
+<meta name="twitter:description" content="Got a Centos7.5 server , so let’s setup2.Login1234#1.loginssh root@xxx.xxx.xxx.xxx#2.patitionfdisk -l">
 
 
 
@@ -305,7 +305,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2018-12-07T06:59:51+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2018-12-07T10:54:27+08:00">
                 2018-12-07
               </time>
             
@@ -341,17 +341,6 @@
 
           
           
-             <span id="/2018/12/07/Centos7-5ServerSetup/" class="leancloud_visitors" data-flag-title="Centos7.5ServerSetup">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
 
           
 
@@ -366,7 +355,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  184
+                  179
                 </span>
               
 
@@ -403,12 +392,11 @@
       
 
       
-        <p><strong>Got a Centos7.5 server , so let’s setup</strong></p>
+        <h1 id="Got-a-Centos7-5-server-so-let’s-setup"><a href="#Got-a-Centos7-5-server-so-let’s-setup" class="headerlink" title="Got a Centos7.5 server , so let’s setup"></a>Got a Centos7.5 server , so let’s setup</h1><h1 id="2-Login"><a href="#2-Login" class="headerlink" title="2.Login"></a>2.Login</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>1.login</span><br><span class="line">ssh root@xxx.xxx.xxx.xxx</span><br><span class="line"><span class="meta">#</span>2.patition</span><br><span class="line">fdisk -l</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h1 id="1-Login"><a href="#1-Login" class="headerlink" title="1.Login"></a>1.Login</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>1.login</span><br><span class="line">ssh root@xxx.xxx.xxx.xxx</span><br><span class="line"><span class="meta">#</span>2.patition</span><br><span class="line">fdisk -l</span><br></pre></td></tr></table></figure>
-<h1 id="2-New-normal-account"><a href="#2-New-normal-account" class="headerlink" title="2.New normal account"></a>2.New normal account</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>change user with a safe name</span><br><span class="line">adduser user</span><br><span class="line"><span class="meta">#</span>passwd</span><br><span class="line">passwd user</span><br><span class="line"><span class="meta">#</span>check permission</span><br><span class="line">ls -l /etc/sudoers</span><br><span class="line"><span class="meta">#</span>if read-only </span><br><span class="line">chmod -v u+w /etc/sudoers</span><br><span class="line"><span class="meta">#</span>edit</span><br><span class="line">vim /etc/sudoers</span><br><span class="line"><span class="meta">#</span>## Allow root to run any commands anywhere </span><br><span class="line"><span class="meta">#</span>root    ALL=(ALL)       ALL</span><br><span class="line"><span class="meta">#</span>## ADDED</span><br><span class="line"><span class="meta">#</span>hacker  ALL=(ALL)       NOPASSWD: ALL</span><br><span class="line"><span class="meta">#</span>change back to read-only</span><br><span class="line">chmod -v u-w /etc/sudoers</span><br><span class="line"><span class="meta">#</span>log as user</span><br><span class="line">su user@xx.xx.xx.xx</span><br></pre></td></tr></table></figure>
-<h1 id="3-Install-Fail2Ban"><a href="#3-Install-Fail2Ban" class="headerlink" title="3.Install Fail2Ban"></a>3.Install Fail2Ban</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/fail2ban/fail2ban/archive/0.11.zip</span><br><span class="line">unzip 0.11.zip</span><br><span class="line">cd fail2ban-0.11</span><br><span class="line">sudo python setup.py install</span><br><span class="line">vi /etc/fail2ban/jail.conf</span><br><span class="line">enabled  = true</span><br></pre></td></tr></table></figure>
-<h1 id="4-Install-Python"><a href="#4-Install-Python" class="headerlink" title="4.Install Python"></a>4.Install Python</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mkdir Download</span><br><span class="line">cd Download</span><br><span class="line">sudo yum -y groupinstall "Development tools"</span><br><span class="line">sudo yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel libffi-devel</span><br><span class="line"><span class="meta">#</span>check current version on https://www.python.org</span><br><span class="line">wget https://www.python.org/ftp/python/3.7.1/Python-3.7.1.tar.xz</span><br><span class="line">tar -xvJf  Python-3.7.0a1.tar.xz</span><br><span class="line">sudo make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
+<h1 id="3-New-normal-account"><a href="#3-New-normal-account" class="headerlink" title="3.New normal account"></a>3.New normal account</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>change user with a safe name</span><br><span class="line">adduser user</span><br><span class="line"><span class="meta">#</span>passwd</span><br><span class="line">passwd user</span><br><span class="line"><span class="meta">#</span>check permission</span><br><span class="line">ls -l /etc/sudoers</span><br><span class="line"><span class="meta">#</span>if read-only </span><br><span class="line">chmod -v u+w /etc/sudoers</span><br><span class="line"><span class="meta">#</span>edit</span><br><span class="line">vim /etc/sudoers</span><br><span class="line"><span class="meta">#</span>## Allow root to run any commands anywhere </span><br><span class="line"><span class="meta">#</span>root    ALL=(ALL)       ALL</span><br><span class="line"><span class="meta">#</span>## ADDED</span><br><span class="line"><span class="meta">#</span>hacker  ALL=(ALL)       NOPASSWD: ALL</span><br><span class="line"><span class="meta">#</span>change back to read-only</span><br><span class="line">chmod -v u-w /etc/sudoers</span><br><span class="line"><span class="meta">#</span>log as user</span><br><span class="line">su user</span><br></pre></td></tr></table></figure>
+<h1 id="4-Install-Fail2Ban"><a href="#4-Install-Fail2Ban" class="headerlink" title="4.Install Fail2Ban"></a>4.Install Fail2Ban</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/fail2ban/fail2ban/archive/0.11.zip</span><br><span class="line">unzip 0.11.zip</span><br><span class="line">cd fail2ban-0.11</span><br><span class="line">sudo python setup.py install</span><br><span class="line">vi /etc/fail2ban/jail.conf</span><br><span class="line">enabled  = true</span><br></pre></td></tr></table></figure>
+<h1 id="5-Install-Python"><a href="#5-Install-Python" class="headerlink" title="5.Install Python"></a>5.Install Python</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mkdir Download</span><br><span class="line">cd Download</span><br><span class="line">sudo yum -y groupinstall "Development tools"</span><br><span class="line">sudo yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel libffi-devel</span><br><span class="line"><span class="meta">#</span>check current version on https://www.python.org</span><br><span class="line">wget https://www.python.org/ftp/python/3.7.1/Python-3.7.1.tar.xz</span><br><span class="line">tar -xvJf  Python-3.7.0a1.tar.xz</span><br><span class="line">sudo make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -605,7 +593,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Login"><span class="nav-number">1.</span> <span class="nav-text">1.Login</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-New-normal-account"><span class="nav-number">2.</span> <span class="nav-text">2.New normal account</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Install-Fail2Ban"><span class="nav-number">3.</span> <span class="nav-text">3.Install Fail2Ban</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Install-Python"><span class="nav-number">4.</span> <span class="nav-text">4.Install Python</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Got-a-Centos7-5-server-so-let’s-setup"><span class="nav-number">1.</span> <span class="nav-text">Got a Centos7.5 server , so let’s setup</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Login"><span class="nav-number">2.</span> <span class="nav-text">2.Login</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-New-normal-account"><span class="nav-number">3.</span> <span class="nav-text">3.New normal account</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Install-Fail2Ban"><span class="nav-number">4.</span> <span class="nav-text">4.Install Fail2Ban</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-Install-Python"><span class="nav-number">5.</span> <span class="nav-text">5.Install Python</span></a></li></ol></div>
             
 
           </div>
@@ -652,6 +640,14 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
 
 
 
@@ -799,113 +795,6 @@
 
 
   
-
-  
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("2JQoMwLj0NBww98kkjIPtn26-9Nh9j0Va", "Mm9wdIXVSI2pw6YecIPVOEXQ");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
 
   
 
