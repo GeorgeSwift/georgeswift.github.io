@@ -275,7 +275,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/07/Centos7-5ServerSetup/" itemprop="url">Centos7.5ServerSetup</a></h1>
+                <a class="post-title-link" href="/2018/12/07/Centos7-5ServerSetup/" itemprop="url">CentOS7.5ServerSetup</a></h1>
         
 
         <div class="post-meta">
@@ -303,7 +303,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2018-12-07T10:54:27+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2018-12-07T23:01:14+08:00">
                 2018-12-07
               </time>
             
@@ -322,8 +322,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Centos-Server/" itemprop="url" rel="index">
-                    <span itemprop="name">Centos Server</span>
+                  <a href="/categories/CentOS-Server/" itemprop="url" rel="index">
+                    <span itemprop="name">CentOS Server</span>
                   </a>
                 </span>
 
@@ -353,7 +353,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  179
+                  675
                 </span>
               
 
@@ -369,7 +369,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  1
+                  4
                 </span>
               
             </div>
@@ -391,7 +391,13 @@
 
       
         
-          <h1 id="Got-a-Centos7-5-server-so-let’s-setup"><a href="#Got-a-Centos7-5-server-so-let’s-setup" class="headerlink" title="Got a Centos7.5 server , so let’s setup"></a>Got a Centos7.5 server , so let’s setup</h1><h1 id="2-Login"><a href="#2-Login" class="headerlink" title="2.Login"></a>2.Login</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>1.login</span><br><span class="line">ssh root@xxx.xxx.xxx.xxx</span><br><span class="line"><span class="meta">#</span>2.patition</span><br><span class="line">fdisk -l</span><br></pre></td></tr></table></figure>
+          <h1 id="1-Got-a-CentOS7-5-server-so-let’s-setup-Promp-SSH-Partition-General-user-account…"><a href="#1-Got-a-CentOS7-5-server-so-let’s-setup-Promp-SSH-Partition-General-user-account…" class="headerlink" title="1.Got a CentOS7.5 server , so let’s setup,Promp, SSH, Partition, General user account…"></a>1.Got a CentOS7.5 server , so let’s setup,Promp, SSH, Partition, General user account…</h1><h2 id="1-1-Set-Promp"><a href="#1-1-Set-Promp" class="headerlink" title="1.1.Set Promp"></a>1.1.Set Promp</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi ~/.bashrc</span><br></pre></td></tr></table></figure>
+<p>add </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PS1='[\t \W]\$'</span><br></pre></td></tr></table></figure>
+<p>to the end of the ~/.bashrc</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source .bashrc</span><br></pre></td></tr></table></figure>
+<p>we got this prompt:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[22:40:00 ~]#</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/12/07/Centos7-5ServerSetup/#more" rel="contents">
@@ -1416,7 +1422,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -1427,7 +1433,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -1494,7 +1500,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">1.6k</span>
+    <span title="Site words total count">2.1k</span>
   
 </div>
 
