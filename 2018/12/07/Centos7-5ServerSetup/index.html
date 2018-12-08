@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next mist" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+    <script>
+    (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/5a709d705.js","daovoice")
+    daovoice('init', {
+        app_id: "5a709d75"
+    });
+    daovoice('update');
+    </script>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Centos,WebServer,Setup,Python,Fail2Ban,Bash,SSH,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="1.Got a CentOS7.5 server , so let’s setup,Promp, SSH, Partition, General user account…1.1.Set Promp1vi ~/.bashrc add  1export PS1=&apos;[\t \W]\$&apos; to the end of the ~/.bashrc 1source .bashrc we got this pr">
+<meta name="keywords" content="Centos,WebServer,Setup,Python,Fail2Ban,Bash,SSH">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CentOS7.5ServerSetup">
+<meta property="og:url" content="https://www.heavenyu.com/2018/12/07/Centos7-5ServerSetup/index.html">
+<meta property="og:site_name" content="Heaven &amp; Kate">
+<meta property="og:description" content="1.Got a CentOS7.5 server , so let’s setup,Promp, SSH, Partition, General user account…1.1.Set Promp1vi ~/.bashrc add  1export PS1=&apos;[\t \W]\$&apos; to the end of the ~/.bashrc 1source .bashrc we got this pr">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-12-08T03:50:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CentOS7.5ServerSetup">
+<meta name="twitter:description" content="1.Got a CentOS7.5 server , so let’s setup,Promp, SSH, Partition, General user account…1.1.Set Promp1vi ~/.bashrc add  1export PS1=&apos;[\t \W]\$&apos; to the end of the ~/.bashrc 1source .bashrc we got this pr">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.heavenyu.com/2018/12/07/Centos7-5ServerSetup/">
+
+
+
+
+
+  <title>CentOS7.5ServerSetup | Heaven & Kate</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Heaven & Kate</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Welcome to send message on the right bottom!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.heavenyu.com/2018/12/07/Centos7-5ServerSetup/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Heaven Yu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Heaven & Kate">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">CentOS7.5ServerSetup</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-07T01:47:19+08:00">
+                2018-12-07
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2018-12-08T11:50:52+08:00">
+                2018-12-08
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/CentOS-Server/" itemprop="url" rel="index">
+                    <span itemprop="name">CentOS Server</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  997
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  6
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="1-Got-a-CentOS7-5-server-so-let’s-setup-Promp-SSH-Partition-General-user-account…"><a href="#1-Got-a-CentOS7-5-server-so-let’s-setup-Promp-SSH-Partition-General-user-account…" class="headerlink" title="1.Got a CentOS7.5 server , so let’s setup,Promp, SSH, Partition, General user account…"></a>1.Got a CentOS7.5 server , so let’s setup,Promp, SSH, Partition, General user account…</h1><h2 id="1-1-Set-Promp"><a href="#1-1-Set-Promp" class="headerlink" title="1.1.Set Promp"></a>1.1.Set Promp</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi ~/.bashrc</span><br></pre></td></tr></table></figure>
+<p>add </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PS1='[\t \W]\$'</span><br></pre></td></tr></table></figure>
+<p>to the end of the ~/.bashrc</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source .bashrc</span><br></pre></td></tr></table></figure>
+<p>we got this prompt:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[22:40:00 ~]#</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h1 id="2-Set-SSH-key-login"><a href="#2-Set-SSH-key-login" class="headerlink" title="2.Set SSH key login"></a>2.Set SSH key login</h1><h2 id="2-1-Add-SSH-Key-on-tencent-cloud-Control"><a href="#2-1-Add-SSH-Key-on-tencent-cloud-Control" class="headerlink" title="2.1.Add SSH Key on tencent cloud Control"></a>2.1.Add SSH Key on tencent cloud Control</h2><h2 id="2-2-Add-correct-host-key-in-user-ssh-known-hosts"><a href="#2-2-Add-correct-host-key-in-user-ssh-known-hosts" class="headerlink" title="2.2.Add correct host key in user/.ssh/known_hosts"></a>2.2.Add correct host key in user/.ssh/known_hosts</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -R xxx.xxx.xxx.xxx</span><br><span class="line"><span class="meta">#</span>/.ssh/known_hosts updated.</span><br><span class="line"><span class="meta">#</span>Are you sure you want to continue connecting (yes/no)? yes</span><br><span class="line">ssh root@xxx.xxx.xxx.xxx</span><br></pre></td></tr></table></figure>
+<h2 id="2-3-Disable-passwd-login"><a href="#2-3-Disable-passwd-login" class="headerlink" title="2.3. Disable passwd login"></a>2.3. Disable passwd login</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/ssh/sshd_config</span><br><span class="line">PasswordAuthentication no</span><br><span class="line">service ssh restart</span><br></pre></td></tr></table></figure>
+<h1 id="3-Create-general-user-account"><a href="#3-Create-general-user-account" class="headerlink" title="3.Create general user account"></a>3.Create general user account</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>add general user</span><br><span class="line">adduser user</span><br><span class="line"><span class="meta">#</span>passwd</span><br><span class="line">passwd user</span><br><span class="line"><span class="meta">#</span>check permission</span><br><span class="line">ls -l /etc/sudoers</span><br><span class="line"><span class="meta">#</span>if read-only </span><br><span class="line">chmod -v u+w /etc/sudoers</span><br><span class="line"><span class="meta">#</span>edit</span><br><span class="line">vim /etc/sudoers</span><br><span class="line"><span class="meta">#</span>## Allow root to run any commands anywhere </span><br><span class="line"><span class="meta">#</span>root    ALL=(ALL)       ALL</span><br><span class="line"><span class="meta">#</span>## ADDED</span><br><span class="line"><span class="meta">#</span>user  ALL=(ALL)       NOPASSWD: ALL</span><br><span class="line"><span class="meta">#</span>change back to read-only</span><br><span class="line">chmod -v u-w /etc/sudoers</span><br><span class="line"><span class="meta">#</span>log as user</span><br><span class="line">su user</span><br></pre></td></tr></table></figure>
+<h1 id="Partition"><a href="#Partition" class="headerlink" title="Partition"></a>Partition</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br></pre></td><td class="code"><pre><span class="line">fdisk -l</span><br><span class="line">fdisk /dev/vdb</span><br><span class="line"></span><br><span class="line">Command (m for help): n</span><br><span class="line">Partition type:</span><br><span class="line">   p   primary (0 primary, 0 extended, 4 free)</span><br><span class="line">   e   extended</span><br><span class="line">Select (default p): p</span><br><span class="line">Partition number (1-4, default 1):  </span><br><span class="line">First sector (2048-104857599, default 2048): </span><br><span class="line">Using default value 2048</span><br><span class="line">Last sector, +sectors or +size&#123;K,M,G&#125; (2048-104857599, default 104857599): 50000000</span><br><span class="line">Partition 1 of type Linux and of size 23.9 GiB is set</span><br><span class="line"></span><br><span class="line">Command (m for help): n</span><br><span class="line">Partition type:</span><br><span class="line">   p   primary (1 primary, 0 extended, 3 free)</span><br><span class="line">   e   extended</span><br><span class="line">Select (default p): p</span><br><span class="line">Partition number (2-4, default 2): 2</span><br><span class="line">First sector (50000001-104857599, default 50001920): </span><br><span class="line">Using default value 50001920</span><br><span class="line">Last sector, +sectors or +size&#123;K,M,G&#125; (50001920-104857599, default 104857599): </span><br><span class="line">Using default value 104857599</span><br><span class="line">Partition 2 of type Linux and of size 26.2 GiB is set</span><br><span class="line">Command (m for help): w</span><br><span class="line">The partition table has been altered!</span><br><span class="line"></span><br><span class="line">Calling ioctl() to re-read partition table.</span><br><span class="line">Syncing disks.</span><br><span class="line"></span><br><span class="line">fdisk -l</span><br><span class="line"></span><br><span class="line">Disk /dev/vda: 53.7 GB, 53687091200 bytes, 104857600 sectors</span><br><span class="line">Units = sectors of 1 * 512 = 512 bytes</span><br><span class="line">Sector size (logical/physical): 512 bytes / 512 bytes</span><br><span class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</span><br><span class="line">Disk label type: dos</span><br><span class="line">Disk identifier: 0x000d64b4</span><br><span class="line"></span><br><span class="line">   Device Boot      Start         End      Blocks   Id  System</span><br><span class="line">/dev/vda1   *        2048   104857599    52427776   83  Linux</span><br><span class="line"></span><br><span class="line">Disk /dev/vdb: 53.7 GB, 53687091200 bytes, 104857600 sectors</span><br><span class="line">Units = sectors of 1 * 512 = 512 bytes</span><br><span class="line">Sector size (logical/physical): 512 bytes / 512 bytes</span><br><span class="line">I/O size (minimum/optimal): 512 bytes / 512 bytes</span><br><span class="line">Disk label type: dos</span><br><span class="line">Disk identifier: 0xd99cb4bf</span><br><span class="line"></span><br><span class="line">   Device Boot      Start         End      Blocks   Id  System</span><br><span class="line">/dev/vdb1            2048    50000000    24998976+  83  Linux</span><br><span class="line">/dev/vdb2        50001920   104857599    27427840   83  Linux</span><br><span class="line">mkfs.ext4 /dev/vdb1</span><br><span class="line">mke2fs 1.42.9 (28-Dec-2013)</span><br><span class="line">Filesystem label=</span><br><span class="line">OS type: Linux</span><br><span class="line">Block size=4096 (log=2)</span><br><span class="line">Fragment size=4096 (log=2)</span><br><span class="line">Stride=0 blocks, Stripe width=0 blocks</span><br><span class="line">1564672 inodes, 6249744 blocks</span><br><span class="line">312487 blocks (5.00%) reserved for the super user</span><br><span class="line">First data block=0</span><br><span class="line">Maximum filesystem blocks=2153775104</span><br><span class="line">191 block groups</span><br><span class="line">32768 blocks per group, 32768 fragments per group</span><br><span class="line">8192 inodes per group</span><br><span class="line">Superblock backups stored on blocks: </span><br><span class="line">	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208, </span><br><span class="line">	4096000</span><br><span class="line"></span><br><span class="line">Allocating group tables: done                            </span><br><span class="line">Writing inode tables: done                            </span><br><span class="line">Creating journal (32768 blocks): done</span><br><span class="line">Writing superblocks and filesystem accounting information: done   </span><br><span class="line"></span><br><span class="line">mkfs.ext4 /dev/vdb2</span><br><span class="line">mke2fs 1.42.9 (28-Dec-2013)</span><br><span class="line">Filesystem label=</span><br><span class="line">OS type: Linux</span><br><span class="line">Block size=4096 (log=2)</span><br><span class="line">Fragment size=4096 (log=2)</span><br><span class="line">Stride=0 blocks, Stripe width=0 blocks</span><br><span class="line">1716960 inodes, 6856960 blocks</span><br><span class="line">342848 blocks (5.00%) reserved for the super user</span><br><span class="line">First data block=0</span><br><span class="line">Maximum filesystem blocks=2155872256</span><br><span class="line">210 block groups</span><br><span class="line">32768 blocks per group, 32768 fragments per group</span><br><span class="line">8176 inodes per group</span><br><span class="line">Superblock backups stored on blocks: </span><br><span class="line">	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208, </span><br><span class="line">	4096000</span><br><span class="line"></span><br><span class="line">Allocating group tables: done                            </span><br><span class="line">Writing inode tables: done                            </span><br><span class="line">Creating journal (32768 blocks): done</span><br><span class="line">Writing superblocks and filesystem accounting information: done   </span><br><span class="line">mkdir /mnt/vdb1</span><br><span class="line">mkdir /mnt/vdb2</span><br><span class="line">mount /dev/vdb1 /data</span><br><span class="line">mount /dev/vdb2 /mnt/vdb2</span><br><span class="line">vi /etc/fstab</span><br><span class="line"><span class="meta">#</span>add</span><br><span class="line">/dev/vdb1               /data   ext4    noatime,nodiratime      0 2</span><br></pre></td></tr></table></figure>
+<h1 id="5-Install-nginx"><a href="#5-Install-nginx" class="headerlink" title="5.Install nginx"></a>5.Install nginx</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">yum install nginx -i</span><br><span class="line">nginx</span><br><span class="line">vi /etc/nginx/nginx.conf</span><br><span class="line">/root</span><br><span class="line">#modify:</span><br><span class="line">root /data/www;</span><br><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure>
+<h1 id="6-Install-node-js"><a href="#6-Install-node-js" class="headerlink" title="6.Install node.js"></a>6.Install node.js</h1><h2 id="6-1-find-the-latest-version-address"><a href="#6-1-find-the-latest-version-address" class="headerlink" title="6.1.find the latest version address"></a>6.1.find the latest version address</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">https://nodejs.org/en/download/</span><br><span class="line">#choose sourcs code</span><br><span class="line">cd /usr/local/src</span><br><span class="line">wget https://nodejs.org/dist/v10.14.1/node-v10.14.1.tar.gz</span><br><span class="line">tar -zxvf node-v10.14.1.tar.gz</span><br><span class="line"></span><br><span class="line">vim ~/.bash_profile</span><br><span class="line"># PATH=$PATH:$HOME/bin</span><br><span class="line">PATH=$PATH:$HOME/bin:/usr/local/src/node/bin</span><br><span class="line">source ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<h1 id="7-Setup-Git"><a href="#7-Setup-Git" class="headerlink" title="7.Setup Git"></a>7.Setup Git</h1><h2 id="7-1-Setup-Server"><a href="#7-1-Setup-Server" class="headerlink" title="7.1.Setup Server"></a>7.1.Setup Server</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">useradd git</span><br><span class="line">passwd git</span><br><span class="line">cd /data/www</span><br><span class="line">mkdir repo</span><br><span class="line">chown -R git:root repo</span><br><span class="line">chmod -R 755 repo</span><br><span class="line">cd repo</span><br><span class="line">git init --bare hexo_static.git</span><br><span class="line">#Initialized empty Git repository in /data/www/repo/hexo_static.git/</span><br><span class="line">mkdir hexo</span><br></pre></td></tr></table></figure>
+<h2 id="7-2-Local-setup-git-SSH"><a href="#7-2-Local-setup-git-SSH" class="headerlink" title="7.2.Local setup git SSH"></a>7.2.Local setup git SSH</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//generate ssh key</span><br><span class="line">ssh-keygen -t rsa -C "ourimail@xxx.com"</span><br></pre></td></tr></table></figure>
+<h2 id="Server-set-allow-passwd-login"><a href="#Server-set-allow-passwd-login" class="headerlink" title="Server set allow passwd login"></a>Server set allow passwd login</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/ssh/sshd_config</span><br><span class="line">PasswordAuthentication yes</span><br><span class="line">service sshd restart</span><br></pre></td></tr></table></figure>
+<h2 id="7-4-Local-copy-ssh-key-to-server"><a href="#7-4-Local-copy-ssh-key-to-server" class="headerlink" title="7.4.Local copy ssh key to server"></a>7.4.Local copy ssh key to server</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-copy-id -i ~/.ssh/id_rsa.pub  git@serverIp</span><br><span class="line">ssh gitgit@serverIp</span><br></pre></td></tr></table></figure>
+<h2 id="7-5-Server-forbid-passwd-login"><a href="#7-5-Server-forbid-passwd-login" class="headerlink" title="7.5.Server forbid passwd login"></a>7.5.Server forbid passwd login</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/ssh/sshd_config</span><br><span class="line"><span class="meta">#</span>set forbid passwd login</span><br><span class="line">PasswordAuthentication no</span><br><span class="line">service sshd restart</span><br></pre></td></tr></table></figure>
+<h1 id="8-Local-setup-hexo-deploy"><a href="#8-Local-setup-hexo-deploy" class="headerlink" title="8.Local setup hexo deploy"></a>8.Local setup hexo deploy</h1><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Edit _config.yml in hexo project root dir</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="string">git@OurServerIp/Domain:/data/repo/hexo_static.git</span></span><br></pre></td></tr></table></figure>
+<h1 id="9-Server-setup-ngnix"><a href="#9-Server-setup-ngnix" class="headerlink" title="9.Server setup ngnix"></a>9.Server setup ngnix</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">nginx -t</span><br><span class="line">nginx: the configuration file /etc/nginx/nginx.conf syntax is ok</span><br><span class="line">nginx: configuration file /etc/nginx/nginx.conf test is successful</span><br><span class="line">vi /etc/nginx/nginx.conf</span><br><span class="line">	server_name  #OurServerIp/Domain;</span><br><span class="line">    location / &#123;</span><br><span class="line">        root     /data/www/repo/hexo;</span><br><span class="line">        index    index.html index.htm;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="10-Server-setup-Auto-Deploy"><a href="#10-Server-setup-Auto-Deploy" class="headerlink" title="10.Server setup Auto Deploy"></a>10.Server setup Auto Deploy</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cd hexo_static.git</span><br><span class="line">vim post-receive</span><br><span class="line"><span class="meta">#</span>add lines between ---</span><br><span class="line">----</span><br><span class="line"><span class="meta">#</span>!/bin/bash</span><br><span class="line">git --work-tree=/data/www/repo/hexo --git-dir=/data/www/repo/hexo_static.git checkout -f</span><br><span class="line">----</span><br><span class="line">chmod +x post-receive</span><br></pre></td></tr></table></figure>
+<h1 id="11-Local-deploy-hexo"><a href="#11-Local-deploy-hexo" class="headerlink" title="11.Local deploy hexo"></a>11.Local deploy hexo</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
+<p>got</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">remote: fatal: Unable to create temporary file '/data/www/repo/hexo_static.git/./objects/pack/tmp_pack_XXXXXX': Permission denied </span><br><span class="line">chmod -R 777 /data</span><br></pre></td></tr></table></figure>
+<p>pushed successfully, but got 403 error. To be done! Maybe need putting server on record!</p>
+<h1 id="12-Install-Python"><a href="#12-Install-Python" class="headerlink" title="12.Install Python"></a>12.Install Python</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mkdir Download</span><br><span class="line">cd Download</span><br><span class="line">sudo yum -y groupinstall "Development tools"</span><br><span class="line">sudo yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel libffi-devel</span><br><span class="line"><span class="meta">#</span>check current version on https://www.python.org</span><br><span class="line">wget https://www.python.org/ftp/python/3.7.1/Python-3.7.1.tar.xz</span><br><span class="line">tar -xvJf  Python-3.7.0a1.tar.xz</span><br><span class="line">sudo make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Centos/" rel="tag"># Centos</a>
+          
+            <a href="/tags/WebServer/" rel="tag"># WebServer</a>
+          
+            <a href="/tags/Setup/" rel="tag"># Setup</a>
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+            <a href="/tags/Fail2Ban/" rel="tag"># Fail2Ban</a>
+          
+            <a href="/tags/Bash/" rel="tag"># Bash</a>
+          
+            <a href="/tags/SSH/" rel="tag"># SSH</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/06/Hexo-using/" rel="next" title="Hexo using">
+                <i class="fa fa-chevron-left"></i> Hexo using
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/08/Install-nginx-1-14-2-on-CentOS7-5/" rel="prev" title="Install nginx-1.14.2 on CentOS7.5">
+                Install nginx-1.14.2 on CentOS7.5 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Heaven Yu</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:gg1956756@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Got-a-CentOS7-5-server-so-let’s-setup-Promp-SSH-Partition-General-user-account…"><span class="nav-text">1.Got a CentOS7.5 server , so let’s setup,Promp, SSH, Partition, General user account…</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Set-Promp"><span class="nav-text">1.1.Set Promp</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Set-SSH-key-login"><span class="nav-text">2.Set SSH key login</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Add-SSH-Key-on-tencent-cloud-Control"><span class="nav-text">2.1.Add SSH Key on tencent cloud Control</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Add-correct-host-key-in-user-ssh-known-hosts"><span class="nav-text">2.2.Add correct host key in user/.ssh/known_hosts</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-Disable-passwd-login"><span class="nav-text">2.3. Disable passwd login</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Create-general-user-account"><span class="nav-text">3.Create general user account</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Partition"><span class="nav-text">Partition</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-Install-nginx"><span class="nav-text">5.Install nginx</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-Install-node-js"><span class="nav-text">6.Install node.js</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-find-the-latest-version-address"><span class="nav-text">6.1.find the latest version address</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-Setup-Git"><span class="nav-text">7.Setup Git</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#7-1-Setup-Server"><span class="nav-text">7.1.Setup Server</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-2-Local-setup-git-SSH"><span class="nav-text">7.2.Local setup git SSH</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Server-set-allow-passwd-login"><span class="nav-text">Server set allow passwd login</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-4-Local-copy-ssh-key-to-server"><span class="nav-text">7.4.Local copy ssh key to server</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-5-Server-forbid-passwd-login"><span class="nav-text">7.5.Server forbid passwd login</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-Local-setup-hexo-deploy"><span class="nav-text">8.Local setup hexo deploy</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#9-Server-setup-ngnix"><span class="nav-text">9.Server setup ngnix</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#10-Server-setup-Auto-Deploy"><span class="nav-text">10.Server setup Auto Deploy</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#11-Local-deploy-hexo"><span class="nav-text">11.Local deploy hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#12-Install-Python"><span class="nav-text">12.Install Python</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Heaven Yu</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">3.7k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
