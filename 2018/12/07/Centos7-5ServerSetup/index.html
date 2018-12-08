@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="Heaven &amp; Kate">
 <meta property="og:description" content="1.Got a CentOS7.5 server , so let’s setup,Promp, SSH, Partition, General user account…1.1.Set Promp1vi ~/.bashrc add  1export PS1=&apos;[\t \W]\$&apos; to the end of the ~/.bashrc 1source .bashrc we got this pr">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-08T03:17:22.000Z">
+<meta property="og:updated_time" content="2018-12-08T03:49:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS7.5ServerSetup">
 <meta name="twitter:description" content="1.Got a CentOS7.5 server , so let’s setup,Promp, SSH, Partition, General user account…1.1.Set Promp1vi ~/.bashrc add  1export PS1=&apos;[\t \W]\$&apos; to the end of the ~/.bashrc 1source .bashrc we got this pr">
@@ -305,7 +305,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2018-12-08T11:17:22+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2018-12-08T11:49:32+08:00">
                 2018-12-08
               </time>
             
@@ -360,7 +360,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  982
+                  997
                 </span>
               
 
@@ -421,7 +421,8 @@
 <h1 id="10-Server-setup-Auto-Deploy"><a href="#10-Server-setup-Auto-Deploy" class="headerlink" title="10.Server setup Auto Deploy"></a>10.Server setup Auto Deploy</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cd hexo_static.git</span><br><span class="line">vim post-receive</span><br><span class="line"><span class="meta">#</span>add lines between ---</span><br><span class="line">----</span><br><span class="line"><span class="meta">#</span>!/bin/bash</span><br><span class="line">git --work-tree=/data/www/repo/hexo --git-dir=/data/www/repo/hexo_static.git checkout -f</span><br><span class="line">----</span><br><span class="line">chmod +x post-receive</span><br></pre></td></tr></table></figure>
 <h1 id="11-Local-deploy-hexo"><a href="#11-Local-deploy-hexo" class="headerlink" title="11.Local deploy hexo"></a>11.Local deploy hexo</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
 <p>got</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fatal: &apos;/data/repo/hexo_static.git&apos; does not appear to be a git repository</span><br><span class="line">fatal: Could not read from remote repository.</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">remote: fatal: Unable to create temporary file '/data/www/repo/hexo_static.git/./objects/pack/tmp_pack_XXXXXX': Permission denied </span><br><span class="line">chmod -R 777 /data</span><br></pre></td></tr></table></figure>
+<p>pushed successfully, but got 403 error. To be done! Maybe need putting server on record!</p>
 <h1 id="5-Install-Python"><a href="#5-Install-Python" class="headerlink" title="5.Install Python"></a>5.Install Python</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mkdir Download</span><br><span class="line">cd Download</span><br><span class="line">sudo yum -y groupinstall "Development tools"</span><br><span class="line">sudo yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel libffi-devel</span><br><span class="line"><span class="meta">#</span>check current version on https://www.python.org</span><br><span class="line">wget https://www.python.org/ftp/python/3.7.1/Python-3.7.1.tar.xz</span><br><span class="line">tar -xvJf  Python-3.7.0a1.tar.xz</span><br><span class="line">sudo make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
 
       
@@ -567,7 +568,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
