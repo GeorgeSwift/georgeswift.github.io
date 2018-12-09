@@ -1898,7 +1898,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fff;
+  background: #bf49a2;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2704,14 +2704,58 @@ hr {
   margin: 20px 0;
   height: 2px;
 }
+header {
+  width: 100% !important;
+}
+header.post-header {
+  width: auto !important;
+}
+.container .main-inner {
+  width: 90%;
+}
+.content-wrap {
+  width: calc(100%);
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .header {
+    width: auto !important;
+  }
+}
+@media (max-width: 767px) {
+  .header {
+    width: auto !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .container .main-inner {
+    width: fixed !important;
+  }
+}
+@media (max-width: 767px) {
+  .container .main-inner {
+    width: fixed !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .content-wrap {
+    width: 100% !important;
+    margin-left: 10%;
+    float: left;
+  }
+}
+@media (max-width: 767px) {
+  .content-wrap {
+    width: 100% !important;
+  }
+}
 .main-inner {
   margin-top: 80px;
 }
 .header {
-  background: #fde3ce;
+  background: clear;
 }
 .header-inner {
-  padding: 10px 0 20px;
+  padding: 0px 0 0px;
 }
 .header-inner:before,
 .header-inner:after {
@@ -2724,7 +2768,7 @@ hr {
 @media (max-width: 767px) {
   .header-inner {
     width: auto;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
     padding: 10px;
   }
 }
@@ -2751,7 +2795,7 @@ hr {
   display: none;
 }
 .site-meta .site-title {
-  font-size: 24px;
+  font-size: 36px;
   font-weight: bolder;
   color: #ff1700;
 }
@@ -2797,11 +2841,11 @@ hr {
 }
 .site-nav-toggle {
   position: static;
-  float: right;
+  float: left;
 }
 .menu {
-  float: right;
-  margin: 8px 0 0 0;
+  float: left;
+  margin: 20px 5 0 0;
 }
 @media (max-width: 767px) {
   .menu {
@@ -2813,7 +2857,7 @@ hr {
   display: none;
 }
 .menu .menu-item {
-  margin: 0;
+  margin: 10;
 }
 @media (max-width: 767px) {
   .menu .menu-item {
@@ -2821,8 +2865,9 @@ hr {
   }
 }
 .menu .menu-item a {
-  padding: 0 10px;
+  padding: 0 0px;
   background: none;
+  font-size: 24px;
   border: none;
   border-radius: 2px;
   transition-property: background;
@@ -2856,7 +2901,7 @@ hr {
 }
 .posts-expand .post-title,
 .posts-expand .post-meta {
-  text-align: left;
+  text-align: center;
 }
 @media (max-width: 767px) {
   .posts-expand .post-title,
@@ -2868,10 +2913,10 @@ hr {
   display: none;
 }
 .posts-expand .post {
-  margin-top: 120px;
+  margin-top: 80px;
 }
 .posts-expand .post:first-child {
-  margin-top: 0;
+  margin-top: 10;
 }
 .posts-expand .post-meta {
   margin-top: 5px;
@@ -2879,6 +2924,7 @@ hr {
 }
 .posts-expand .post-title {
   position: relative;
+  text-align: center;
   font-size: 26px;
   font-weight: 400;
 }
@@ -2895,16 +2941,20 @@ hr {
 .posts-expand .post-title:hover:before {
   background: #222;
 }
+.posts-expand .post-body {
+  text-align: center;
+  position: relative;
+}
 @media (max-width: 767px) {
   .posts-expand .post-body {
-    font-size: 17px;
+    font-size: $font-size-normal;
   }
 }
 .posts-expand .post-body img {
   margin: 0;
 }
 .posts-expand .post-tags {
-  text-align: left;
+  text-align: center;
 }
 .posts-expand .post-tags a {
   padding: 1px 5px;
@@ -2919,7 +2969,7 @@ hr {
 }
 .post-button {
   margin-top: 20px;
-  text-align: left;
+  text-align: center;
 }
 .post-button a {
   padding: 0;
@@ -3037,9 +3087,6 @@ pre {
 ::-moz-selection {
   background: #00c4b6;
   color: #f7f7f7;
-}
-.headband {
-  height: 3px;
 }
 .site-meta {
   padding: 20px 0;
