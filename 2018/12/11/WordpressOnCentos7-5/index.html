@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="1.Upgrade Blog with WordPress">
+<meta name="description" content="1.Setup Blog with WordPress">
 <meta name="keywords" content="Wordpress,blog">
 <meta property="og:type" content="article">
 <meta property="og:title" content="WordpressOnCentos7.5">
 <meta property="og:url" content="https://heavenyu.com/2018/12/11/WordpressOnCentos7-5/index.html">
 <meta property="og:site_name" content="Heaven &amp; Kate">
-<meta property="og:description" content="1.Upgrade Blog with WordPress">
+<meta property="og:description" content="1.Setup Blog with WordPress">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-11T06:46:46.000Z">
+<meta property="og:updated_time" content="2018-12-11T12:30:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WordpressOnCentos7.5">
-<meta name="twitter:description" content="1.Upgrade Blog with WordPress">
+<meta name="twitter:description" content="1.Setup Blog with WordPress">
 
 
 
@@ -305,7 +305,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2018-12-11T14:46:46+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2018-12-11T20:30:29+08:00">
                 2018-12-11
               </time>
             
@@ -360,7 +360,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  86
+                  87
                 </span>
               
 
@@ -397,8 +397,8 @@
       
 
       
-        <h1 id="1-Upgrade-Blog-with-WordPress"><a href="#1-Upgrade-Blog-with-WordPress" class="headerlink" title="1.Upgrade Blog with WordPress"></a>1.Upgrade Blog with WordPress</h1><a id="more"></a>
-<h2 id="1-1-Reason"><a href="#1-1-Reason" class="headerlink" title="1.1.Reason"></a>1.1.Reason</h2><h3 id="1-1-1-Enable-my-wife-posting-blogs-too"><a href="#1-1-1-Enable-my-wife-posting-blogs-too" class="headerlink" title="1.1.1.Enable my wife posting blogs too."></a>1.1.1.Enable my wife posting blogs too.</h3><h3 id="1-1-2-Enable-post-by-phone"><a href="#1-1-2-Enable-post-by-phone" class="headerlink" title="1.1.2.Enable post by phone."></a>1.1.2.Enable post by phone.</h3><h2 id="1-2-Plan-WordPress-display-hexo-pages"><a href="#1-2-Plan-WordPress-display-hexo-pages" class="headerlink" title="1.2.Plan: WordPress display hexo pages."></a>1.2.Plan: WordPress display hexo pages.</h2><h1 id="2-Procedure-as-Tencent-Suggested"><a href="#2-Procedure-as-Tencent-Suggested" class="headerlink" title="2.Procedure as Tencent Suggested."></a>2.<a href="https://cloud.tencent.com/document/product/213/8044" target="_blank" rel="noopener">Procedure</a> as Tencent Suggested.</h1><h1 id="3-Install-mysql-server"><a href="#3-Install-mysql-server" class="headerlink" title="3.Install mysql-server"></a>3.Install mysql-server</h1><h2 id="3-1-Check-repo"><a href="#3-1-Check-repo" class="headerlink" title="3.1.Check  repo"></a>3.1.Check  repo</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum list | grep mysql</span><br><span class="line"><span class="meta">#</span> no repo on default Tencent server</span><br></pre></td></tr></table></figure>
+        <h1 id="1-Setup-Blog-with-WordPress"><a href="#1-Setup-Blog-with-WordPress" class="headerlink" title="1.Setup Blog with WordPress"></a>1.Setup Blog with WordPress</h1><a id="more"></a>
+<h2 id="1-1-Reason"><a href="#1-1-Reason" class="headerlink" title="1.1.Reason"></a>1.1.Reason</h2><h3 id="1-1-1-Enable-my-wife-posting-blogs-too"><a href="#1-1-1-Enable-my-wife-posting-blogs-too" class="headerlink" title="1.1.1.Enable my wife posting blogs too."></a>1.1.1.Enable my wife posting blogs too.</h3><h3 id="1-1-2-Enable-post-by-phone"><a href="#1-1-2-Enable-post-by-phone" class="headerlink" title="1.1.2.Enable post by phone."></a>1.1.2.Enable post by phone.</h3><h2 id="1-2-Plan-Using-same-port-and-different-DomainName"><a href="#1-2-Plan-Using-same-port-and-different-DomainName" class="headerlink" title="1.2.Plan: Using same port and different DomainName"></a>1.2.Plan: Using same port and different DomainName</h2><h1 id="2-Procedure-as-Tencent-Suggested"><a href="#2-Procedure-as-Tencent-Suggested" class="headerlink" title="2.Procedure as Tencent Suggested."></a>2.<a href="https://cloud.tencent.com/document/product/213/8044" target="_blank" rel="noopener">Procedure</a> as Tencent Suggested.</h1><h1 id="3-Install-mysql-server"><a href="#3-Install-mysql-server" class="headerlink" title="3.Install mysql-server"></a>3.Install mysql-server</h1><h2 id="3-1-Check-repo"><a href="#3-1-Check-repo" class="headerlink" title="3.1.Check  repo"></a>3.1.Check  repo</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum list | grep mysql</span><br><span class="line"><span class="meta">#</span> no repo on default Tencent server</span><br></pre></td></tr></table></figure>
 <h2 id="3-2-Install-new-repo"><a href="#3-2-Install-new-repo" class="headerlink" title="3.2.Install new repo"></a>3.2.Install new repo</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm</span><br><span class="line">sudo rpm -ivh mysql-community-release-el7-5.noarch.rpm</span><br><span class="line">sudo yum install mysql-server -y</span><br></pre></td></tr></table></figure>
 <h2 id="Tencent-yum-repo-has-no"><a href="#Tencent-yum-repo-has-no" class="headerlink" title="Tencent yum repo has no"></a>Tencent yum repo has no</h2>
       
@@ -441,6 +441,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/11/Welcome-Dear-Wife-Kate-Home/" rel="prev" title="Welcome Dear Wife Kate Home">
+                Welcome Dear Wife Kate Home <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -519,7 +523,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -584,7 +588,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Upgrade-Blog-with-WordPress"><span class="nav-text">1.Upgrade Blog with WordPress</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Reason"><span class="nav-text">1.1.Reason</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-1-Enable-my-wife-posting-blogs-too"><span class="nav-text">1.1.1.Enable my wife posting blogs too.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-Enable-post-by-phone"><span class="nav-text">1.1.2.Enable post by phone.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Plan-WordPress-display-hexo-pages"><span class="nav-text">1.2.Plan: WordPress display hexo pages.</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Procedure-as-Tencent-Suggested"><span class="nav-text">2.Procedure as Tencent Suggested.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Install-mysql-server"><span class="nav-text">3.Install mysql-server</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-Check-repo"><span class="nav-text">3.1.Check  repo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-Install-new-repo"><span class="nav-text">3.2.Install new repo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tencent-yum-repo-has-no"><span class="nav-text">Tencent yum repo has no</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Setup-Blog-with-WordPress"><span class="nav-text">1.Setup Blog with WordPress</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Reason"><span class="nav-text">1.1.Reason</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-1-Enable-my-wife-posting-blogs-too"><span class="nav-text">1.1.1.Enable my wife posting blogs too.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-Enable-post-by-phone"><span class="nav-text">1.1.2.Enable post by phone.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Plan-Using-same-port-and-different-DomainName"><span class="nav-text">1.2.Plan: Using same port and different DomainName</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Procedure-as-Tencent-Suggested"><span class="nav-text">2.Procedure as Tencent Suggested.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Install-mysql-server"><span class="nav-text">3.Install mysql-server</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-Check-repo"><span class="nav-text">3.1.Check  repo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-Install-new-repo"><span class="nav-text">3.2.Install new repo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tencent-yum-repo-has-no"><span class="nav-text">Tencent yum repo has no</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -618,7 +622,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">4.4k</span>
+    <span title="Site words total count">4.5k</span>
   
 </div>
 
