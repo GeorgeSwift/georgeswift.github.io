@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next mist" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+    <script>
+    (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/5a709d705.js","daovoice")
+    daovoice('init', {
+        app_id: "5a709d75"
+    });
+    daovoice('update');
+    </script>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="iOS,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="1.OC 没有tupple返回, swift 有">
+<meta name="keywords" content="iOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LyndaCompareOCwithSwift">
+<meta property="og:url" content="https://www.heavenyu.com/2020/06/19/LyndaCompareOCwithSwift/index.html">
+<meta property="og:site_name" content="MichaelRich">
+<meta property="og:description" content="1.OC 没有tupple返回, swift 有">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://www.heavenyu.com/2020/06/19/LyndaCompareOCwithSwift/LyndaCompareOCwithSwift.assets/Snip20200619_5.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/06/19/LyndaCompareOCwithSwift/LyndaCompareOCwithSwift.assets/Snip20200619_6.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/06/19/LyndaCompareOCwithSwift/LyndaCompareOCwithSwift.assets/Snip20200619_7.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/06/19/LyndaCompareOCwithSwift/LyndaCompareOCwithSwift.assets/Snip20200619_8.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/06/19/LyndaCompareOCwithSwift/LyndaCompareOCwithSwift.assets/Snip20200619_9.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/06/19/LyndaCompareOCwithSwift/LyndaCompareOCwithSwift.assets/Snip20200619_10.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/06/19/LyndaCompareOCwithSwift/LyndaCompareOCwithSwift.assets/Snip20200619_12.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/06/19/LyndaCompareOCwithSwift/LyndaCompareOCwithSwift.assets/Snip20200619_13.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/06/19/LyndaCompareOCwithSwift/LyndaCompareOCwithSwift.assets/Snip20200619_14.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/06/19/LyndaCompareOCwithSwift/LyndaCompareOCwithSwift.assets/Snip20200619_15.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/06/19/LyndaCompareOCwithSwift/LyndaCompareOCwithSwift.assets/Snip20200619_16.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/06/19/LyndaCompareOCwithSwift/LyndaCompareOCwithSwift.assets/Snip20200619_20.png">
+<meta property="og:updated_time" content="2020-06-28T01:23:25.550Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LyndaCompareOCwithSwift">
+<meta name="twitter:description" content="1.OC 没有tupple返回, swift 有">
+<meta name="twitter:image" content="https://www.heavenyu.com/2020/06/19/LyndaCompareOCwithSwift/LyndaCompareOCwithSwift.assets/Snip20200619_5.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.heavenyu.com/2020/06/19/LyndaCompareOCwithSwift/">
+
+
+
+
+
+  <title>LyndaCompareOCwithSwift | MichaelRich</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MichaelRich</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Welcome to send messages on the right bottom!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.heavenyu.com/2020/06/19/LyndaCompareOCwithSwift/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MichaelRich">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MichaelRich">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">LyndaCompareOCwithSwift</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-19T17:54:49+08:00">
+                2020-06-19
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2020-06-28T09:23:25+08:00">
+                2020-06-28
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  365
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="1-OC-没有tupple返回-swift-有"><a href="#1-OC-没有tupple返回-swift-有" class="headerlink" title="1.OC 没有tupple返回, swift 有"></a>1.OC 没有tupple返回, swift 有</h2><a id="more"></a>
+<h2 id="2-Instantiating-Objects"><a href="#2-Instantiating-Objects" class="headerlink" title="2.Instantiating Objects"></a>2.Instantiating Objects</h2><h3 id="var-myDate-NSDate"><a href="#var-myDate-NSDate" class="headerlink" title="var myDate = NSDate()"></a>var myDate = NSDate()</h3><h3 id="swift-没有指针-没有alloc-init用-new"><a href="#swift-没有指针-没有alloc-init用-new" class="headerlink" title="swift 没有指针,没有alloc init用()(new)"></a>swift 没有指针,没有alloc init用()(new)</h3><h3 id="NSDate-myDate-NSDate-alloc-init-OC"><a href="#NSDate-myDate-NSDate-alloc-init-OC" class="headerlink" title="NSDate *myDate = [[NSDate alloc] init]; OC"></a>NSDate *myDate = [[NSDate alloc] init]; OC</h3><h2 id="3-Calling-methods"><a href="#3-Calling-methods" class="headerlink" title="3.Calling methods"></a>3.Calling methods</h2><h3 id="myObject-method-方括号包括整个方法"><a href="#myObject-method-方括号包括整个方法" class="headerlink" title="[myObject  method]; 方括号包括整个方法"></a>[myObject  method]; 方括号包括整个方法</h3><h3 id="myObject-method-点语法必须有参数小括号"><a href="#myObject-method-点语法必须有参数小括号" class="headerlink" title="myObject.method() 点语法必须有参数小括号"></a>myObject.method() 点语法必须有参数小括号</h3><h2 id="4-Calling-methods-one-parameter"><a href="#4-Calling-methods-one-parameter" class="headerlink" title="4.Calling methods one parameter"></a>4.Calling methods one parameter</h2><h3 id="myObject-methodWithParameter-123"><a href="#myObject-methodWithParameter-123" class="headerlink" title="[myObject methodWithParameter:123];"></a>[myObject methodWithParameter:123];</h3><h3 id="myObject-methodWithParameter-123-1"><a href="#myObject-methodWithParameter-123-1" class="headerlink" title="myObject.methodWithParameter(123)"></a>myObject.methodWithParameter(123)</h3><h2 id="5-Calling-method-with-two-parameters"><a href="#5-Calling-method-with-two-parameters" class="headerlink" title="5.Calling method with two parameters"></a>5.Calling method with two parameters</h2><h3 id="myAVQueuePlayer-insertItem-newSong-afterItem-currentSong"><a href="#myAVQueuePlayer-insertItem-newSong-afterItem-currentSong" class="headerlink" title="[myAVQueuePlayer insertItem:newSong afterItem:currentSong];"></a>[myAVQueuePlayer insertItem:newSong afterItem:currentSong];</h3><h3 id="myAVQueuePlayer-insertItem-newSong-afterItem-currentSong-1"><a href="#myAVQueuePlayer-insertItem-newSong-afterItem-currentSong-1" class="headerlink" title="myAVQueuePlayer.insertItem(newSong,afterItem:currentSong)"></a>myAVQueuePlayer.insertItem(newSong,afterItem:currentSong)</h3><h3 id="swift第一个形参在外-其他在括号里"><a href="#swift第一个形参在外-其他在括号里" class="headerlink" title="swift第一个形参在外,其他在括号里"></a>swift第一个形参在外,其他在括号里</h3><h2 id="6-Initializer-methods"><a href="#6-Initializer-methods" class="headerlink" title="6.Initializer methods"></a>6.Initializer methods</h2><h3 id="OC-NSURL-alloc-initWithString-”http-bd-com-quot"><a href="#OC-NSURL-alloc-initWithString-”http-bd-com-quot" class="headerlink" title="OC: [[NSURL alloc] initWithString:@”http://bd.com&quot;];"></a>OC: [[NSURL alloc] initWithString:@”<a href="http://bd.com&quot;]" target="_blank" rel="noopener">http://bd.com&quot;]</a>;</h3><h3 id="SW-NSURL-string-”http-bd-com-quot-没有了initWith-直接类名加括号参数"><a href="#SW-NSURL-string-”http-bd-com-quot-没有了initWith-直接类名加括号参数" class="headerlink" title="SW:NSURL(string:”http://bd.com&quot;) 没有了initWith,直接类名加括号参数"></a>SW:NSURL(string:”<a href="http://bd.com&quot;" target="_blank" rel="noopener">http://bd.com&quot;</a>) 没有了initWith,直接类名加括号参数</h3><h2 id="7-factory-methods"><a href="#7-factory-methods" class="headerlink" title="7.factory methods"></a>7.factory methods</h2><h3 id="OC-没有alloc-init-NSURL-URLWithString-”http-bd-com-quot"><a href="#OC-没有alloc-init-NSURL-URLWithString-”http-bd-com-quot" class="headerlink" title="OC.没有alloc/init: [NSURL URLWithString:@”http://bd.com&quot;];"></a>OC.没有alloc/init: [NSURL URLWithString:@”<a href="http://bd.com&quot;]" target="_blank" rel="noopener">http://bd.com&quot;]</a>;</h3><h3 id="SW-不能用NSURL-URLWithString-“http-bd-com-quot-没有swift版本"><a href="#SW-不能用NSURL-URLWithString-“http-bd-com-quot-没有swift版本" class="headerlink" title="SW.不能用NSURL.URLWithString:(“http://bd.com&quot;)没有swift版本"></a>SW.不能用NSURL.URLWithString:(“<a href="http://bd.com&quot;)没有swift版本" target="_blank" rel="noopener">http://bd.com&quot;)没有swift版本</a></h3><h3 id="还用NSURL-string-”http-bd-com-quot-只用init版本-有swift版本"><a href="#还用NSURL-string-”http-bd-com-quot-只用init版本-有swift版本" class="headerlink" title="还用NSURL(string:”http://bd.com&quot;) ,只用init版本,有swift版本"></a>还用NSURL(string:”<a href="http://bd.com&quot;" target="_blank" rel="noopener">http://bd.com&quot;</a>) ,只用init版本,有swift版本</h3><h2 id="8-using-failable-initialization-will-be-mapped-to-optional-value"><a href="#8-using-failable-initialization-will-be-mapped-to-optional-value" class="headerlink" title="8.using failable initialization will be mapped to optional value"></a>8.using failable initialization will be mapped to optional value</h2><h3 id="var-myURL-NSURL-NSURL-string-”http-bd-com-quot"><a href="#var-myURL-NSURL-NSURL-string-”http-bd-com-quot" class="headerlink" title="var myURL:NSURL? =  NSURL(string:”http://bd.com&quot;)"></a>var myURL:NSURL? =  NSURL(string:”<a href="http://bd.com&quot;" target="_blank" rel="noopener">http://bd.com&quot;</a>)</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(myURL != <span class="literal">nil</span>) &#123;</span><br><span class="line"></span><br><span class="line">		myURL!.lastPathComponent</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="myURL-lastPathComponent"><a href="#myURL-lastPathComponent" class="headerlink" title="myURL?.lastPathComponent"></a>myURL?.lastPathComponent</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">If</span> <span class="keyword">let</span> myURL:<span class="type">NSURL</span> =  <span class="type">NSURL</span>(string:<span class="string">"http://bd.com"</span>)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="9-working-with-properties"><a href="#9-working-with-properties" class="headerlink" title="9.working with properties"></a>9.working with properties</h2><h3 id="OC-可以点语法也可以getter-setter"><a href="#OC-可以点语法也可以getter-setter" class="headerlink" title="OC,可以点语法也可以getter setter"></a>OC,可以点语法也可以getter setter</h3><h3 id="SW-只用点语法"><a href="#SW-只用点语法" class="headerlink" title="SW,只用点语法"></a>SW,只用点语法</h3><h2 id="10-readonly-properties"><a href="#10-readonly-properties" class="headerlink" title="10.readonly properties"></a>10.readonly properties</h2><h3 id="Setting-must-use-a-regular-method"><a href="#Setting-must-use-a-regular-method" class="headerlink" title="Setting must use a regular method"></a>Setting must use a regular method</h3><h3 id="Optional-and-unwrapped-optional-always-has-a-value"><a href="#Optional-and-unwrapped-optional-always-has-a-value" class="headerlink" title="Optional and unwrapped optional(always has a value)"></a>Optional and unwrapped optional(always has a value)</h3><h2 id="11-id-and-AnyObject"><a href="#11-id-and-AnyObject" class="headerlink" title="11.id and AnyObject"></a>11.id and AnyObject</h2><p><img src="LyndaCompareOCwithSwift.assets/Snip20200619_5.png" alt="Snip20200619_5"></p>
+<h2 id="12-working-with-swift-and-objectiveC-Strings"><a href="#12-working-with-swift-and-objectiveC-Strings" class="headerlink" title="12.working with swift and objectiveC Strings"></a>12.working with swift and objectiveC Strings</h2><p><img src="LyndaCompareOCwithSwift.assets/Snip20200619_6.png" alt="Snip20200619_6"></p>
+<h2 id="13-more-maps-NSArray-mapped-to-AnyObject"><a href="#13-more-maps-NSArray-mapped-to-AnyObject" class="headerlink" title="13.more maps NSArray  mapped to [AnyObject]"></a>13.more maps NSArray  mapped to [AnyObject]</h2><p><img src="LyndaCompareOCwithSwift.assets/Snip20200619_7.png" alt="Snip20200619_7"></p>
+<h2 id="14-Dictionaries-mapped-to-NSObject-AnyObject"><a href="#14-Dictionaries-mapped-to-NSObject-AnyObject" class="headerlink" title="14.Dictionaries mapped to [NSObject : AnyObject]"></a>14.Dictionaries mapped to [NSObject : AnyObject]</h2><p><img src="LyndaCompareOCwithSwift.assets/Snip20200619_8.png" alt="Snip20200619_8"></p>
+<h3 id="Hash"><a href="#Hash" class="headerlink" title="Hash"></a>Hash</h3><p><img src="LyndaCompareOCwithSwift.assets/Snip20200619_9.png" alt="Snip20200619_9"></p>
+<h2 id="15-NSNumber-bridge-to-Int-Unit-Float"><a href="#15-NSNumber-bridge-to-Int-Unit-Float" class="headerlink" title="15.NSNumber bridge to Int,Unit,Float"></a>15.NSNumber bridge to Int,Unit,Float</h2><p><img src="LyndaCompareOCwithSwift.assets/Snip20200619_10.png" alt="Snip20200619_10"></p>
+<h2 id="16-Structs"><a href="#16-Structs" class="headerlink" title="16.Structs"></a>16.Structs</h2><p><img src="LyndaCompareOCwithSwift.assets/Snip20200619_12.png" alt="Snip20200619_12"></p>
+<h2 id="17-working-with-NSError"><a href="#17-working-with-NSError" class="headerlink" title="17.working with NSError"></a>17.working with NSError</h2><p><img src="LyndaCompareOCwithSwift.assets/Snip20200619_13.png" alt="Snip20200619_13"></p>
+<h2 id="18-adding-Swift-to-OC-project"><a href="#18-adding-Swift-to-OC-project" class="headerlink" title="18.adding Swift to OC project"></a>18.adding Swift to OC project</h2><h3 id="1-create-bridge-header-file"><a href="#1-create-bridge-header-file" class="headerlink" title="1.create bridge header file"></a>1.create bridge header file</h3><h3 id="2-import-header"><a href="#2-import-header" class="headerlink" title="2.import header"></a>2.import header</h3><h2 id="19-Use-swift-class-in-OC-class"><a href="#19-Use-swift-class-in-OC-class" class="headerlink" title="19.Use swift class in OC class"></a>19.Use swift class in OC class</h2><h3 id="1-import-project-swift-h-in-OC-file-changed-no-such-file-now-not-necessary"><a href="#1-import-project-swift-h-in-OC-file-changed-no-such-file-now-not-necessary" class="headerlink" title="1.import project-swift.h in OC file (changed, no such file now,not necessary)"></a>1.import project-swift.h in OC file (changed, no such file now,not necessary)</h3><h3 id="2-let-swift-class-inherit-NSObject-or-add-objc"><a href="#2-let-swift-class-inherit-NSObject-or-add-objc" class="headerlink" title="2.let swift class inherit NSObject or add @objc"></a>2.let swift class inherit NSObject or add @objc</h3><h3 id="3-override-init"><a href="#3-override-init" class="headerlink" title="3.override init"></a>3.override init</h3><h2 id="20-limitations-of-language-interoperability"><a href="#20-limitations-of-language-interoperability" class="headerlink" title="20.limitations of language interoperability"></a>20.limitations of language interoperability</h2><h3 id="Generics-and-Tuples-OC-doesn’t-support"><a href="#Generics-and-Tuples-OC-doesn’t-support" class="headerlink" title="Generics and Tuples | OC doesn’t support"></a>Generics and Tuples | OC doesn’t support</h3><h3 id="Swift-defined-Enumrerations-and-Stuctures"><a href="#Swift-defined-Enumrerations-and-Stuctures" class="headerlink" title="Swift-defined Enumrerations and Stuctures"></a>Swift-defined Enumrerations and Stuctures</h3><p><img src="LyndaCompareOCwithSwift.assets/Snip20200619_14.png" alt="Snip20200619_14"></p>
+<h3 id="Limitations-on-dynamic-untyped-behavior-Swift-doesn’s-support"><a href="#Limitations-on-dynamic-untyped-behavior-Swift-doesn’s-support" class="headerlink" title="Limitations on dynamic, untyped behavior  | Swift doesn’s support"></a>Limitations on dynamic, untyped behavior  | Swift doesn’s support</h3><p><img src="LyndaCompareOCwithSwift.assets/Snip20200619_15.png" alt="Snip20200619_15"></p>
+<h2 id="21-Inheriting-between-languages"><a href="#21-Inheriting-between-languages" class="headerlink" title="21.Inheriting between languages"></a>21.Inheriting between languages</h2><h3 id="Swift-can-inherit-OC-Classes"><a href="#Swift-can-inherit-OC-Classes" class="headerlink" title="Swift can inherit OC Classes"></a>Swift can inherit OC Classes</h3><h3 id="OC-can-not-inherit-Swift-Classes"><a href="#OC-can-not-inherit-Swift-Classes" class="headerlink" title="OC can not inherit Swift Classes"></a>OC can not inherit Swift Classes</h3><h2 id="22-Migrating-Objective-C-to-Swift-manually"><a href="#22-Migrating-Objective-C-to-Swift-manually" class="headerlink" title="22.Migrating Objective-C to Swift manually"></a>22.Migrating Objective-C to Swift manually</h2><p><img src="LyndaCompareOCwithSwift.assets/Snip20200619_16.png" alt="Snip20200619_16"></p>
+<p><img src="LyndaCompareOCwithSwift.assets/Snip20200619_20.png" alt="Snip20200619_17"></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/" rel="tag"># iOS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/06/08/StanFordiOS2020记录/" rel="next" title="SanFordiOS2020记录">
+                <i class="fa fa-chevron-left"></i> SanFordiOS2020记录
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/06/20/StanfordiOS8/" rel="prev" title="StanfordiOS8">
+                StanfordiOS8 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">MichaelRich</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:gg1956756@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://kate.heavenyu.com/" title="NewHome" target="_blank">NewHome</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-OC-没有tupple返回-swift-有"><span class="nav-text">1.OC 没有tupple返回, swift 有</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Instantiating-Objects"><span class="nav-text">2.Instantiating Objects</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#var-myDate-NSDate"><span class="nav-text">var myDate = NSDate()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#swift-没有指针-没有alloc-init用-new"><span class="nav-text">swift 没有指针,没有alloc init用()(new)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NSDate-myDate-NSDate-alloc-init-OC"><span class="nav-text">NSDate *myDate = [[NSDate alloc] init]; OC</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Calling-methods"><span class="nav-text">3.Calling methods</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#myObject-method-方括号包括整个方法"><span class="nav-text">[myObject  method]; 方括号包括整个方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#myObject-method-点语法必须有参数小括号"><span class="nav-text">myObject.method() 点语法必须有参数小括号</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Calling-methods-one-parameter"><span class="nav-text">4.Calling methods one parameter</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#myObject-methodWithParameter-123"><span class="nav-text">[myObject methodWithParameter:123];</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#myObject-methodWithParameter-123-1"><span class="nav-text">myObject.methodWithParameter(123)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Calling-method-with-two-parameters"><span class="nav-text">5.Calling method with two parameters</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#myAVQueuePlayer-insertItem-newSong-afterItem-currentSong"><span class="nav-text">[myAVQueuePlayer insertItem:newSong afterItem:currentSong];</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#myAVQueuePlayer-insertItem-newSong-afterItem-currentSong-1"><span class="nav-text">myAVQueuePlayer.insertItem(newSong,afterItem:currentSong)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#swift第一个形参在外-其他在括号里"><span class="nav-text">swift第一个形参在外,其他在括号里</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-Initializer-methods"><span class="nav-text">6.Initializer methods</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#OC-NSURL-alloc-initWithString-”http-bd-com-quot"><span class="nav-text">OC: [[NSURL alloc] initWithString:@”http://bd.com&quot;];</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SW-NSURL-string-”http-bd-com-quot-没有了initWith-直接类名加括号参数"><span class="nav-text">SW:NSURL(string:”http://bd.com&quot;) 没有了initWith,直接类名加括号参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-factory-methods"><span class="nav-text">7.factory methods</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#OC-没有alloc-init-NSURL-URLWithString-”http-bd-com-quot"><span class="nav-text">OC.没有alloc/init: [NSURL URLWithString:@”http://bd.com&quot;];</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SW-不能用NSURL-URLWithString-“http-bd-com-quot-没有swift版本"><span class="nav-text">SW.不能用NSURL.URLWithString:(“http://bd.com&quot;)没有swift版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#还用NSURL-string-”http-bd-com-quot-只用init版本-有swift版本"><span class="nav-text">还用NSURL(string:”http://bd.com&quot;) ,只用init版本,有swift版本</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-using-failable-initialization-will-be-mapped-to-optional-value"><span class="nav-text">8.using failable initialization will be mapped to optional value</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#var-myURL-NSURL-NSURL-string-”http-bd-com-quot"><span class="nav-text">var myURL:NSURL? =  NSURL(string:”http://bd.com&quot;)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#myURL-lastPathComponent"><span class="nav-text">myURL?.lastPathComponent</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-working-with-properties"><span class="nav-text">9.working with properties</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#OC-可以点语法也可以getter-setter"><span class="nav-text">OC,可以点语法也可以getter setter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SW-只用点语法"><span class="nav-text">SW,只用点语法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-readonly-properties"><span class="nav-text">10.readonly properties</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Setting-must-use-a-regular-method"><span class="nav-text">Setting must use a regular method</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Optional-and-unwrapped-optional-always-has-a-value"><span class="nav-text">Optional and unwrapped optional(always has a value)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-id-and-AnyObject"><span class="nav-text">11.id and AnyObject</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-working-with-swift-and-objectiveC-Strings"><span class="nav-text">12.working with swift and objectiveC Strings</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-more-maps-NSArray-mapped-to-AnyObject"><span class="nav-text">13.more maps NSArray  mapped to [AnyObject]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14-Dictionaries-mapped-to-NSObject-AnyObject"><span class="nav-text">14.Dictionaries mapped to [NSObject : AnyObject]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hash"><span class="nav-text">Hash</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-NSNumber-bridge-to-Int-Unit-Float"><span class="nav-text">15.NSNumber bridge to Int,Unit,Float</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-Structs"><span class="nav-text">16.Structs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-working-with-NSError"><span class="nav-text">17.working with NSError</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18-adding-Swift-to-OC-project"><span class="nav-text">18.adding Swift to OC project</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-create-bridge-header-file"><span class="nav-text">1.create bridge header file</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-import-header"><span class="nav-text">2.import header</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#19-Use-swift-class-in-OC-class"><span class="nav-text">19.Use swift class in OC class</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-import-project-swift-h-in-OC-file-changed-no-such-file-now-not-necessary"><span class="nav-text">1.import project-swift.h in OC file (changed, no such file now,not necessary)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-let-swift-class-inherit-NSObject-or-add-objc"><span class="nav-text">2.let swift class inherit NSObject or add @objc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-override-init"><span class="nav-text">3.override init</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20-limitations-of-language-interoperability"><span class="nav-text">20.limitations of language interoperability</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Generics-and-Tuples-OC-doesn’t-support"><span class="nav-text">Generics and Tuples | OC doesn’t support</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Swift-defined-Enumrerations-and-Stuctures"><span class="nav-text">Swift-defined Enumrerations and Stuctures</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Limitations-on-dynamic-untyped-behavior-Swift-doesn’s-support"><span class="nav-text">Limitations on dynamic, untyped behavior  | Swift doesn’s support</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#21-Inheriting-between-languages"><span class="nav-text">21.Inheriting between languages</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Swift-can-inherit-OC-Classes"><span class="nav-text">Swift can inherit OC Classes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OC-can-not-inherit-Swift-Classes"><span class="nav-text">OC can not inherit Swift Classes</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-Migrating-Objective-C-to-Swift-manually"><span class="nav-text">22.Migrating Objective-C to Swift manually</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MichaelRich</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">23.6k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

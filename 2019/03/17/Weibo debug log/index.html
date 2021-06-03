@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next mist" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+    <script>
+    (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/5a709d705.js","daovoice")
+    daovoice('init', {
+        app_id: "5a709d75"
+    });
+    daovoice('update');
+    </script>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="iOS,OC,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Weibo debug log tapping retweeted text is not calling touches began on iPhone we cannot lunch so we disabled debug in scheme. Causing we think didn’t triger. Because we used notification to call didSe">
+<meta name="keywords" content="iOS,OC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HYweibo Debug Log">
+<meta property="og:url" content="https://www.heavenyu.com/2019/03/17/Weibo debug log/index.html">
+<meta property="og:site_name" content="MichaelRich">
+<meta property="og:description" content="Weibo debug log tapping retweeted text is not calling touches began on iPhone we cannot lunch so we disabled debug in scheme. Causing we think didn’t triger. Because we used notification to call didSe">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://heavenyu.com/wp-content/uploads/2018/12/Snip20190223_7.png">
+<meta property="og:image" content="https://heavenyu.com/wp-content/uploads/2018/12/Snip20190223_8.png">
+<meta property="og:image" content="https://heavenyu.com/wp-content/uploads/2018/12/Snip20190223_9.png">
+<meta property="og:updated_time" content="2020-06-06T22:04:09.476Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HYweibo Debug Log">
+<meta name="twitter:description" content="Weibo debug log tapping retweeted text is not calling touches began on iPhone we cannot lunch so we disabled debug in scheme. Causing we think didn’t triger. Because we used notification to call didSe">
+<meta name="twitter:image" content="https://heavenyu.com/wp-content/uploads/2018/12/Snip20190223_7.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.heavenyu.com/2019/03/17/Weibo debug log/">
+
+
+
+
+
+  <title>HYweibo Debug Log | MichaelRich</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MichaelRich</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Welcome to send messages on the right bottom!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.heavenyu.com/2019/03/17/Weibo debug log/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MichaelRich">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MichaelRich">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">HYweibo Debug Log</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-17T11:46:00+08:00">
+                2019-03-17
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2020-06-07T06:04:09+08:00">
+                2020-06-07
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  1.2k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  7
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Weibo-debug-log"><a href="#Weibo-debug-log" class="headerlink" title="Weibo debug log"></a>Weibo debug log</h1><ol>
+<li><h2 id="tapping-retweeted-text-is-not-calling-touches-began"><a href="#tapping-retweeted-text-is-not-calling-touches-began" class="headerlink" title="tapping retweeted text is not calling touches began"></a>tapping retweeted text is not calling touches began</h2><ol>
+<li><h3 id="on-iPhone-we-cannot-lunch-so-we-disabled-debug-in-scheme-Causing-we-think-didn’t-triger"><a href="#on-iPhone-we-cannot-lunch-so-we-disabled-debug-in-scheme-Causing-we-think-didn’t-triger" class="headerlink" title="on iPhone we cannot lunch so we disabled debug in scheme. Causing we think didn’t triger."></a>on iPhone we cannot lunch so we disabled debug in scheme. Causing we think didn’t triger.</h3></li>
+<li><h3 id="Because-we-used-notification-to-call-didSelectRow"><a href="#Because-we-used-notification-to-call-didSelectRow" class="headerlink" title="Because we used notification to call didSelectRow"></a>Because we used notification to call didSelectRow</h3></li>
+<li><h3 id="we-couldnot-call-didSelectRow-before-so-we-used-notification"><a href="#we-couldnot-call-didSelectRow-before-so-we-used-notification" class="headerlink" title="we couldnot call didSelectRow before so we used notification"></a>we couldnot call didSelectRow before so we used notification</h3></li>
+</ol>
+</li>
+</ol>
+<ol start="2">
+<li><h2 id="Repost-API-is-forbiden"><a href="#Repost-API-is-forbiden" class="headerlink" title="Repost API is forbiden."></a>Repost API is forbiden.</h2><ol>
+<li>2019-03-17 17:04:45</li>
+</ol>
+</li>
+<li><h2 id="1-Button-IBAction-was-not-being-called"><a href="#1-Button-IBAction-was-not-being-called" class="headerlink" title="1.Button IBAction was not being called"></a>1.Button IBAction was not being called</h2><ol>
+<li><h3 id="1-1-Button-titles-can’t-be-changed"><a href="#1-1-Button-titles-can’t-be-changed" class="headerlink" title="1.1 Button titles can’t be changed"></a>1.1 Button titles can’t be changed</h3></li>
+<li><h3 id="1-2-Reinstall-app-titles-are-changed-still-can’t-call-IBActions"><a href="#1-2-Reinstall-app-titles-are-changed-still-can’t-call-IBActions" class="headerlink" title="1.2 Reinstall app titles are changed, still can’t call IBActions"></a>1.2 Reinstall app titles are changed, still can’t call IBActions</h3></li>
+<li><h3 id="1-3-2019-03-17-11-43-23"><a href="#1-3-2019-03-17-11-43-23" class="headerlink" title="1.3.2019-03-17 11:43:23"></a>1.3.2019-03-17 11:43:23</h3></li>
+</ol>
+</li>
+</ol>
+<a id="more"></a>
+<h4 id=""><a href="#" class="headerlink" title=" "></a> </h4><ol>
+<li><h2 id="Home85-Status-detail-didSelectRow-doesn’t-pop-when-clicking-StatusLabel"><a href="#Home85-Status-detail-didSelectRow-doesn’t-pop-when-clicking-StatusLabel" class="headerlink" title="Home85 Status detail didSelectRow doesn’t pop when clicking StatusLabel"></a>Home85 Status detail didSelectRow doesn’t pop when clicking StatusLabel</h2><ol>
+<li>Other subviews in the cell is working.</li>
+<li>set all views containing statusLabel userInteractionEnabled = NO; no luck.</li>
+<li><strong>-[HYStatusCell copyWithZone:] using Notification causing this. infoKey was set wrong</strong></li>
+<li>added Notification.but causing unwanted segue to first cell in tableView.</li>
+</ol>
+</li>
+<li><h2 id="Home78-6-background-view-show-after-scroll-instead-of-at-once"><a href="#Home78-6-background-view-show-after-scroll-instead-of-at-once" class="headerlink" title="Home78.6.background view show after scroll instead of at once."></a>Home78.6.background view show after scroll instead of at once.</h2></li>
+<li><h4 id="Compose67-Recent-Emotions-doesn’t-show"><a href="#Compose67-Recent-Emotions-doesn’t-show" class="headerlink" title="Compose67. Recent Emotions doesn’t show."></a>Compose67. Recent Emotions doesn’t show.</h4><ol>
+<li>directory didn’t encode, deleting saved file, save again, worked.</li>
+</ol>
+</li>
+<li><h4 id="Compose67-crash-on-selecting-emotion"><a href="#Compose67-crash-on-selecting-emotion" class="headerlink" title="Compose67. crash on selecting emotion"></a>Compose67. crash on selecting emotion</h4><ol>
+<li>encode to file crash if code is nil. judge before encode.</li>
+</ol>
+</li>
+<li><h4 id="Compose65-Emoji-doesn’t-show-in-popView"><a href="#Compose65-Emoji-doesn’t-show-in-popView" class="headerlink" title="Compose65.Emoji doesn’t show in popView."></a>Compose65.Emoji doesn’t show in popView.</h4><ol>
+<li>title color set to clear color causing not showing</li>
+<li>font size causing not showing correctly</li>
+</ol>
+</li>
+<li><h4 id="Exception-on-click-emotionToolbarButton"><a href="#Exception-on-click-emotionToolbarButton" class="headerlink" title="Exception on click emotionToolbarButton"></a>Exception on click emotionToolbarButton</h4><ol>
+<li><strong>Terminating app due to uncaught exception ‘keyValuesArray is not a NSArray - keyValuesArray不是一个数组’, reason: ‘keyValuesArray is a (null) - keyValuesArray参数是一个(null)’</strong></li>
+<li>plist path is wrong.</li>
+<li>create reference instead of create groups, worked. keep the folder in project blue!</li>
+</ol>
+</li>
+<li><h2 id="Compose-60-EmotionIcons-added-causing-crash"><a href="#Compose-60-EmotionIcons-added-causing-crash" class="headerlink" title="Compose-60 EmotionIcons added causing crash."></a>Compose-60 EmotionIcons added causing crash.</h2><ol>
+<li><a href="https://heavenyu.com/wp-content/uploads/2018/12/Snip20190223_7.png" target="_blank" rel="noopener"><img src="https://heavenyu.com/wp-content/uploads/2018/12/Snip20190223_7.png" alt="img"></a> <a href="https://heavenyu.com/wp-content/uploads/2018/12/Snip20190223_8.png" target="_blank" rel="noopener"><img src="https://heavenyu.com/wp-content/uploads/2018/12/Snip20190223_8.png" alt="img"></a> <a href="https://heavenyu.com/wp-content/uploads/2018/12/Snip20190223_9.png" target="_blank" rel="noopener"><img src="https://heavenyu.com/wp-content/uploads/2018/12/Snip20190223_9.png" alt="img"></a></li>
+<li>copy files to root directorythen droped files to project caused problem.</li>
+<li>drop to project directly worked on iPhone.</li>
+<li>simulator can’t lunch, waiting iPhone6 to start.</li>
+<li>create reference instead of create groups, worked. keep the folder in project blue!</li>
+</ol>
+</li>
+<li><h4 id="Home-58-MJPhotoBrowser-pageControl-number-error"><a href="#Home-58-MJPhotoBrowser-pageControl-number-error" class="headerlink" title="Home-58 MJPhotoBrowser pageControl number error."></a>Home-58 MJPhotoBrowser pageControl number error.</h4><ol>
+<li>page 2 doesn’t turn correctly in simulator, but it’s working in iPhone.</li>
+<li>2019-02-22</li>
+</ol>
+</li>
+</ol>
+<h4 id="1-id-and-secret"><a href="#1-id-and-secret" class="headerlink" title="1. id and secret"></a>1. id and secret</h4><h5 id="1-1-composeVC-CZ"><a href="#1-1-composeVC-CZ" class="headerlink" title="1.1. composeVC CZ"></a>1.1. composeVC CZ</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 拼接URL字符串</span><br><span class="line">NSString *urlStr = [NSString stringWithFormat:@&quot;%@?client_id=%@&amp;redirect_uri=%@&quot;,CZAuthorizeBaseUrl,CZClient_id,CZRedirect_uri];</span><br></pre></td></tr></table></figure>
+<h4 id="2-account-key-add-isRealName"><a href="#2-account-key-add-isRealName" class="headerlink" title="2. account key add isRealName"></a>2. account key add isRealName</h4><h5 id="Using-this-class-is-not-key-value-coding-compliant-for-the-key-isRealName"><a href="#Using-this-class-is-not-key-value-coding-compliant-for-the-key-isRealName" class="headerlink" title="Using this class is not key value coding-compliant for the key isRealName."></a>Using this class is not key value coding-compliant for the key isRealName.</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> *  added by HY 2018-12-19 13:49:10</span><br><span class="line"> *</span><br><span class="line"> *  Using MJExtension, will encode all keys in returned dict, when sina updated API</span><br><span class="line"> *  without this property will pop an error when encode an acount</span><br><span class="line"> *  this class is not key value coding-compliant for the key isRealName.</span><br><span class="line"> */</span><br><span class="line">@property (nonatomic, copy) NSString *isRealName;</span><br></pre></td></tr></table></figure>
+<h2 id="3-CZ-New-feature-page-control-center-fix"><a href="#3-CZ-New-feature-page-control-center-fix" class="headerlink" title="3.CZ New feature page control center fix"></a>3.CZ New feature page control center fix</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">control.center = CGPointMake(self.view.width * 0.5, self.view.height * 0.97);</span><br></pre></td></tr></table></figure>
+<h4 id="4-CZ-tabbar-lost-items"><a href="#4-CZ-tabbar-lost-items" class="headerlink" title="4.CZ  tabbar lost items"></a>4.CZ  tabbar lost items</h4><ul>
+<li>the default tabbar is not removed.</li>
+</ul>
+<h2 id="5-The-app’s-Info-plist-must-contain-an-NSPhotoLibraryAddUsageDescription-key-with-a-string-value-explaining-to-the-user-how-the-app-uses-this-data"><a href="#5-The-app’s-Info-plist-must-contain-an-NSPhotoLibraryAddUsageDescription-key-with-a-string-value-explaining-to-the-user-how-the-app-uses-this-data" class="headerlink" title="5.The app’s Info.plist must contain an NSPhotoLibraryAddUsageDescription key with a string value explaining to the user how the app uses this data."></a>5.The app’s Info.plist must contain an NSPhotoLibraryAddUsageDescription key with a string value explaining to the user how the app uses this data.</h2><ul>
+<li>Error: <ul>
+<li>This app has crashed because it attempted to access privacy-sensitive data without a usage description. The app’s Info.plist must contain an NSPhotoLibraryAddUsageDescription key with a string value explaining to the user how the app uses this data.</li>
+</ul>
+</li>
+<li>Reason <ul>
+<li>Code 27.6 (below) adding photo to Library needs discription to user</li>
+</ul>
+</li>
+<li>Fix: <ul>
+<li>add this key to plist</li>
+<li>Privacy Photo Libaray Addition Usage Discription<br>Our application needs permission to write photos…</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> 27.6.addPhotoToAlbum for test</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">-(<span class="keyword">void</span>)addPhotoToAlbum</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;<span class="number">5</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">NSString</span> *name = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"minion_0%d"</span>, i + <span class="number">1</span>];</span><br><span class="line">        <span class="built_in">UIImage</span> *image = [<span class="built_in">UIImage</span> imageNamed:name];</span><br><span class="line">        <span class="built_in">UIImageWriteToSavedPhotosAlbum</span>(image, <span class="literal">nil</span>, <span class="literal">nil</span>, <span class="literal">nil</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="6-replace-UIWebView-with-WKWebView-UIWebview-is-deprecated-in-iOS12-2018-12-21-16-31-44"><a href="#6-replace-UIWebView-with-WKWebView-UIWebview-is-deprecated-in-iOS12-2018-12-21-16-31-44" class="headerlink" title="6.replace UIWebView with WKWebView (UIWebview is deprecated in iOS12! ) 2018-12-21 16:31:44"></a>6.replace UIWebView with WKWebView (UIWebview is deprecated in iOS12! ) 2018-12-21 16:31:44</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. import</span></span><br><span class="line"><span class="meta">#import <span class="meta-string">&lt;WebKit/WebKit.h&gt;</span></span></span><br><span class="line"><span class="comment">// 2. WKNavigationDelegate</span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">HYOAuthViewController</span> () &lt;<span class="title">WKNavigationDelegate</span>&gt;</span></span><br><span class="line"><span class="comment">// 3.navigationDelegate</span></span><br><span class="line">webView.navigationDelegate = <span class="keyword">self</span>;</span><br><span class="line"><span class="comment">// 4. </span></span><br><span class="line">- (<span class="keyword">void</span>)webView:(<span class="built_in">WKWebView</span> *)webView decidePolicyForNavigationAction:(<span class="built_in">WKNavigationAction</span> *)navigationAction decisionHandler:(<span class="keyword">void</span> (^)(<span class="built_in">WKNavigationActionPolicy</span>))decisionHandler &#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">NSString</span> *url = [navigationAction.request.URL absoluteString];</span><br><span class="line"></span><br><span class="line">    <span class="built_in">NSString</span> *str = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%@/?code="</span>,HYRedirectURI];</span><br><span class="line">    <span class="built_in">NSRange</span> range = [url rangeOfString:str];</span><br><span class="line">    <span class="keyword">if</span> (range.location != <span class="built_in">NSNotFound</span>) &#123;</span><br><span class="line">            <span class="comment">//14.3.2.get requeset code</span></span><br><span class="line">        <span class="keyword">int</span> from = range.location + range.length;</span><br><span class="line">        <span class="built_in">NSString</span> *code = [url substringFromIndex:from];</span><br><span class="line">        HYLog(<span class="string">@"%@"</span>,code);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//14.3.3.get accessToken with code</span></span><br><span class="line">        [<span class="keyword">self</span> accessTokenWithCode:code];</span><br><span class="line">        decisionHandler(<span class="built_in">WKNavigationActionPolicyCancel</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    decisionHandler(<span class="built_in">WKNavigationActionPolicyAllow</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="-1"><a href="#-1" class="headerlink" title=" "></a> </h4><h2 id="7-Auth-went-to-redirect-URL-the-reason-is-redirect-URL-changed-has-a-“-“-lost"><a href="#7-Auth-went-to-redirect-URL-the-reason-is-redirect-URL-changed-has-a-“-“-lost" class="headerlink" title="7. Auth went to redirect URL, the reason is redirect URL changed has a “/“ lost."></a>7. Auth went to redirect URL, the reason is redirect URL changed has a “/“ lost.</h2><ol>
+<li>This happened when testing on a real iPhone</li>
+<li>We should test on simulator first.</li>
+<li>if it works</li>
+<li>Then we doubt it’s a real iPhone issue!</li>
+</ol>
+<h4 id="8-new-Xcode-git-can’t-commit"><a href="#8-new-Xcode-git-can’t-commit" class="headerlink" title="8. new Xcode git can’t commit"></a>8. new Xcode git can’t commit</h4><ul>
+<li>using old Xcode commit, said need configure name and email</li>
+<li>configured, can commit</li>
+<li>new Xcode can commit after reload.</li>
+</ul>
+<h2 id="9-Property-‘access-token’-cannot-be-found-in-forward-class-object-‘Account’"><a href="#9-Property-‘access-token’-cannot-be-found-in-forward-class-object-‘Account’" class="headerlink" title="9.Property ‘access_token’ cannot be found in forward class object ‘Account’"></a>9.Property ‘access_token’ cannot be found in forward class object ‘Account’</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//need import Account in ComposeVC too</span></span><br><span class="line"><span class="meta">#import <span class="meta-string">"Account.h"</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="10-NSLocalizedDescription-Request-failed-forbidden-403-sendWeibo-API-changed-2018-12-23-23-34-17"><a href="#10-NSLocalizedDescription-Request-failed-forbidden-403-sendWeibo-API-changed-2018-12-23-23-34-17" class="headerlink" title="10.NSLocalizedDescription=Request failed: forbidden (403) sendWeibo, API changed.2018-12-23 23:34:17"></a>10.NSLocalizedDescription=Request failed: forbidden (403) sendWeibo, <a href="http://bbs.mob.com/thread-23921-1-1.html" target="_blank" rel="noopener">API changed</a>.2018-12-23 23:34:17</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// set safe domain for app first then change this:</span></span><br><span class="line">params[<span class="string">@"status"</span>] = [_textView.text stringByAppendingString:<span class="string">@"from http://heavenyu.com"</span>];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3. Get request</span></span><br><span class="line">[mgr POST:<span class="string">@"https://api.weibo.com/2/statuses/share.json"</span></span><br></pre></td></tr></table></figure>
+<h2 id="11-account-can’t-be-saved"><a href="#11-account-can’t-be-saved" class="headerlink" title="11.account can’t be saved"></a>11.account can’t be saved</h2><ul>
+<li>API changed!</li>
+<li>access_token, doesn’t return expires_time, so account is set to nil after</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">+(HYAccount *)account</span><br><span class="line">&#123;</span><br><span class="line">       </span><br><span class="line">    HYAccount *account = [NSKeyedUnarchiver unarchiveObjectWithFile:HYAccountFilePath];</span><br><span class="line">    </span><br><span class="line">    if (account) &#123;</span><br><span class="line">        NSDate *now = [NSDate date];</span><br><span class="line">        </span><br><span class="line">            //16.2.1.compare date</span><br><span class="line">        if ([now compare:account.expires_time] != NSOrderedAscending) &#123;</span><br><span class="line">            account = nil;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return account;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="12-application-icon-badge-number-not-showing"><a href="#12-application-icon-badge-number-not-showing" class="headerlink" title="12.application icon badge number not showing"></a>12.application icon badge number not showing</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">// 34.8 UIUserNotificationTypeBadge</span></span><br><span class="line"><span class="built_in">UIUserNotificationSettings</span>* notificationSettings = [<span class="built_in">UIUserNotificationSettings</span> settingsForTypes:<span class="built_in">UIUserNotificationTypeAlert</span> | <span class="built_in">UIUserNotificationTypeBadge</span> | <span class="built_in">UIUserNotificationTypeSound</span> categories:<span class="literal">nil</span>];</span><br><span class="line"></span><br><span class="line">[[<span class="built_in">UIApplication</span> sharedApplication] registerUserNotificationSettings:notificationSettings];</span><br></pre></td></tr></table></figure>
+<h4 id="13-tabBar-home-clicked-again-but-not-refreshing"><a href="#13-tabBar-home-clicked-again-but-not-refreshing" class="headerlink" title="13.tabBar home clicked again, but not refreshing"></a>13.tabBar home clicked again, but not refreshing</h4><ol>
+<li>debug , found delegate method not called</li>
+<li>so it’s delegate not seted!!!!</li>
+</ol>
+<h4 id="14-UITableView-contentOffsetForScrollingToRowAtIndexPath-atScrollPosition-usingPresentationValues-row-0-beyond-bounds-0-for-section-0"><a href="#14-UITableView-contentOffsetForScrollingToRowAtIndexPath-atScrollPosition-usingPresentationValues-row-0-beyond-bounds-0-for-section-0" class="headerlink" title="14.-[UITableView _contentOffsetForScrollingToRowAtIndexPath:atScrollPosition:usingPresentationValues:]: row (0) beyond bounds (0) for section (0)."></a>14.-[UITableView _contentOffsetForScrollingToRowAtIndexPath:atScrollPosition:usingPresentationValues:]: row (0) beyond bounds (0) for section (0).</h4><ol>
+<li>tableView is not showing at all! no section to scroll</li>
+<li>pull to refresh first</li>
+</ol>
+<h2 id="15-not-scrolling-to-top-if-default-postion-is-scrolled-down"><a href="#15-not-scrolling-to-top-if-default-postion-is-scrolled-down" class="headerlink" title="15.not scrolling to top if default postion is scrolled down"></a>15.not scrolling to top if default postion is scrolled down</h2><ol>
+<li>default is set to do so</li>
+<li>we can set to scroll to top like this:</li>
+<li></li>
+</ol>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#pragma mark - 34.10</span></span><br><span class="line">- (<span class="keyword">void</span>)refresh:(<span class="built_in">BOOL</span>)fromSelf</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>.tabBarItem.badgeValue) &#123;</span><br><span class="line"><span class="comment">//        [self.refreshControl beginRefreshing];</span></span><br><span class="line">        [<span class="keyword">self</span> loadNewStatuses:<span class="keyword">self</span>.refreshControl];</span><br><span class="line">        <span class="built_in">NSIndexPath</span> *firstRow = [<span class="built_in">NSIndexPath</span> indexPathForRow:<span class="number">0</span> inSection:<span class="number">0</span>];</span><br><span class="line">        [<span class="keyword">self</span>.tableView scrollToRowAtIndexPath:firstRow atScrollPosition:<span class="built_in">UITableViewScrollPositionTop</span> animated:<span class="literal">YES</span>];</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fromSelf) &#123;</span><br><span class="line">        <span class="built_in">NSIndexPath</span> *firstRow = [<span class="built_in">NSIndexPath</span> indexPathForRow:<span class="number">0</span> inSection:<span class="number">0</span>];</span><br><span class="line">        [<span class="keyword">self</span>.tableView scrollToRowAtIndexPath:firstRow atScrollPosition:<span class="built_in">UITableViewScrollPositionTop</span> animated:<span class="literal">YES</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="16-file-not-found-even-the-file-is-there"><a href="#16-file-not-found-even-the-file-is-there" class="headerlink" title="16.file not found, even the file is there"></a>16.file not found, even the file is there</h2><ol>
+<li>remove the folder</li>
+<li>add the folder again</li>
+</ol>
+<h2 id="keyValuesArray-is-null"><a href="#keyValuesArray-is-null" class="headerlink" title="keyValuesArray is null"></a>keyValuesArray is null</h2><h3 id="回滚"><a href="#回滚" class="headerlink" title="回滚"></a>回滚</h3><h3 id="xcode-new-branch-from-commit"><a href="#xcode-new-branch-from-commit" class="headerlink" title="xcode new branch from commit"></a>xcode new branch from commit</h3><h3 id="terminal"><a href="#terminal" class="headerlink" title="terminal"></a>terminal</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard </span><br><span class="line">git push origin new branch</span><br></pre></td></tr></table></figure>
+<h3 id="gitee-设置默认分支"><a href="#gitee-设置默认分支" class="headerlink" title="gitee 设置默认分支"></a>gitee 设置默认分支</h3><h3 id="重新clone"><a href="#重新clone" class="headerlink" title="重新clone"></a>重新clone</h3><h2 id="Socket-SO-ERROR-54-Connection-reset-by-peer"><a href="#Socket-SO-ERROR-54-Connection-reset-by-peer" class="headerlink" title="Socket SO_ERROR [54: Connection reset by peer"></a><strong>Socket SO_ERROR [54: Connection reset by peer</strong></h2><h3 id="断网了"><a href="#断网了" class="headerlink" title="断网了."></a>断网了.</h3><h2 id="Modifications-to-the-layout-engine-must-not-be-performed-from-a-background-thread-after-it-has-been-accessed-from-the-main-thread-’"><a href="#Modifications-to-the-layout-engine-must-not-be-performed-from-a-background-thread-after-it-has-been-accessed-from-the-main-thread-’" class="headerlink" title="Modifications to the layout engine must not be performed from a background thread after it has been accessed from the main thread.’"></a><strong>Modifications to the layout engine must not be performed from a background thread after it has been accessed from the main thread.’</strong></h2><h3 id="This-application-is-modifying-the-autolayout-engine-from-a-background-thread-after-the-engine-was-accessed-from-the-main-thread-This-can-lead-to-engine-corruption-and-weird-crashes"><a href="#This-application-is-modifying-the-autolayout-engine-from-a-background-thread-after-the-engine-was-accessed-from-the-main-thread-This-can-lead-to-engine-corruption-and-weird-crashes" class="headerlink" title="This application is modifying the autolayout engine from a background thread after the engine was accessed from the main thread. This can lead to engine corruption and weird crashes."></a><strong>This application is modifying the autolayout engine from a background thread after the engine was accessed from the main thread. This can lead to engine corruption and weird crashes.</strong></h3><h2 id="17-sqlite-error-20-由于count没设置。"><a href="#17-sqlite-error-20-由于count没设置。" class="headerlink" title="17.sqlite error 20 由于count没设置。"></a>17.sqlite error 20 由于count没设置。</h2><p>2020-05-11 21:13:29</p>
+<h2 id="18-防止view滚出屏幕-不判断会出错"><a href="#18-防止view滚出屏幕-不判断会出错" class="headerlink" title="18.防止view滚出屏幕,不判断会出错"></a>18.防止view滚出屏幕,不判断会出错</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">### // 99.19.防止view滚出屏幕,textView添加在屏幕外</span><br><span class="line"></span><br><span class="line">  if (self.messages.count &gt; 0) &#123; //不判断会出错</span><br><span class="line"></span><br><span class="line">    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="19-Collection-lt-NSArrayM-0x600000d2bfc0-gt-was-mutated-while-being-enumerated"><a href="#19-Collection-lt-NSArrayM-0x600000d2bfc0-gt-was-mutated-while-being-enumerated" class="headerlink" title="19.Collection &lt;__NSArrayM: 0x600000d2bfc0&gt; was mutated while being enumerated."></a>19.Collection &lt;__NSArrayM: 0x600000d2bfc0&gt; was mutated while being enumerated.</h2><h2 id="20-记事没保存"><a href="#20-记事没保存" class="headerlink" title="20.记事没保存"></a>20.记事没保存</h2><p><strong>新建没保存</strong></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/" rel="tag"># iOS</a>
+          
+            <a href="/tags/OC/" rel="tag"># OC</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/12/SetupCentOS7-5/" rel="next" title="SetupCentOS7.5">
+                <i class="fa fa-chevron-left"></i> SetupCentOS7.5
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/17/Rules of iOS development/" rel="prev" title="Rules of iOS development">
+                Rules of iOS development <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">MichaelRich</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:gg1956756@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://kate.heavenyu.com/" title="NewHome" target="_blank">NewHome</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Weibo-debug-log"><span class="nav-text">Weibo debug log</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#tapping-retweeted-text-is-not-calling-touches-began"><span class="nav-text">tapping retweeted text is not calling touches began</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#on-iPhone-we-cannot-lunch-so-we-disabled-debug-in-scheme-Causing-we-think-didn’t-triger"><span class="nav-text">on iPhone we cannot lunch so we disabled debug in scheme. Causing we think didn’t triger.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Because-we-used-notification-to-call-didSelectRow"><span class="nav-text">Because we used notification to call didSelectRow</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#we-couldnot-call-didSelectRow-before-so-we-used-notification"><span class="nav-text">we couldnot call didSelectRow before so we used notification</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Repost-API-is-forbiden"><span class="nav-text">Repost API is forbiden.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Button-IBAction-was-not-being-called"><span class="nav-text">1.Button IBAction was not being called</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-Button-titles-can’t-be-changed"><span class="nav-text">1.1 Button titles can’t be changed</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-Reinstall-app-titles-are-changed-still-can’t-call-IBActions"><span class="nav-text">1.2 Reinstall app titles are changed, still can’t call IBActions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-2019-03-17-11-43-23"><span class="nav-text">1.3.2019-03-17 11:43:23</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#"><span class="nav-text"> </span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Home85-Status-detail-didSelectRow-doesn’t-pop-when-clicking-StatusLabel"><span class="nav-text">Home85 Status detail didSelectRow doesn’t pop when clicking StatusLabel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Home78-6-background-view-show-after-scroll-instead-of-at-once"><span class="nav-text">Home78.6.background view show after scroll instead of at once.</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Compose67-Recent-Emotions-doesn’t-show"><span class="nav-text">Compose67. Recent Emotions doesn’t show.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Compose67-crash-on-selecting-emotion"><span class="nav-text">Compose67. crash on selecting emotion</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Compose65-Emoji-doesn’t-show-in-popView"><span class="nav-text">Compose65.Emoji doesn’t show in popView.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Exception-on-click-emotionToolbarButton"><span class="nav-text">Exception on click emotionToolbarButton</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Compose-60-EmotionIcons-added-causing-crash"><span class="nav-text">Compose-60 EmotionIcons added causing crash.</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Home-58-MJPhotoBrowser-pageControl-number-error"><span class="nav-text">Home-58 MJPhotoBrowser pageControl number error.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-id-and-secret"><span class="nav-text">1. id and secret</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1-composeVC-CZ"><span class="nav-text">1.1. composeVC CZ</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-account-key-add-isRealName"><span class="nav-text">2. account key add isRealName</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Using-this-class-is-not-key-value-coding-compliant-for-the-key-isRealName"><span class="nav-text">Using this class is not key value coding-compliant for the key isRealName.</span></a></li></ol></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#3-CZ-New-feature-page-control-center-fix"><span class="nav-text">3.CZ New feature page control center fix</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-CZ-tabbar-lost-items"><span class="nav-text">4.CZ  tabbar lost items</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-The-app’s-Info-plist-must-contain-an-NSPhotoLibraryAddUsageDescription-key-with-a-string-value-explaining-to-the-user-how-the-app-uses-this-data"><span class="nav-text">5.The app’s Info.plist must contain an NSPhotoLibraryAddUsageDescription key with a string value explaining to the user how the app uses this data.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-replace-UIWebView-with-WKWebView-UIWebview-is-deprecated-in-iOS12-2018-12-21-16-31-44"><span class="nav-text">6.replace UIWebView with WKWebView (UIWebview is deprecated in iOS12! ) 2018-12-21 16:31:44</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#-1"><span class="nav-text"> </span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-Auth-went-to-redirect-URL-the-reason-is-redirect-URL-changed-has-a-“-“-lost"><span class="nav-text">7. Auth went to redirect URL, the reason is redirect URL changed has a “/“ lost.</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-new-Xcode-git-can’t-commit"><span class="nav-text">8. new Xcode git can’t commit</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-Property-‘access-token’-cannot-be-found-in-forward-class-object-‘Account’"><span class="nav-text">9.Property ‘access_token’ cannot be found in forward class object ‘Account’</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-NSLocalizedDescription-Request-failed-forbidden-403-sendWeibo-API-changed-2018-12-23-23-34-17"><span class="nav-text">10.NSLocalizedDescription=Request failed: forbidden (403) sendWeibo, API changed.2018-12-23 23:34:17</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-account-can’t-be-saved"><span class="nav-text">11.account can’t be saved</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-application-icon-badge-number-not-showing"><span class="nav-text">12.application icon badge number not showing</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#13-tabBar-home-clicked-again-but-not-refreshing"><span class="nav-text">13.tabBar home clicked again, but not refreshing</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#14-UITableView-contentOffsetForScrollingToRowAtIndexPath-atScrollPosition-usingPresentationValues-row-0-beyond-bounds-0-for-section-0"><span class="nav-text">14.-[UITableView _contentOffsetForScrollingToRowAtIndexPath:atScrollPosition:usingPresentationValues:]: row (0) beyond bounds (0) for section (0).</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-not-scrolling-to-top-if-default-postion-is-scrolled-down"><span class="nav-text">15.not scrolling to top if default postion is scrolled down</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-file-not-found-even-the-file-is-there"><span class="nav-text">16.file not found, even the file is there</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#keyValuesArray-is-null"><span class="nav-text">keyValuesArray is null</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#回滚"><span class="nav-text">回滚</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xcode-new-branch-from-commit"><span class="nav-text">xcode new branch from commit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#terminal"><span class="nav-text">terminal</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gitee-设置默认分支"><span class="nav-text">gitee 设置默认分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重新clone"><span class="nav-text">重新clone</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Socket-SO-ERROR-54-Connection-reset-by-peer"><span class="nav-text">Socket SO_ERROR [54: Connection reset by peer</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#断网了"><span class="nav-text">断网了.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Modifications-to-the-layout-engine-must-not-be-performed-from-a-background-thread-after-it-has-been-accessed-from-the-main-thread-’"><span class="nav-text">Modifications to the layout engine must not be performed from a background thread after it has been accessed from the main thread.’</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#This-application-is-modifying-the-autolayout-engine-from-a-background-thread-after-the-engine-was-accessed-from-the-main-thread-This-can-lead-to-engine-corruption-and-weird-crashes"><span class="nav-text">This application is modifying the autolayout engine from a background thread after the engine was accessed from the main thread. This can lead to engine corruption and weird crashes.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-sqlite-error-20-由于count没设置。"><span class="nav-text">17.sqlite error 20 由于count没设置。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18-防止view滚出屏幕-不判断会出错"><span class="nav-text">18.防止view滚出屏幕,不判断会出错</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#19-Collection-lt-NSArrayM-0x600000d2bfc0-gt-was-mutated-while-being-enumerated"><span class="nav-text">19.Collection &lt;__NSArrayM: 0x600000d2bfc0&gt; was mutated while being enumerated.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20-记事没保存"><span class="nav-text">20.记事没保存</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MichaelRich</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">23.6k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

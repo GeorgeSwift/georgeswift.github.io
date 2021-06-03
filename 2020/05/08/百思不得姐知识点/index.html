@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next mist" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+    <script>
+    (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/5a709d705.js","daovoice")
+    daovoice('init', {
+        app_id: "5a709d75"
+    });
+    daovoice('update');
+    </script>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="iOS,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="百思不得姐知识点tabBarItem字符属性123456NSMutableDictionary *normalAttrs = [NSMutableDictionary dictionary]; normalAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:14];normalAttrs[NSForegroundColorAttributeN">
+<meta name="keywords" content="iOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="百思不得姐知识点">
+<meta property="og:url" content="https://www.heavenyu.com/2020/05/08/百思不得姐知识点/index.html">
+<meta property="og:site_name" content="MichaelRich">
+<meta property="og:description" content="百思不得姐知识点tabBarItem字符属性123456NSMutableDictionary *normalAttrs = [NSMutableDictionary dictionary]; normalAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:14];normalAttrs[NSForegroundColorAttributeN">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-05-08T15:16:34.731Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="百思不得姐知识点">
+<meta name="twitter:description" content="百思不得姐知识点tabBarItem字符属性123456NSMutableDictionary *normalAttrs = [NSMutableDictionary dictionary]; normalAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:14];normalAttrs[NSForegroundColorAttributeN">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.heavenyu.com/2020/05/08/百思不得姐知识点/">
+
+
+
+
+
+  <title>百思不得姐知识点 | MichaelRich</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MichaelRich</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Welcome to send messages on the right bottom!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.heavenyu.com/2020/05/08/百思不得姐知识点/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MichaelRich">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MichaelRich">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">百思不得姐知识点</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-08T21:51:36+08:00">
+                2020-05-08
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2020-05-08T23:16:34+08:00">
+                2020-05-08
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  526
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="百思不得姐知识点"><a href="#百思不得姐知识点" class="headerlink" title="百思不得姐知识点"></a>百思不得姐知识点</h1><h2 id="tabBarItem字符属性"><a href="#tabBarItem字符属性" class="headerlink" title="tabBarItem字符属性"></a>tabBarItem字符属性</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSMutableDictionary</span> *normalAttrs = [<span class="built_in">NSMutableDictionary</span> dictionary]; </span><br><span class="line">normalAttrs[<span class="built_in">NSFontAttributeName</span>] = [<span class="built_in">UIFont</span> systemFontOfSize:<span class="number">14</span>];</span><br><span class="line">normalAttrs[<span class="built_in">NSForegroundColorAttributeName</span>] = [<span class="built_in">UIColor</span> grayColor];</span><br><span class="line"></span><br><span class="line">[vc0.tabBarItem setTitleTextAttributes:normalAttrs forState:<span class="built_in">UIControlStateNormal</span>];</span><br><span class="line">    [vc0.tabBarItem setTitleTextAttributes:selectedAttrs forState:<span class="built_in">UIControlStateSelected</span>];</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="设置自定义tabBar控制器"><a href="#设置自定义tabBar控制器" class="headerlink" title="设置自定义tabBar控制器"></a>设置自定义tabBar控制器</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">self</span>.window.rootViewController = [[XMGTabBarController alloc] init];</span><br></pre></td></tr></table></figure>
+<h2 id="pch常见宏"><a href="#pch常见宏" class="headerlink" title="pch常见宏"></a>pch常见宏</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/***** 在#ifdef __OBJC__和#endif之间的内容, 只会拷贝到OC源代码文件中, 不会拷贝到其他语言的源代码文件中 *****/</span></span><br><span class="line"><span class="meta">#ifdef __OBJC__</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*** 日志 ***/</span></span><br><span class="line"><span class="meta">#ifdef DEBUG</span></span><br><span class="line"><span class="meta">#define XMGLog(...) NSLog(__VA_ARGS__)</span></span><br><span class="line"><span class="meta">#else</span></span><br><span class="line"><span class="meta">#define XMGLog(...)</span></span><br><span class="line"><span class="meta">#endif</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*** 颜色 ***/</span></span><br><span class="line"><span class="meta">#define XMGColorA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]</span></span><br><span class="line"><span class="meta">#define XMGColor(r, g, b) XMGColorA((r), (g), (b), 255)</span></span><br><span class="line"><span class="meta">#define XMGRandomColor XMGColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#endif</span></span><br><span class="line"><span class="comment">/***** 在#ifdef __OBJC__和#endif之间的内容, 只会拷贝到OC源代码文件中, 不会拷贝到其他语言的源代码文件中 *****/</span></span><br></pre></td></tr></table></figure>
+<h3 id="利用Appearance实现简单的换肤"><a href="#利用Appearance实现简单的换肤" class="headerlink" title="利用Appearance实现简单的换肤"></a>利用Appearance实现简单的换肤</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="built_in">UISwitch</span> appearance].onTintColor = [<span class="built_in">UIColor</span> orangeColor];</span><br></pre></td></tr></table></figure>
+<h2 id="发布按钮"><a href="#发布按钮" class="headerlink" title="发布按钮"></a>发布按钮</h2><p>当viewWillAppear:方法被调用的时候, tabBar内部已经添加了5个UITabBarButton</p>
+<p> * 就可以实现一个效果 : [发布按钮]盖在其他UITabBarButton上面</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)viewWillAppear:(<span class="built_in">BOOL</span>)animated</span><br><span class="line">&#123;</span><br><span class="line">    [<span class="keyword">super</span> viewWillAppear:animated];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**** 增加一个发布按钮 ****/</span></span><br><span class="line">    [<span class="keyword">self</span>.tabBar addSubview:<span class="keyword">self</span>.publishButton];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="自定义tabBar"><a href="#自定义tabBar" class="headerlink" title="自定义tabBar"></a>自定义tabBar</h2><h3 id="打印方法名"><a href="#打印方法名" class="headerlink" title="打印方法名"></a>打印方法名</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#define XMGLogFunc XMGLog(@<span class="meta-string">"%s"</span>, __func__);</span></span><br></pre></td></tr></table></figure>
+<h3 id="找到中间按钮-NSClassFromString"><a href="#找到中间按钮-NSClassFromString" class="headerlink" title="找到中间按钮 NSClassFromString"></a>找到中间按钮 NSClassFromString</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (subview.class != <span class="built_in">NSClassFromString</span>(<span class="string">@"UITabBarButton"</span>)) <span class="keyword">continue</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="KVC设置tabBar"><a href="#KVC设置tabBar" class="headerlink" title="KVC设置tabBar"></a>KVC设置tabBar</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="keyword">self</span> setValue:[[XMGTabBar alloc] init] forKeyPath:<span class="string">@"tabBar"</span>];</span><br></pre></td></tr></table></figure>
+<h2 id="完善代码"><a href="#完善代码" class="headerlink" title="完善代码"></a>完善代码</h2><h3 id="frame-x-方便访问-UIView-XMGExtension-h"><a href="#frame-x-方便访问-UIView-XMGExtension-h" class="headerlink" title="frame.x 方便访问 UIView+XMGExtension.h"></a>frame.x 方便访问 UIView+XMGExtension.h</h3><h2 id="设置BarButtonItem"><a href="#设置BarButtonItem" class="headerlink" title="设置BarButtonItem"></a>设置BarButtonItem</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">self</span>.navigationItem.rightBarButtonItems = @[settingItem, moonItem];</span><br></pre></td></tr></table></figure>
+<h2 id="UIBarButtonItem-Extension-h"><a href="#UIBarButtonItem-Extension-h" class="headerlink" title="UIBarButtonItem+Extension.h"></a>UIBarButtonItem+Extension.h</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">+ (<span class="keyword">instancetype</span>)itemWithImage:(<span class="built_in">NSString</span> *)image highImage:(<span class="built_in">NSString</span> *)highImage target:(<span class="keyword">id</span>)target action:(SEL)action</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">UIButton</span> *button = [<span class="built_in">UIButton</span> buttonWithType:<span class="built_in">UIButtonTypeCustom</span>];</span><br><span class="line">    [button setImage:[<span class="built_in">UIImage</span> imageNamed:image] forState:<span class="built_in">UIControlStateNormal</span>];</span><br><span class="line">    [button setImage:[<span class="built_in">UIImage</span> imageNamed:highImage] forState:<span class="built_in">UIControlStateHighlighted</span>];</span><br><span class="line">    [button addTarget:target action:action forControlEvents:<span class="built_in">UIControlEventTouchUpInside</span>];</span><br><span class="line">    [button sizeToFit];</span><br><span class="line">    <span class="keyword">return</span> [[<span class="keyword">self</span> alloc] initWithCustomView:button];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="统一添加返回item"><a href="#统一添加返回item" class="headerlink" title="统一添加返回item"></a>统一添加返回item</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)pushViewController:(<span class="built_in">UIViewController</span> *)viewController animated:(<span class="built_in">BOOL</span>)animated</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>.childViewControllers.count &gt; <span class="number">0</span>) &#123; <span class="comment">// 如果viewController不是最早push进来的子控制器</span></span><br><span class="line">        <span class="comment">// 左上角</span></span><br><span class="line">        <span class="built_in">UIButton</span> *backButton = [<span class="built_in">UIButton</span> buttonWithType:<span class="built_in">UIButtonTypeCustom</span>];</span><br><span class="line">        [backButton setImage:[<span class="built_in">UIImage</span> imageNamed:<span class="string">@"navigationButtonReturn"</span>] forState:<span class="built_in">UIControlStateNormal</span>];</span><br><span class="line">        [backButton setImage:[<span class="built_in">UIImage</span> imageNamed:<span class="string">@"navigationButtonReturnClick"</span>] forState:<span class="built_in">UIControlStateHighlighted</span>];</span><br><span class="line">        [backButton setTitle:<span class="string">@"返回"</span> forState:<span class="built_in">UIControlStateNormal</span>];</span><br><span class="line">        [backButton setTitleColor:[<span class="built_in">UIColor</span> blackColor] forState:<span class="built_in">UIControlStateNormal</span>];</span><br><span class="line">        [backButton setTitleColor:[<span class="built_in">UIColor</span> redColor] forState:<span class="built_in">UIControlStateHighlighted</span>];</span><br><span class="line">        [backButton sizeToFit];</span><br><span class="line">        <span class="comment">// 这句代码放在sizeToFit后面</span></span><br><span class="line">        backButton.contentEdgeInsets = <span class="built_in">UIEdgeInsetsMake</span>(<span class="number">0</span>, <span class="number">-20</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">        [backButton addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(back) forControlEvents:<span class="built_in">UIControlEventTouchUpInside</span>];</span><br><span class="line">        viewController.navigationItem.leftBarButtonItem = [[<span class="built_in">UIBarButtonItem</span> alloc] initWithCustomView:backButton];</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 隐藏底部的工具条</span></span><br><span class="line">        viewController.hidesBottomBarWhenPushed = <span class="literal">YES</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 所有设置搞定后, 再push控制器</span></span><br><span class="line">    [<span class="keyword">super</span> pushViewController:viewController animated:animated];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">BOOL</span>)gestureRecognizerShouldBegin:(<span class="built_in">UIGestureRecognizer</span> *)gestureRecognizer</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">self</span>.childViewControllers.count &gt; <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/" rel="tag"># iOS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/03/13/iOS-面试/" rel="next" title="iOS面试">
+                <i class="fa fa-chevron-left"></i> iOS面试
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/05/16/OC-syntax/" rel="prev" title="OC-syntax">
+                OC-syntax <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">MichaelRich</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:gg1956756@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://kate.heavenyu.com/" title="NewHome" target="_blank">NewHome</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#百思不得姐知识点"><span class="nav-text">百思不得姐知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#tabBarItem字符属性"><span class="nav-text">tabBarItem字符属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置自定义tabBar控制器"><span class="nav-text">设置自定义tabBar控制器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pch常见宏"><span class="nav-text">pch常见宏</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#利用Appearance实现简单的换肤"><span class="nav-text">利用Appearance实现简单的换肤</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发布按钮"><span class="nav-text">发布按钮</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义tabBar"><span class="nav-text">自定义tabBar</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#打印方法名"><span class="nav-text">打印方法名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#找到中间按钮-NSClassFromString"><span class="nav-text">找到中间按钮 NSClassFromString</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#KVC设置tabBar"><span class="nav-text">KVC设置tabBar</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完善代码"><span class="nav-text">完善代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#frame-x-方便访问-UIView-XMGExtension-h"><span class="nav-text">frame.x 方便访问 UIView+XMGExtension.h</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置BarButtonItem"><span class="nav-text">设置BarButtonItem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UIBarButtonItem-Extension-h"><span class="nav-text">UIBarButtonItem+Extension.h</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#统一添加返回item"><span class="nav-text">统一添加返回item</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MichaelRich</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">23.6k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

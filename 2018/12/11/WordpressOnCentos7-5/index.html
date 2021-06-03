@@ -91,10 +91,10 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="WordpressOnCentos7.5">
 <meta property="og:url" content="https://www.heavenyu.com/2018/12/11/WordpressOnCentos7-5/index.html">
-<meta property="og:site_name" content="Heaven &amp; Kate">
+<meta property="og:site_name" content="MichaelRich">
 <meta property="og:description" content="1.Setup Blog with WordPress">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-13T22:02:34.000Z">
+<meta property="og:updated_time" content="2019-12-07T06:25:53.553Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WordpressOnCentos7.5">
 <meta name="twitter:description" content="1.Setup Blog with WordPress">
@@ -133,7 +133,7 @@
 
 
 
-  <title>WordpressOnCentos7.5 | Heaven & Kate</title>
+  <title>WordpressOnCentos7.5 | MichaelRich</title>
   
 
 
@@ -163,12 +163,12 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Heaven & Kate</span>
+        <span class="site-title">MichaelRich</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle">Welcome to send message on the right bottom!</p>
+        <p class="site-subtitle">Welcome to send messages on the right bottom!</p>
       
   </div>
 
@@ -263,13 +263,13 @@
     <link itemprop="mainEntityOfPage" href="https://www.heavenyu.com/2018/12/11/WordpressOnCentos7-5/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Heaven Yu">
+      <meta itemprop="name" content="MichaelRich">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Heaven & Kate">
+      <meta itemprop="name" content="MichaelRich">
     </span>
 
     
@@ -305,8 +305,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2018-12-14T06:02:34+08:00">
-                2018-12-14
+              <time title="Post modified" itemprop="dateModified" datetime="2019-12-07T14:25:53+08:00">
+                2019-12-07
               </time>
             
           </span>
@@ -398,9 +398,9 @@
 
       
         <h1 id="1-Setup-Blog-with-WordPress"><a href="#1-Setup-Blog-with-WordPress" class="headerlink" title="1.Setup Blog with WordPress"></a>1.Setup Blog with WordPress</h1><a id="more"></a>
-<h2 id="1-1-Reason"><a href="#1-1-Reason" class="headerlink" title="1.1.Reason"></a>1.1.Reason</h2><h3 id="1-1-1-Enable-my-wife-posting-blogs-too"><a href="#1-1-1-Enable-my-wife-posting-blogs-too" class="headerlink" title="1.1.1.Enable my wife posting blogs too."></a>1.1.1.Enable my wife posting blogs too.</h3><h3 id="1-1-2-Enable-post-by-phone"><a href="#1-1-2-Enable-post-by-phone" class="headerlink" title="1.1.2.Enable post by phone."></a>1.1.2.Enable post by phone.</h3><h2 id="1-2-Plan-Using-same-port-and-different-DomainName"><a href="#1-2-Plan-Using-same-port-and-different-DomainName" class="headerlink" title="1.2.Plan: Using same port and different DomainName"></a>1.2.Plan: Using same port and different DomainName</h2><h1 id="2-Update-to-5-0"><a href="#2-Update-to-5-0" class="headerlink" title="2.Update to 5.0"></a>2.Update to 5.0</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">cd /home</span><br><span class="line">wget https://cn.wordpress.org/wordpress-5.0-zh_CN.tar.gz</span><br><span class="line">tar xzvf wordpress-5.0-zh_CN.tar.gz</span><br><span class="line">rm -Rf wordpress/wp-content</span><br><span class="line">chown -R nginx:nginx wordpress</span><br><span class="line">\cp -r -f wordpress/* /usr/share/wordpress</span><br><span class="line">vi /usr/share/wordpress/wp-config.php </span><br><span class="line"><span class="meta">#</span>modify</span><br><span class="line"><span class="meta">#</span>define('DB_NAME',</span><br><span class="line"><span class="meta">#</span> define('DB_USER'</span><br><span class="line"><span class="meta">#</span>define('DB_PASSWORD',</span><br><span class="line"><span class="meta">#</span> $table_prefix </span><br><span class="line"><span class="meta">#</span>---add to end</span><br><span class="line">define("FS_METHOD", "direct");  </span><br><span class="line">define("FS_CHMOD_DIR", 0777);  </span><br><span class="line">define("FS_CHMOD_FILE", 0777); </span><br><span class="line"><span class="meta">#</span>----</span><br></pre></td></tr></table></figure>
+<h2 id="1-1-Reason"><a href="#1-1-Reason" class="headerlink" title="1.1.Reason"></a>1.1.Reason</h2><h3 id="1-1-1-Enable-my-friends-posting-blogs-too"><a href="#1-1-1-Enable-my-friends-posting-blogs-too" class="headerlink" title="1.1.1.Enable my friends posting blogs too."></a>1.1.1.Enable my friends posting blogs too.</h3><h3 id="1-1-2-Enable-post-by-phone"><a href="#1-1-2-Enable-post-by-phone" class="headerlink" title="1.1.2.Enable post by phone."></a>1.1.2.Enable post by phone.</h3><h2 id="1-2-Plan-Using-same-port-and-different-DomainName"><a href="#1-2-Plan-Using-same-port-and-different-DomainName" class="headerlink" title="1.2.Plan: Using same port and different DomainName"></a>1.2.Plan: Using same port and different DomainName</h2><h1 id="2-Update-to-5-0"><a href="#2-Update-to-5-0" class="headerlink" title="2.Update to 5.0"></a>2.Update to 5.0</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">cd /home</span><br><span class="line">wget https://cn.wordpress.org/wordpress-5.0-zh_CN.tar.gz</span><br><span class="line">tar xzvf wordpress-5.0-zh_CN.tar.gz</span><br><span class="line">rm -Rf wordpress/wp-content</span><br><span class="line">chown -R nginx:nginx wordpress</span><br><span class="line">\cp -r -f wordpress/* /usr/share/wordpress</span><br><span class="line">vi /usr/share/wordpress/wp-config.php </span><br><span class="line"><span class="meta">#</span><span class="bash">modify</span></span><br><span class="line"><span class="meta">#</span><span class="bash">define(<span class="string">'DB_NAME'</span>,</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> define(<span class="string">'DB_USER'</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">define(<span class="string">'DB_PASSWORD'</span>,</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="variable">$table_prefix</span> </span></span><br><span class="line"><span class="meta">#</span><span class="bash">---add to end</span></span><br><span class="line">define("FS_METHOD", "direct");  </span><br><span class="line">define("FS_CHMOD_DIR", 0777);  </span><br><span class="line">define("FS_CHMOD_FILE", 0777); </span><br><span class="line"><span class="meta">#</span><span class="bash">----</span></span><br></pre></td></tr></table></figure>
 <h1 id="2-Procedure-as-Tencent-Suggested"><a href="#2-Procedure-as-Tencent-Suggested" class="headerlink" title="2.Procedure as Tencent Suggested."></a>2.<a href="https://cloud.tencent.com/developer/labs/lab/10001" target="_blank" rel="noopener">Procedure</a> as Tencent Suggested.</h1><h1 id="3-Install-mariadb-CentOS7-suggest-mariadb"><a href="#3-Install-mariadb-CentOS7-suggest-mariadb" class="headerlink" title="3.Install mariadb, CentOS7 suggest mariadb"></a>3.Install mariadb, CentOS7 suggest mariadb</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install mariadb mariadb-server -y</span><br></pre></td></tr></table></figure>
-<h1 id="3-Install-mysql-server-before-CentOS7"><a href="#3-Install-mysql-server-before-CentOS7" class="headerlink" title="3.Install mysql-server , before CentOS7"></a>3.Install mysql-server , before CentOS7</h1><h2 id="3-1-Check-repo"><a href="#3-1-Check-repo" class="headerlink" title="3.1.Check  repo"></a>3.1.Check  repo</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum list | grep mysql</span><br><span class="line"><span class="meta">#</span> no repo on default Tencent server</span><br></pre></td></tr></table></figure>
+<h1 id="3-Install-mysql-server-before-CentOS7"><a href="#3-Install-mysql-server-before-CentOS7" class="headerlink" title="3.Install mysql-server , before CentOS7"></a>3.Install mysql-server , before CentOS7</h1><h2 id="3-1-Check-repo"><a href="#3-1-Check-repo" class="headerlink" title="3.1.Check  repo"></a>3.1.Check  repo</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum list | grep mysql</span><br><span class="line"><span class="meta">#</span><span class="bash"> no repo on default Tencent server</span></span><br></pre></td></tr></table></figure>
 <h2 id="3-2-Install-new-repo"><a href="#3-2-Install-new-repo" class="headerlink" title="3.2.Install new repo"></a>3.2.Install new repo</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm</span><br><span class="line">sudo rpm -ivh mysql-community-release-el7-5.noarch.rpm</span><br><span class="line">sudo yum install mysql-server -y</span><br></pre></td></tr></table></figure>
 <h1 id="6-php-ini"><a href="#6-php-ini" class="headerlink" title="6.php.ini"></a>6.php.ini</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/php.ini</span><br><span class="line"></span><br><span class="line">upload_max_filesize = 1024M</span><br><span class="line">post_max_size = 1024M</span><br><span class="line"></span><br><span class="line">systemctl restart nginx</span><br></pre></td></tr></table></figure>
 <h1 id="7-Garfunkel-Theme"><a href="#7-Garfunkel-Theme" class="headerlink" title="7. Garfunkel Theme"></a>7. Garfunkel Theme</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/share/workpress/wp-content/themes/garfunkel/style.css</span><br></pre></td></tr></table></figure>
@@ -436,8 +436,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/11/Kate-Album/" rel="next" title="Kate Album">
-                <i class="fa fa-chevron-left"></i> Kate Album
+              <a href="/2018/12/09/Blog-Tasks/" rel="next" title="Blog Tasks">
+                <i class="fa fa-chevron-left"></i> Blog Tasks
               </a>
             
           </div>
@@ -446,8 +446,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/12/11/Welcome-Dear-Wife-Kate-Home/" rel="prev" title="Welcome Dear Wife Kate Home">
-                Welcome Dear Wife Kate Home <i class="fa fa-chevron-right"></i>
+              <a href="/2018/12/12/SetupCentOS7-5/" rel="prev" title="SetupCentOS7.5">
+                SetupCentOS7.5 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -516,7 +516,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">Heaven Yu</p>
+              <p class="site-author-name" itemprop="name">MichaelRich</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -527,7 +527,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -538,7 +538,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -549,7 +549,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -606,7 +606,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Setup-Blog-with-WordPress"><span class="nav-text">1.Setup Blog with WordPress</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Reason"><span class="nav-text">1.1.Reason</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-1-Enable-my-wife-posting-blogs-too"><span class="nav-text">1.1.1.Enable my wife posting blogs too.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-Enable-post-by-phone"><span class="nav-text">1.1.2.Enable post by phone.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Plan-Using-same-port-and-different-DomainName"><span class="nav-text">1.2.Plan: Using same port and different DomainName</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Update-to-5-0"><span class="nav-text">2.Update to 5.0</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Procedure-as-Tencent-Suggested"><span class="nav-text">2.Procedure as Tencent Suggested.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Install-mariadb-CentOS7-suggest-mariadb"><span class="nav-text">3.Install mariadb, CentOS7 suggest mariadb</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Install-mysql-server-before-CentOS7"><span class="nav-text">3.Install mysql-server , before CentOS7</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-Check-repo"><span class="nav-text">3.1.Check  repo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-Install-new-repo"><span class="nav-text">3.2.Install new repo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-php-ini"><span class="nav-text">6.php.ini</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-Garfunkel-Theme"><span class="nav-text">7. Garfunkel Theme</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Setup-Blog-with-WordPress"><span class="nav-text">1.Setup Blog with WordPress</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Reason"><span class="nav-text">1.1.Reason</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-1-Enable-my-friends-posting-blogs-too"><span class="nav-text">1.1.1.Enable my friends posting blogs too.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-Enable-post-by-phone"><span class="nav-text">1.1.2.Enable post by phone.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Plan-Using-same-port-and-different-DomainName"><span class="nav-text">1.2.Plan: Using same port and different DomainName</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Update-to-5-0"><span class="nav-text">2.Update to 5.0</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Procedure-as-Tencent-Suggested"><span class="nav-text">2.Procedure as Tencent Suggested.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Install-mariadb-CentOS7-suggest-mariadb"><span class="nav-text">3.Install mariadb, CentOS7 suggest mariadb</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Install-mysql-server-before-CentOS7"><span class="nav-text">3.Install mysql-server , before CentOS7</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-Check-repo"><span class="nav-text">3.1.Check  repo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-Install-new-repo"><span class="nav-text">3.2.Install new repo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-php-ini"><span class="nav-text">6.php.ini</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-Garfunkel-Theme"><span class="nav-text">7. Garfunkel Theme</span></a></li></ol></div>
             
 
           </div>
@@ -626,11 +626,11 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Heaven Yu</span>
+  <span class="author" itemprop="copyrightHolder">MichaelRich</span>
 
   
     <span class="post-meta-divider">|</span>
@@ -640,7 +640,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">4.9k</span>
+    <span title="Site words total count">23.6k</span>
   
 </div>
 

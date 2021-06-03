@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next mist" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+    <script>
+    (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/5a709d705.js","daovoice")
+    daovoice('init', {
+        app_id: "5a709d75"
+    });
+    daovoice('update');
+    </script>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="iOS,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="京贝debug1.Safe Area Layout Guide before iOS 9.0设置不用">
+<meta name="keywords" content="iOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="京贝debug">
+<meta property="og:url" content="https://www.heavenyu.com/2020/05/29/京贝debug/index.html">
+<meta property="og:site_name" content="MichaelRich">
+<meta property="og:description" content="京贝debug1.Safe Area Layout Guide before iOS 9.0设置不用">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-06-30T04:07:57.013Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="京贝debug">
+<meta name="twitter:description" content="京贝debug1.Safe Area Layout Guide before iOS 9.0设置不用">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.heavenyu.com/2020/05/29/京贝debug/">
+
+
+
+
+
+  <title>京贝debug | MichaelRich</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MichaelRich</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Welcome to send messages on the right bottom!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.heavenyu.com/2020/05/29/京贝debug/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MichaelRich">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MichaelRich">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">京贝debug</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-29T15:58:50+08:00">
+                2020-05-29
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2020-06-30T12:07:57+08:00">
+                2020-06-30
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  1.1k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="京贝debug"><a href="#京贝debug" class="headerlink" title="京贝debug"></a>京贝debug</h1><h2 id="1-Safe-Area-Layout-Guide-before-iOS-9-0"><a href="#1-Safe-Area-Layout-Guide-before-iOS-9-0" class="headerlink" title="1.Safe Area Layout Guide before iOS 9.0"></a>1.Safe Area Layout Guide before iOS 9.0</h2><p><strong>设置不用</strong></p>
+<a id="more"></a>
+<h2 id="2-Multiple-commands-produce"><a href="#2-Multiple-commands-produce" class="headerlink" title="2.Multiple commands produce"></a>2.Multiple commands produce</h2><p>iphoneos/NoteBook.app/.gitkeep’</p>
+<p><strong>在buildsetting删掉这些文件</strong></p>
+<h2 id="3-Build-input-file-cannot-be-found-NoteBook-pch"><a href="#3-Build-input-file-cannot-be-found-NoteBook-pch" class="headerlink" title="3.Build input file cannot be found: /NoteBook.pch"></a>3.Build input file cannot be found: /NoteBook.pch</h2><p><strong>实际文件不在这个位置</strong></p>
+<h2 id="4-duplicate-symbol-for-architecture-x86-64"><a href="#4-duplicate-symbol-for-architecture-x86-64" class="headerlink" title="4.duplicate symbol for architecture x86_64"></a>4.duplicate symbol for architecture x86_64</h2><p><strong>删除重复添加的文件</strong></p>
+<h2 id="5-Undefined-symbol-OBJC-CLASS-CellModel"><a href="#5-Undefined-symbol-OBJC-CLASS-CellModel" class="headerlink" title="5.Undefined symbol: _OBJC_CLASS_$_CellModel"></a>5.Undefined symbol: _OBJC_CLASS_$_CellModel</h2><p><strong>没有实现文件,只有头文件</strong></p>
+<h2 id="6-不用一下子把很多cell都拉进去"><a href="#6-不用一下子把很多cell都拉进去" class="headerlink" title="6.不用一下子把很多cell都拉进去"></a>6.不用一下子把很多cell都拉进去</h2><h2 id="7-Could-not-find-a-storyboard-named-‘Main’-in-bundle-NSBundle"><a href="#7-Could-not-find-a-storyboard-named-‘Main’-in-bundle-NSBundle" class="headerlink" title="7.Could not find a storyboard named ‘Main’ in bundle NSBundle"></a>7.Could not find a storyboard named ‘Main’ in bundle NSBundle</h2><h2 id="8-Terminating-app-due-to-uncaught-exception-‘Bad-property-protocol-declaration’-reason-‘-is-not-allowed-JSONModel-property-protocol-and-not-a-JSONModel-class"><a href="#8-Terminating-app-due-to-uncaught-exception-‘Bad-property-protocol-declaration’-reason-‘-is-not-allowed-JSONModel-property-protocol-and-not-a-JSONModel-class" class="headerlink" title="8.Terminating app due to uncaught exception ‘Bad property protocol declaration’, reason: ‘ is not allowed JSONModel property protocol, and not a JSONModel class."></a>8.<strong>Terminating app due to uncaught exception ‘Bad property protocol declaration’, reason: ‘<itemsmodel> is not allowed JSONModel property protocol, and not a JSONModel class.</itemsmodel></strong></h2><p><strong>类没实现</strong></p>
+<h2 id="9‘NSInvalidArgumentException’-reason-‘-NSArrayM-insertObject-atIndex-object-cannot-be-nil’"><a href="#9‘NSInvalidArgumentException’-reason-‘-NSArrayM-insertObject-atIndex-object-cannot-be-nil’" class="headerlink" title="9‘NSInvalidArgumentException’, reason: ‘\* -[__NSArrayM insertObject:atIndex:]: object cannot be nil’**"></a>9<strong>‘NSInvalidArgumentException’, reason: ‘\</strong>* -[__NSArrayM insertObject:atIndex:]: object cannot be nil’**</h2><p><strong>空对象</strong></p>
+<h2 id="10-JSON转的模型部分为空-key写错了"><a href="#10-JSON转的模型部分为空-key写错了" class="headerlink" title="10.JSON转的模型部分为空:key写错了."></a>10.JSON转的模型部分为空:key写错了.</h2><h2 id="11-Terminating-app-due-to-uncaught-exception-‘NSInternalInconsistencyException’-reason-‘could-not-dequeue-a-view-of-kind-UICollectionElementKindCell-with-identifier-HYBannerCellID-must-register-a-nib-or-a-class-for-the-identifier-or-connect-a-prototype-cell-in-a-storyboard’"><a href="#11-Terminating-app-due-to-uncaught-exception-‘NSInternalInconsistencyException’-reason-‘could-not-dequeue-a-view-of-kind-UICollectionElementKindCell-with-identifier-HYBannerCellID-must-register-a-nib-or-a-class-for-the-identifier-or-connect-a-prototype-cell-in-a-storyboard’" class="headerlink" title="11.Terminating app due to uncaught exception ‘NSInternalInconsistencyException’, reason: ‘could not dequeue a view of kind: UICollectionElementKindCell with identifier HYBannerCellID - must register a nib or a class for the identifier or connect a prototype cell in a storyboard’"></a>11.<strong>Terminating app due to uncaught exception ‘NSInternalInconsistencyException’, reason: ‘could not dequeue a view of kind: UICollectionElementKindCell with identifier HYBannerCellID - must register a nib or a class for the identifier or connect a prototype cell in a storyboard’</strong></h2><h2 id="12-does-not-have-a-reuseIdentifier-cells-must-be-retrieved-by-calling-dequeueReusableCellWithReuseIdentifier-forIndexPath-’"><a href="#12-does-not-have-a-reuseIdentifier-cells-must-be-retrieved-by-calling-dequeueReusableCellWithReuseIdentifier-forIndexPath-’" class="headerlink" title="12.does not have a reuseIdentifier - cells must be retrieved by calling -dequeueReusableCellWithReuseIdentifier:forIndexPath:’"></a>12.<strong>does not have a reuseIdentifier - cells must be retrieved by calling -dequeueReusableCellWithReuseIdentifier:forIndexPath:’</strong></h2><h2 id="13-‘the-cell-returned-from-collectionView-cellForItemAtIndexPath-does-not-have-a-reuseIdentifier-cells-must-be-retrieved-by-calling-dequeueReusableCellWithReuseIdentifier-forIndexPath-’"><a href="#13-‘the-cell-returned-from-collectionView-cellForItemAtIndexPath-does-not-have-a-reuseIdentifier-cells-must-be-retrieved-by-calling-dequeueReusableCellWithReuseIdentifier-forIndexPath-’" class="headerlink" title="13.‘the cell returned from -collectionView:cellForItemAtIndexPath: does not have a reuseIdentifier - cells must be retrieved by calling -dequeueReusableCellWithReuseIdentifier:forIndexPath:’"></a>13.<strong>‘the cell returned from -collectionView:cellForItemAtIndexPath: does not have a reuseIdentifier - cells must be retrieved by calling -dequeueReusableCellWithReuseIdentifier:forIndexPath:’</strong></h2><h2 id="14-banner图片显示不出来"><a href="#14-banner图片显示不出来" class="headerlink" title="14.banner图片显示不出来"></a>14.banner图片显示不出来</h2><h2 id="15-数据为空-首先检查字符串"><a href="#15-数据为空-首先检查字符串" class="headerlink" title="15.数据为空,首先检查字符串"></a>15.数据为空,首先检查字符串</h2><h2 id="16-’Bad-property-protocol-declaration’-reason-‘-is-not-allowed-JSONModel-property-protocol-and-not-a-JSONModel-class-’"><a href="#16-’Bad-property-protocol-declaration’-reason-‘-is-not-allowed-JSONModel-property-protocol-and-not-a-JSONModel-class-’" class="headerlink" title="16.’Bad property protocol declaration’, reason: ‘ is not allowed JSONModel property protocol, and not a JSONModel class.’"></a>16.’Bad property protocol declaration’, reason: ‘<sectionmodel> is not allowed JSONModel property protocol, and not a JSONModel class.’</sectionmodel></h2><h2 id="16-itemForIndex-中用masonry"><a href="#16-itemForIndex-中用masonry" class="headerlink" title="16.itemForIndex 中用masonry"></a>16.itemForIndex 中用masonry</h2><p><strong>NSInternalInconsistencyException’, reason: ‘attempting to add unsupported attribute: &lt;DCHandPickViewController: 0x101f39670&gt;’</strong></p>
+<h2 id="17-index-0-beyond-bounds-for-empty-array’"><a href="#17-index-0-beyond-bounds-for-empty-array’" class="headerlink" title="17.index 0 beyond bounds for empty array’"></a>17.<strong>index 0 beyond bounds for empty array’</strong></h2><p><strong>没初始化homeViewModel</strong></p>
+<h2 id="18-‘the-view-returned-from-collectionView-viewForSupplementaryElementOfKind-atIndexPath-UICollectionElementKindSectionFooter-lt-NSIndexPath-0xca82a82eec4d21d1-gt-length-2-path-0-0-was-not-retrieved-by-calling-dequeueReusableSupplementaryViewOfKind-withReuseIdentifier-forIndexPath-or-is-nil"><a href="#18-‘the-view-returned-from-collectionView-viewForSupplementaryElementOfKind-atIndexPath-UICollectionElementKindSectionFooter-lt-NSIndexPath-0xca82a82eec4d21d1-gt-length-2-path-0-0-was-not-retrieved-by-calling-dequeueReusableSupplementaryViewOfKind-withReuseIdentifier-forIndexPath-or-is-nil" class="headerlink" title="18.‘the view returned from -collectionView:viewForSupplementaryElementOfKind:atIndexPath (UICollectionElementKindSectionFooter,&lt;NSIndexPath: 0xca82a82eec4d21d1&gt; {length = 2, path = 0 - 0}) was not retrieved by calling -dequeueReusableSupplementaryViewOfKind:withReuseIdentifier:forIndexPath: or is nil"></a>18.<strong>‘the view returned from -collectionView:viewForSupplementaryElementOfKind:atIndexPath (UICollectionElementKindSectionFooter,&lt;NSIndexPath: 0xca82a82eec4d21d1&gt; {length = 2, path = 0 - 0}) was not retrieved by calling -dequeueReusableSupplementaryViewOfKind:withReuseIdentifier:forIndexPath: or is nil</strong></h2><h3 id="因为返回高度给已删除的footer"><a href="#因为返回高度给已删除的footer" class="headerlink" title="因为返回高度给已删除的footer"></a>因为返回高度给已删除的footer</h3><h2 id="19-Masonry导致卡顿-多余的constraints"><a href="#19-Masonry导致卡顿-多余的constraints" class="headerlink" title="19.Masonry导致卡顿,多余的constraints."></a>19.Masonry导致卡顿,多余的constraints.</h2><h2 id="20-6-duplicate-symbols-for-architecture-arm64"><a href="#20-6-duplicate-symbols-for-architecture-arm64" class="headerlink" title="20.6 duplicate symbols for architecture arm64"></a>20.6 duplicate symbols for architecture arm64</h2><p><strong>复制的文件没删除</strong></p>
+<h2 id="21-增加了数据后滚动后不见了-因为是重新处理的图的原因"><a href="#21-增加了数据后滚动后不见了-因为是重新处理的图的原因" class="headerlink" title="21.增加了数据后滚动后不见了,因为是重新处理的图的原因."></a>21.增加了数据后滚动后不见了,因为是重新处理的图的原因.</h2><h2 id="22-collect没数据-先看数据源"><a href="#22-collect没数据-先看数据源" class="headerlink" title="22.collect没数据,先看数据源"></a>22.collect没数据,先看数据源</h2><h2 id="23-‘NSInvalidArgumentException’-reason-‘-NSArrayM-insertObject-atIndex-object-cannot-be-nil’"><a href="#23-‘NSInvalidArgumentException’-reason-‘-NSArrayM-insertObject-atIndex-object-cannot-be-nil’" class="headerlink" title="23.‘NSInvalidArgumentException’, reason: ‘\* -[__NSArrayM insertObject:atIndex:]: object cannot be nil’**"></a>23.<strong>‘NSInvalidArgumentException’, reason: ‘\</strong>* -[__NSArrayM insertObject:atIndex:]: object cannot be nil’**</h2><h3 id="把-字典写成了对象"><a href="#把-字典写成了对象" class="headerlink" title="把 字典写成了对象."></a>把 字典写成了对象.</h3><h2 id="24-‘-NSDictionaryM-name-unrecognized-selector-sent-to-instance-0x280ae28e0’"><a href="#24-‘-NSDictionaryM-name-unrecognized-selector-sent-to-instance-0x280ae28e0’" class="headerlink" title="24.‘-[__NSDictionaryM name]: unrecognized selector sent to instance 0x280ae28e0’"></a>24.<strong>‘-[__NSDictionaryM name]: unrecognized selector sent to instance 0x280ae28e0’</strong></h2><h2 id="25NSRangeException’-reason-‘-NSArrayM-objectAtIndexedSubscript-index-0-beyond-bounds-for-empty-array’"><a href="#25NSRangeException’-reason-‘-NSArrayM-objectAtIndexedSubscript-index-0-beyond-bounds-for-empty-array’" class="headerlink" title="25NSRangeException’, reason: ‘\* -[__NSArrayM objectAtIndexedSubscript:]: index 0 beyond bounds for empty array’**"></a>25<strong>NSRangeException’, reason: ‘\</strong>* -[__NSArrayM objectAtIndexedSubscript:]: index 0 beyond bounds for empty array’**</h2><h2 id="26-NSArrayM-objectAtIndexedSubscript-index-0-beyond-bounds-for-empty-array’"><a href="#26-NSArrayM-objectAtIndexedSubscript-index-0-beyond-bounds-for-empty-array’" class="headerlink" title="26__NSArrayM objectAtIndexedSubscript:]: index 0 beyond bounds for empty array’"></a>26<strong>__NSArrayM objectAtIndexedSubscript:]: index 0 beyond bounds for empty array’</strong></h2><p><strong>跟加载无关,是有的数据没有</strong></p>
+<h2 id="27-内存耗用大-因为图片多"><a href="#27-内存耗用大-因为图片多" class="headerlink" title="27.内存耗用大.因为图片多"></a>27.内存耗用大.因为图片多</h2><h2 id="28-masonry导致卡顿-也许要分两个section-或者重新定义个cell-搞定"><a href="#28-masonry导致卡顿-也许要分两个section-或者重新定义个cell-搞定" class="headerlink" title="28.masonry导致卡顿.也许要分两个section,或者重新定义个cell(搞定)."></a>28.masonry导致卡顿.也许要分两个section,或者重新定义个cell(搞定).</h2><h2 id="29空白"><a href="#29空白" class="headerlink" title="29空白"></a>29空白</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">CGFloat</span> top = <span class="number">24</span>; <span class="comment">//XMGTitilesViewY;</span></span><br><span class="line"><span class="keyword">self</span>.tableView.contentInset = <span class="built_in">UIEdgeInsetsMake</span>(top, <span class="number">0</span>, bottom, <span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="30-导入错了info-plist-导致错误-删除building-phase-info"><a href="#30-导入错了info-plist-导致错误-删除building-phase-info" class="headerlink" title="30.导入错了info.plist,导致错误:删除building,phase,info"></a>30.导入错了info.plist,导致错误:删除building,phase,info</h2><p>Multiple commands produce /Info.plist’:</p>
+<h2 id="31-pch文件在Xcode新版本里需要手动添加-路径要写全"><a href="#31-pch文件在Xcode新版本里需要手动添加-路径要写全" class="headerlink" title="31.pch文件在Xcode新版本里需要手动添加,路径要写全"></a>31.pch文件在Xcode新版本里需要手动添加,路径要写全</h2><h2 id="32-UIImageRenderingModeAlwaysOriginal导致图片显示不出来"><a href="#32-UIImageRenderingModeAlwaysOriginal导致图片显示不出来" class="headerlink" title="32.UIImageRenderingModeAlwaysOriginal导致图片显示不出来"></a>32.UIImageRenderingModeAlwaysOriginal导致图片显示不出来</h2><h2 id="33-Internal-launch-error-process-launch-failed-timed-out-waiting-for-app-to-launch"><a href="#33-Internal-launch-error-process-launch-failed-timed-out-waiting-for-app-to-launch" class="headerlink" title="33.Internal launch error: process launch failed: timed out waiting for app to launch"></a>33.Internal launch error: process launch failed: timed out waiting for app to launch</h2><h2 id="34-Use-of-undeclared-identifier-‘AFHTTPRequestOperationManager’"><a href="#34-Use-of-undeclared-identifier-‘AFHTTPRequestOperationManager’" class="headerlink" title="34.Use of undeclared identifier ‘AFHTTPRequestOperationManager’"></a>34.Use of undeclared identifier ‘AFHTTPRequestOperationManager’</h2><p><strong>现在都用的是NSURLSession了，AFN中用的是AFHTTPSessionManager了~~</strong></p>
+<h2 id="35-‘UICollectionView-must-be-initialized-with-a-non-nil-layout-parameter’"><a href="#35-‘UICollectionView-must-be-initialized-with-a-non-nil-layout-parameter’" class="headerlink" title="35.‘UICollectionView must be initialized with a non-nil layout parameter’"></a>35.<strong>‘UICollectionView must be initialized with a non-nil layout parameter’</strong></h2><p><strong>要在init里注册</strong></p>
+<h2 id="36-标签没字-要看赋值那里是不是有问题"><a href="#36-标签没字-要看赋值那里是不是有问题" class="headerlink" title="36.标签没字,要看赋值那里是不是有问题"></a>36.标签没字,要看赋值那里是不是有问题</h2><p><strong>尤其第一个显示了最后一个,可能就是全都赋给了第一个.</strong></p>
+<h2 id="37-nearby顶部label没显示-看看加没加"><a href="#37-nearby顶部label没显示-看看加没加" class="headerlink" title="37.nearby顶部label没显示,看看加没加"></a>37.nearby顶部label没显示,看看加没加</h2><h2 id="38-nearby顶部label显示模糊图片-两个label-添加了两次-而且没对齐"><a href="#38-nearby顶部label显示模糊图片-两个label-添加了两次-而且没对齐" class="headerlink" title="38.nearby顶部label显示模糊图片,两个label,添加了两次,而且没对齐."></a>38.nearby顶部label显示模糊图片,两个label,添加了两次,而且没对齐.</h2><h2 id="39-nearby顶部titlebuttons-没走到就变红-走完了还不变回白色"><a href="#39-nearby顶部titlebuttons-没走到就变红-走完了还不变回白色" class="headerlink" title="39.nearby顶部titlebuttons,没走到就变红,走完了还不变回白色."></a>39.nearby顶部titlebuttons,没走到就变红,走完了还不变回白色.</h2><p><strong>设isShaping关闭好了</strong></p>
+<h2 id="40-nearby-底部多出一条白线-黑白都有"><a href="#40-nearby-底部多出一条白线-黑白都有" class="headerlink" title="40.nearby 底部多出一条白线,黑白都有."></a>40.nearby 底部多出一条白线,黑白都有.</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">self</span>.contentScrollView.frame = <span class="built_in">CGRectMake</span>(<span class="number">0</span>, tY + tH + bD, ScreenW, ScreenH - (tY + tH + bD) + <span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="41-data-parameter-is-nil’"><a href="#41-data-parameter-is-nil’" class="headerlink" title="41.data parameter is nil’"></a>41.<strong>data parameter is nil’</strong></h2><p><strong>文件名没写对</strong></p>
+<h2 id="42-‘NSInternalInconsistencyException’-reason-‘Delegate-must-respond-to-locationManager-didFailWithError-’"><a href="#42-‘NSInternalInconsistencyException’-reason-‘Delegate-must-respond-to-locationManager-didFailWithError-’" class="headerlink" title="42.‘NSInternalInconsistencyException’, reason: ‘Delegate must respond to locationManager:didFailWithError:’"></a>42.<strong>‘NSInternalInconsistencyException’, reason: ‘Delegate must respond to locationManager:didFailWithError:’</strong></h2><h2 id="43-滑动起来总是距离就刷没了"><a href="#43-滑动起来总是距离就刷没了" class="headerlink" title="43.滑动起来总是距离就刷没了"></a>43.滑动起来总是距离就刷没了</h2><p><strong>把计算的距离放在模型里存起来</strong></p>
+<h2 id="44-行间有灰色空白"><a href="#44-行间有灰色空白" class="headerlink" title="44.行间有灰色空白"></a>44.行间有灰色空白</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">layout.minimumLineSpacing = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="45-Undefined-symbol-gxx-personality-v0"><a href="#45-Undefined-symbol-gxx-personality-v0" class="headerlink" title="45.Undefined symbol: ___gxx_personality_v0"></a>45.Undefined symbol: ___gxx_personality_v0</h2><h2 id="46-字典数组数据取不到-看key是否写错了"><a href="#46-字典数组数据取不到-看key是否写错了" class="headerlink" title="46.字典数组数据取不到,看key是否写错了"></a>46.字典数组数据取不到,看key是否写错了</h2><h2 id="47-只显示左侧不显示右侧-cell内部坐标用cell-bounds"><a href="#47-只显示左侧不显示右侧-cell内部坐标用cell-bounds" class="headerlink" title="47.只显示左侧不显示右侧,cell内部坐标用cell.bounds"></a>47.只显示左侧不显示右侧,cell内部坐标用cell.bounds</h2><h2 id="48-dequeueReusableSupplementaryViewOfKind-UICollectionElementKindSectionHeader"><a href="#48-dequeueReusableSupplementaryViewOfKind-UICollectionElementKindSectionHeader" class="headerlink" title="48.dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader"></a>48.dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader</h2><p><strong>+[DCDeatilCustomHeadView length]: unrecognized selector sent to class 0x10469bfa8’</strong></p>
+<h2 id="49NSInvalidArgumentException’-reason-‘-NSPlaceholderDictionary-initWithObjects-forKeys-count-attempt-to-insert-nil-object-from-objects-0-’"><a href="#49NSInvalidArgumentException’-reason-‘-NSPlaceholderDictionary-initWithObjects-forKeys-count-attempt-to-insert-nil-object-from-objects-0-’" class="headerlink" title="49NSInvalidArgumentException’, reason: ‘\* -[__NSPlaceholderDictionary initWithObjects:forKeys:count:]: attempt to insert nil object from objects[0]’**"></a>49<strong>NSInvalidArgumentException’, reason: ‘\</strong>* -[__NSPlaceholderDictionary initWithObjects:forKeys:count:]: attempt to insert nil object from objects[0]’**</h2><p><strong>发通知的通知名写错</strong></p>
+<h2 id="50DYGLInitPlatform-connection-to-host-has-failed-Error-Domain-NSPOSIXErrorDomain-Code-2-“No-such-file-or-directory”"><a href="#50DYGLInitPlatform-connection-to-host-has-failed-Error-Domain-NSPOSIXErrorDomain-Code-2-“No-such-file-or-directory”" class="headerlink" title="50DYGLInitPlatform] connection to host has failed: Error Domain=NSPOSIXErrorDomain Code=2 “No such file or directory”"></a>50<strong>DYGLInitPlatform] connection to host has failed: Error Domain=NSPOSIXErrorDomain Code=2 “No such file or directory”</strong></h2><h2 id="51-启动图片失效"><a href="#51-启动图片失效" class="headerlink" title="51.启动图片失效."></a>51.启动图片失效.</h2><h2 id="52-JSONModel-字典数组可以不是mutable"><a href="#52-JSONModel-字典数组可以不是mutable" class="headerlink" title="52. JSONModel,字典数组可以不是mutable"></a>52. JSONModel,字典数组可以不是mutable</h2><p><strong>NSMutableDictionary *dict2 = [content objectForKey:@”storeInfo”]; dict2是nil,</strong></p>
+<h2 id="53-Property-type-of-MR-StoreInfo-shortName-is-not-supported-by-JSONModel-’"><a href="#53-Property-type-of-MR-StoreInfo-shortName-is-not-supported-by-JSONModel-’" class="headerlink" title="53.Property type of MR_StoreInfo.shortName is not supported by JSONModel.’"></a>53.<strong>Property type of MR_StoreInfo.shortName is not supported by JSONModel.’</strong></h2><h2 id="54-转模型为nil-搞了半天找到了工具-其实是局部变量的原因"><a href="#54-转模型为nil-搞了半天找到了工具-其实是局部变量的原因" class="headerlink" title="54.转模型为nil,搞了半天找到了工具.其实是局部变量的原因."></a>54.转模型为nil,搞了半天找到了工具.其实是局部变量的原因.</h2><h2 id="55-NSSring-longlongValue-null设成了NSUInteger-改为了string"><a href="#55-NSSring-longlongValue-null设成了NSUInteger-改为了string" class="headerlink" title="55.NSSring longlongValue,null设成了NSUInteger,改为了string"></a>55.NSSring longlongValue,null设成了NSUInteger,改为了string</h2><h2 id="56-MR-SectionMenuFooter-setReuseIdentifier-refactor导致"><a href="#56-MR-SectionMenuFooter-setReuseIdentifier-refactor导致" class="headerlink" title="56.-[MR_SectionMenuFooter _setReuseIdentifier:] refactor导致"></a>56.<strong>-[MR_SectionMenuFooter _setReuseIdentifier:]</strong> refactor导致</h2><h2 id="57-Cannot-remove-an-observer"><a href="#57-Cannot-remove-an-observer" class="headerlink" title="57.Cannot remove an observer "></a>57.<strong>Cannot remove an observer </strong></h2><p><strong>&lt;MR_StoreInfoFirstCollectionViewCell 0x11653afb0&gt; for the key path “distanceStr” from &lt;MR_StoreInfo 0x101779ea0&gt; because it is not registered as an observer.’</strong></p>
+<h2 id="58-NSPlaceholderDictionary-initWithObjects-forKeys-count-attempt-to-insert-nil-object-from-objects-0-’"><a href="#58-NSPlaceholderDictionary-initWithObjects-forKeys-count-attempt-to-insert-nil-object-from-objects-0-’" class="headerlink" title="58.[__NSPlaceholderDictionary initWithObjects:forKeys:count:]: attempt to insert nil object from objects[0]’"></a>58.<strong>[__NSPlaceholderDictionary initWithObjects:forKeys:count:]: attempt to insert nil object from objects[0]’</strong></h2><h2 id="59-NSArrayM-objectAtIndexedSubscript-index-7-beyond-bounds-0-3-’"><a href="#59-NSArrayM-objectAtIndexedSubscript-index-7-beyond-bounds-0-3-’" class="headerlink" title="59.-[__NSArrayM objectAtIndexedSubscript:]: index 7 beyond bounds [0 .. 3]’"></a>59.<strong>-[__NSArrayM objectAtIndexedSubscript:]: index 7 beyond bounds [0 .. 3]’</strong></h2><h2 id="60-NSPlaceholderDictionary-initWithObjects-forKeys-count-attempt-to-insert-nil-object-from-objects-0-’"><a href="#60-NSPlaceholderDictionary-initWithObjects-forKeys-count-attempt-to-insert-nil-object-from-objects-0-’" class="headerlink" title="60.-[__NSPlaceholderDictionary initWithObjects:forKeys:count:]: attempt to insert nil object from objects[0]’"></a>60.<strong>-[__NSPlaceholderDictionary initWithObjects:forKeys:count:]: attempt to insert nil object from objects[0]’</strong></h2><h2 id="61-百度地图引擎初始化失败"><a href="#61-百度地图引擎初始化失败" class="headerlink" title="61.百度地图引擎初始化失败"></a>61.百度地图引擎初始化失败</h2><h3 id="创建的管理者立刻release了-没有保存到属性"><a href="#创建的管理者立刻release了-没有保存到属性" class="headerlink" title="创建的管理者立刻release了,没有保存到属性"></a><strong>创建的管理者立刻release了,没有保存到属性</strong></h3><p>/ijkmedia/ijksdl/ffmpeg/ijksdl_inc_ffmpeg.h:28:10: ‘libavutil/imgutils.h’ file not found</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/" rel="tag"># iOS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/05/29/百思debug/" rel="next" title="百思debug">
+                <i class="fa fa-chevron-left"></i> 百思debug
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/05/29/京贝尔开发记录/" rel="prev" title="京贝尔开发记录">
+                京贝尔开发记录 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">MichaelRich</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:gg1956756@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://kate.heavenyu.com/" title="NewHome" target="_blank">NewHome</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#京贝debug"><span class="nav-text">京贝debug</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Safe-Area-Layout-Guide-before-iOS-9-0"><span class="nav-text">1.Safe Area Layout Guide before iOS 9.0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Multiple-commands-produce"><span class="nav-text">2.Multiple commands produce</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Build-input-file-cannot-be-found-NoteBook-pch"><span class="nav-text">3.Build input file cannot be found: /NoteBook.pch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-duplicate-symbol-for-architecture-x86-64"><span class="nav-text">4.duplicate symbol for architecture x86_64</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Undefined-symbol-OBJC-CLASS-CellModel"><span class="nav-text">5.Undefined symbol: _OBJC_CLASS_$_CellModel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-不用一下子把很多cell都拉进去"><span class="nav-text">6.不用一下子把很多cell都拉进去</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-Could-not-find-a-storyboard-named-‘Main’-in-bundle-NSBundle"><span class="nav-text">7.Could not find a storyboard named ‘Main’ in bundle NSBundle</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-Terminating-app-due-to-uncaught-exception-‘Bad-property-protocol-declaration’-reason-‘-is-not-allowed-JSONModel-property-protocol-and-not-a-JSONModel-class"><span class="nav-text">8.Terminating app due to uncaught exception ‘Bad property protocol declaration’, reason: ‘ is not allowed JSONModel property protocol, and not a JSONModel class.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9‘NSInvalidArgumentException’-reason-‘-NSArrayM-insertObject-atIndex-object-cannot-be-nil’"><span class="nav-text">9‘NSInvalidArgumentException’, reason: ‘\* -[__NSArrayM insertObject:atIndex:]: object cannot be nil’**</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-JSON转的模型部分为空-key写错了"><span class="nav-text">10.JSON转的模型部分为空:key写错了.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-Terminating-app-due-to-uncaught-exception-‘NSInternalInconsistencyException’-reason-‘could-not-dequeue-a-view-of-kind-UICollectionElementKindCell-with-identifier-HYBannerCellID-must-register-a-nib-or-a-class-for-the-identifier-or-connect-a-prototype-cell-in-a-storyboard’"><span class="nav-text">11.Terminating app due to uncaught exception ‘NSInternalInconsistencyException’, reason: ‘could not dequeue a view of kind: UICollectionElementKindCell with identifier HYBannerCellID - must register a nib or a class for the identifier or connect a prototype cell in a storyboard’</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-does-not-have-a-reuseIdentifier-cells-must-be-retrieved-by-calling-dequeueReusableCellWithReuseIdentifier-forIndexPath-’"><span class="nav-text">12.does not have a reuseIdentifier - cells must be retrieved by calling -dequeueReusableCellWithReuseIdentifier:forIndexPath:’</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-‘the-cell-returned-from-collectionView-cellForItemAtIndexPath-does-not-have-a-reuseIdentifier-cells-must-be-retrieved-by-calling-dequeueReusableCellWithReuseIdentifier-forIndexPath-’"><span class="nav-text">13.‘the cell returned from -collectionView:cellForItemAtIndexPath: does not have a reuseIdentifier - cells must be retrieved by calling -dequeueReusableCellWithReuseIdentifier:forIndexPath:’</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14-banner图片显示不出来"><span class="nav-text">14.banner图片显示不出来</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-数据为空-首先检查字符串"><span class="nav-text">15.数据为空,首先检查字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-’Bad-property-protocol-declaration’-reason-‘-is-not-allowed-JSONModel-property-protocol-and-not-a-JSONModel-class-’"><span class="nav-text">16.’Bad property protocol declaration’, reason: ‘ is not allowed JSONModel property protocol, and not a JSONModel class.’</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-itemForIndex-中用masonry"><span class="nav-text">16.itemForIndex 中用masonry</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-index-0-beyond-bounds-for-empty-array’"><span class="nav-text">17.index 0 beyond bounds for empty array’</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18-‘the-view-returned-from-collectionView-viewForSupplementaryElementOfKind-atIndexPath-UICollectionElementKindSectionFooter-lt-NSIndexPath-0xca82a82eec4d21d1-gt-length-2-path-0-0-was-not-retrieved-by-calling-dequeueReusableSupplementaryViewOfKind-withReuseIdentifier-forIndexPath-or-is-nil"><span class="nav-text">18.‘the view returned from -collectionView:viewForSupplementaryElementOfKind:atIndexPath (UICollectionElementKindSectionFooter,&lt;NSIndexPath: 0xca82a82eec4d21d1&gt; {length = 2, path = 0 - 0}) was not retrieved by calling -dequeueReusableSupplementaryViewOfKind:withReuseIdentifier:forIndexPath: or is nil</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#因为返回高度给已删除的footer"><span class="nav-text">因为返回高度给已删除的footer</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#19-Masonry导致卡顿-多余的constraints"><span class="nav-text">19.Masonry导致卡顿,多余的constraints.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20-6-duplicate-symbols-for-architecture-arm64"><span class="nav-text">20.6 duplicate symbols for architecture arm64</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#21-增加了数据后滚动后不见了-因为是重新处理的图的原因"><span class="nav-text">21.增加了数据后滚动后不见了,因为是重新处理的图的原因.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-collect没数据-先看数据源"><span class="nav-text">22.collect没数据,先看数据源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#23-‘NSInvalidArgumentException’-reason-‘-NSArrayM-insertObject-atIndex-object-cannot-be-nil’"><span class="nav-text">23.‘NSInvalidArgumentException’, reason: ‘\* -[__NSArrayM insertObject:atIndex:]: object cannot be nil’**</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#把-字典写成了对象"><span class="nav-text">把 字典写成了对象.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#24-‘-NSDictionaryM-name-unrecognized-selector-sent-to-instance-0x280ae28e0’"><span class="nav-text">24.‘-[__NSDictionaryM name]: unrecognized selector sent to instance 0x280ae28e0’</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#25NSRangeException’-reason-‘-NSArrayM-objectAtIndexedSubscript-index-0-beyond-bounds-for-empty-array’"><span class="nav-text">25NSRangeException’, reason: ‘\* -[__NSArrayM objectAtIndexedSubscript:]: index 0 beyond bounds for empty array’**</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#26-NSArrayM-objectAtIndexedSubscript-index-0-beyond-bounds-for-empty-array’"><span class="nav-text">26__NSArrayM objectAtIndexedSubscript:]: index 0 beyond bounds for empty array’</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#27-内存耗用大-因为图片多"><span class="nav-text">27.内存耗用大.因为图片多</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#28-masonry导致卡顿-也许要分两个section-或者重新定义个cell-搞定"><span class="nav-text">28.masonry导致卡顿.也许要分两个section,或者重新定义个cell(搞定).</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#29空白"><span class="nav-text">29空白</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#30-导入错了info-plist-导致错误-删除building-phase-info"><span class="nav-text">30.导入错了info.plist,导致错误:删除building,phase,info</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#31-pch文件在Xcode新版本里需要手动添加-路径要写全"><span class="nav-text">31.pch文件在Xcode新版本里需要手动添加,路径要写全</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#32-UIImageRenderingModeAlwaysOriginal导致图片显示不出来"><span class="nav-text">32.UIImageRenderingModeAlwaysOriginal导致图片显示不出来</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#33-Internal-launch-error-process-launch-failed-timed-out-waiting-for-app-to-launch"><span class="nav-text">33.Internal launch error: process launch failed: timed out waiting for app to launch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#34-Use-of-undeclared-identifier-‘AFHTTPRequestOperationManager’"><span class="nav-text">34.Use of undeclared identifier ‘AFHTTPRequestOperationManager’</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#35-‘UICollectionView-must-be-initialized-with-a-non-nil-layout-parameter’"><span class="nav-text">35.‘UICollectionView must be initialized with a non-nil layout parameter’</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#36-标签没字-要看赋值那里是不是有问题"><span class="nav-text">36.标签没字,要看赋值那里是不是有问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#37-nearby顶部label没显示-看看加没加"><span class="nav-text">37.nearby顶部label没显示,看看加没加</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#38-nearby顶部label显示模糊图片-两个label-添加了两次-而且没对齐"><span class="nav-text">38.nearby顶部label显示模糊图片,两个label,添加了两次,而且没对齐.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#39-nearby顶部titlebuttons-没走到就变红-走完了还不变回白色"><span class="nav-text">39.nearby顶部titlebuttons,没走到就变红,走完了还不变回白色.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#40-nearby-底部多出一条白线-黑白都有"><span class="nav-text">40.nearby 底部多出一条白线,黑白都有.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#41-data-parameter-is-nil’"><span class="nav-text">41.data parameter is nil’</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#42-‘NSInternalInconsistencyException’-reason-‘Delegate-must-respond-to-locationManager-didFailWithError-’"><span class="nav-text">42.‘NSInternalInconsistencyException’, reason: ‘Delegate must respond to locationManager:didFailWithError:’</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#43-滑动起来总是距离就刷没了"><span class="nav-text">43.滑动起来总是距离就刷没了</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#44-行间有灰色空白"><span class="nav-text">44.行间有灰色空白</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#45-Undefined-symbol-gxx-personality-v0"><span class="nav-text">45.Undefined symbol: ___gxx_personality_v0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#46-字典数组数据取不到-看key是否写错了"><span class="nav-text">46.字典数组数据取不到,看key是否写错了</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#47-只显示左侧不显示右侧-cell内部坐标用cell-bounds"><span class="nav-text">47.只显示左侧不显示右侧,cell内部坐标用cell.bounds</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#48-dequeueReusableSupplementaryViewOfKind-UICollectionElementKindSectionHeader"><span class="nav-text">48.dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#49NSInvalidArgumentException’-reason-‘-NSPlaceholderDictionary-initWithObjects-forKeys-count-attempt-to-insert-nil-object-from-objects-0-’"><span class="nav-text">49NSInvalidArgumentException’, reason: ‘\* -[__NSPlaceholderDictionary initWithObjects:forKeys:count:]: attempt to insert nil object from objects[0]’**</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#50DYGLInitPlatform-connection-to-host-has-failed-Error-Domain-NSPOSIXErrorDomain-Code-2-“No-such-file-or-directory”"><span class="nav-text">50DYGLInitPlatform] connection to host has failed: Error Domain=NSPOSIXErrorDomain Code=2 “No such file or directory”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#51-启动图片失效"><span class="nav-text">51.启动图片失效.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#52-JSONModel-字典数组可以不是mutable"><span class="nav-text">52. JSONModel,字典数组可以不是mutable</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#53-Property-type-of-MR-StoreInfo-shortName-is-not-supported-by-JSONModel-’"><span class="nav-text">53.Property type of MR_StoreInfo.shortName is not supported by JSONModel.’</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#54-转模型为nil-搞了半天找到了工具-其实是局部变量的原因"><span class="nav-text">54.转模型为nil,搞了半天找到了工具.其实是局部变量的原因.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#55-NSSring-longlongValue-null设成了NSUInteger-改为了string"><span class="nav-text">55.NSSring longlongValue,null设成了NSUInteger,改为了string</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#56-MR-SectionMenuFooter-setReuseIdentifier-refactor导致"><span class="nav-text">56.-[MR_SectionMenuFooter _setReuseIdentifier:] refactor导致</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#57-Cannot-remove-an-observer"><span class="nav-text">57.Cannot remove an observer </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#58-NSPlaceholderDictionary-initWithObjects-forKeys-count-attempt-to-insert-nil-object-from-objects-0-’"><span class="nav-text">58.[__NSPlaceholderDictionary initWithObjects:forKeys:count:]: attempt to insert nil object from objects[0]’</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#59-NSArrayM-objectAtIndexedSubscript-index-7-beyond-bounds-0-3-’"><span class="nav-text">59.-[__NSArrayM objectAtIndexedSubscript:]: index 7 beyond bounds [0 .. 3]’</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#60-NSPlaceholderDictionary-initWithObjects-forKeys-count-attempt-to-insert-nil-object-from-objects-0-’"><span class="nav-text">60.-[__NSPlaceholderDictionary initWithObjects:forKeys:count:]: attempt to insert nil object from objects[0]’</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#61-百度地图引擎初始化失败"><span class="nav-text">61.百度地图引擎初始化失败</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建的管理者立刻release了-没有保存到属性"><span class="nav-text">创建的管理者立刻release了,没有保存到属性</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MichaelRich</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">23.6k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

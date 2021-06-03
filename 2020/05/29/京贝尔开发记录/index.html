@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next mist" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+    <script>
+    (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/5a709d705.js","daovoice")
+    daovoice('init', {
+        app_id: "5a709d75"
+    });
+    daovoice('update');
+    </script>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="iOS,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="1.京贝尔数据1.数据模型">
+<meta name="keywords" content="iOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="京贝尔开发记录">
+<meta property="og:url" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/index.html">
+<meta property="og:site_name" content="MichaelRich">
+<meta property="og:description" content="1.京贝尔数据1.数据模型">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_5.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_7.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_32.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_1.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_6.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_14.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_12.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_15.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_17.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_19.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_21.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_23.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_25.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_27.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_28.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_31.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_34.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_33.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_35.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_2.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_3.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_5.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_1.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_7.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_8.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_9.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_6.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_11.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_12.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_15.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_17.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_19.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_20.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_21.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_22.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_23.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_24.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_26.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_27.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_28.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_29.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_30.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_3.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_4.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_9.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_6.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_8.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_11.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_12.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_15.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_16.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_17.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_19.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_2.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_20.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_21.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_22.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_23.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200603_6.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200603_7.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_29.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_34.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_39.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200603_2.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200603_3.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200603_4.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_1.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_2.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_4.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_5.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_6.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_7.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_24.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_25.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_27.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_29.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_23.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_8.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_10.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_13.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_14.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_16.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_18.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_19.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_20.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_25.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_27.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_29.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_22.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_26.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_9.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_11.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_15.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_17.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_21.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_3.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200605_1.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200605_8.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200605_9.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200605_11.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200605_17.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200605_13.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200605_12.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200605_18.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200605_19.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_18.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_4.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_5.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_6.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_7.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_9.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_10.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_11.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_12.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_13.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_14.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_24.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_19.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_20.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_26.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_27.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_29.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_34.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_35.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_35.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_38.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_40.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_41.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_42.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_44.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200607_1.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200607_4.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200607_6.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200607_5.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200609_2.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200609_4.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_1.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_2.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_3.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_5.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_6.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_7.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_8.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_9.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_11.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_11.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200617_2.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_12.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200617_1.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200617_5.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_14.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200617_9.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200619_3.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200619_2.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200624_2.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200624_3.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200624_4.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200624_6.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200624_7.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200624_9.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200624_10.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200624_11.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200624_12.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_1.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_5.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_7.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_10.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_13.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_15.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_21.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_20.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_23.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_25.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_26.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_27.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200626_1.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200626_2.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200626_3.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200626_4.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200626_5.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200626_6.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200626_7.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/9CD7BB63-3A52-45C1-9D5D-CE17C7467E67_1_201_a.jpeg">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200628_2.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200628_1.png">
+<meta property="og:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200628_4.png">
+<meta property="og:updated_time" content="2020-06-29T03:41:00.134Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="京贝尔开发记录">
+<meta name="twitter:description" content="1.京贝尔数据1.数据模型">
+<meta name="twitter:image" content="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_5.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/">
+
+
+
+
+
+  <title>京贝尔开发记录 | MichaelRich</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MichaelRich</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Welcome to send messages on the right bottom!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.heavenyu.com/2020/05/29/京贝尔开发记录/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MichaelRich">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MichaelRich">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">京贝尔开发记录</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-29T17:54:54+08:00">
+                2020-05-29
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2020-06-29T11:41:00+08:00">
+                2020-06-29
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  2.4k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  9
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="1-京贝尔数据"><a href="#1-京贝尔数据" class="headerlink" title="1.京贝尔数据"></a>1.京贝尔数据</h1><h2 id="1-数据模型"><a href="#1-数据模型" class="headerlink" title="1.数据模型"></a>1.数据模型</h2><h2 id=""><a href="#" class="headerlink" title=""></a><img src="京贝尔开发记录.assets/Snip20200531_5.png" alt="Snip20200531_5"></h2><a id="more"></a>
+<div style="page-break-after: always;"></div>
+
+<h1 id="2-初始化加载数据"><a href="#2-初始化加载数据" class="headerlink" title="2.初始化加载数据"></a>2.初始化加载数据</h1><p><img src="京贝尔开发记录.assets/Snip20200531_7.png" alt="Snip20200531_7"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200531_32.png" alt="Snip20200531_32"></p>
+<div style="page-break-after: always;"></div>
+
+<h1 id="3-轮播"><a href="#3-轮播" class="headerlink" title="3.轮播"></a>3.轮播</h1><p><img src="京贝尔开发记录.assets/Snip20200531_1.png" alt="Snip20200531_1"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200531_6.png" alt="Snip20200531_6"></p>
+<div style="page-break-after: always;"></div>
+
+<h1 id="4-gridItem分类"><a href="#4-gridItem分类" class="headerlink" title="4.gridItem分类"></a>4.gridItem分类</h1><h2 id="4-1-获取gridItem分类数据模型"><a href="#4-1-获取gridItem分类数据模型" class="headerlink" title="4.1.获取gridItem分类数据模型."></a>4.1.获取gridItem分类数据模型.</h2><p><img src="京贝尔开发记录.assets/Snip20200531_14.png" alt="Snip20200531_14"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200531_12.png" alt="Snip20200531_12"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200531_15.png" alt="Snip20200531_15"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200531_17.png" alt="Snip20200531_17"><img src="京贝尔开发记录.assets/Snip20200531_19.png" alt="Snip20200531_19"></p>
+<h3 id="4-2-在数据源方法-设置模型-返回三排三种cell"><a href="#4-2-在数据源方法-设置模型-返回三排三种cell" class="headerlink" title="4.2.在数据源方法,设置模型,返回三排三种cell"></a>4.2.在数据源方法,设置模型,返回三排三种cell</h3><p><img src="京贝尔开发记录.assets/Snip20200531_21.png" alt="Snip20200531_21"></p>
+<h3 id="4-3-gridCell-添加子控件"><a href="#4-3-gridCell-添加子控件" class="headerlink" title="4.3.gridCell.添加子控件."></a>4.3.gridCell.添加子控件.</h3><p><img src="京贝尔开发记录.assets/Snip20200531_23.png" alt="Snip20200531_23"></p>
+<h2 id="4-4-layoutSubviews"><a href="#4-4-layoutSubviews" class="headerlink" title="4.4.layoutSubviews"></a>4.4.layoutSubviews</h2><p><img src="京贝尔开发记录.assets/Snip20200531_25.png" alt="Snip20200531_25"></p>
+<h2 id="4-5-中间grid-Masonry设置约束"><a href="#4-5-中间grid-Masonry设置约束" class="headerlink" title="4.5.中间grid Masonry设置约束"></a>4.5.中间grid Masonry设置约束</h2><p><img src="京贝尔开发记录.assets/Snip20200531_27.png" alt="Snip20200531_27"></p>
+<h2 id="4-6下边图靠上-图设小-字靠紧"><a href="#4-6下边图靠上-图设小-字靠紧" class="headerlink" title="4.6下边图靠上,图设小,字靠紧"></a>4.6下边图靠上,图设小,字靠紧</h2><p><img src="京贝尔开发记录.assets/Snip20200531_28.png" alt="Snip20200531_28"></p>
+<h2 id="4-7-不再继承自gridCell-单独建类-不会继承到Masonry约束-非常流畅"><a href="#4-7-不再继承自gridCell-单独建类-不会继承到Masonry约束-非常流畅" class="headerlink" title="4.7.不再继承自gridCell,单独建类,不会继承到Masonry约束,非常流畅."></a>4.7.不再继承自gridCell,单独建类,不会继承到Masonry约束,非常流畅.</h2><div style="page-break-after: always;"></div>
+
+<h1 id="5-主题推荐"><a href="#5-主题推荐" class="headerlink" title="5.主题推荐"></a>5.主题推荐</h1><h2 id="5-1模型数组"><a href="#5-1模型数组" class="headerlink" title="5.1模型数组"></a>5.1模型数组</h2><h2 id="5-2-ViewModel"><a href="#5-2-ViewModel" class="headerlink" title="5.2.ViewModel"></a>5.2.ViewModel</h2><p><img src="京贝尔开发记录.assets/Snip20200531_31.png" alt="Snip20200531_31"></p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[<span class="keyword">self</span>.homeViewModel setData:^&#123;</span><br><span class="line">    </span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+<p><img src="京贝尔开发记录.assets/Snip20200531_34.png" alt="Snip20200531_34"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200531_33.png" alt="Snip20200531_33"></p>
+<div style="page-break-after: always;"></div>
+
+<h1 id="6-热门好店"><a href="#6-热门好店" class="headerlink" title="6.热门好店"></a>6.热门好店</h1><h2 id="1-数据源"><a href="#1-数据源" class="headerlink" title="1.数据源"></a>1.数据源</h2><p><img src="京贝尔开发记录.assets/Snip20200531_35.png" alt="Snip20200531_35"></p>
+<h2 id="6-2-从模型数组中取出热门-好店模型数组"><a href="#6-2-从模型数组中取出热门-好店模型数组" class="headerlink" title="6.2.从模型数组中取出热门 好店模型数组"></a>6.2.从模型数组中取出热门 好店模型数组</h2><p><img src="京贝尔开发记录.assets/Snip20200601_2.png" alt="Snip20200601_2"></p>
+<h2 id="6-3-UICollectionViewDataSource"><a href="#6-3-UICollectionViewDataSource" class="headerlink" title="6.3.UICollectionViewDataSource"></a>6.3.UICollectionViewDataSource</h2><p><img src="京贝尔开发记录.assets/Snip20200601_3.png" alt="Snip20200601_3"></p>
+<h2 id="6-4-设置inset-itemsize"><a href="#6-4-设置inset-itemsize" class="headerlink" title="6.4.设置inset,itemsize"></a>6.4.设置inset,itemsize</h2><p><img src="京贝尔开发记录.assets/Snip20200601_5.png" alt="Snip20200601_5"></p>
+<h2 id="6-5-PS测量尺寸-BC-scale-计算比例"><a href="#6-5-PS测量尺寸-BC-scale-计算比例" class="headerlink" title="6.5.PS测量尺寸,BC,scale,计算比例."></a>6.5.PS测量尺寸,BC,scale,计算比例.</h2><p><img src="京贝尔开发记录.assets/Snip20200601_1.png" alt="Snip20200601_1"></p>
+<h2 id="6-6-设置图片-需要缩放-不需要"><a href="#6-6-设置图片-需要缩放-不需要" class="headerlink" title="6.6.设置图片,需要缩放(不需要)"></a>6.6.设置图片,需要缩放(不需要)</h2><p><img src="京贝尔开发记录.assets/Snip20200601_7.png" alt="Snip20200601_7"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200601_8.png" alt="Snip20200601_8"></p>
+<h2 id="6-6-2-从缓存中找sd下的图"><a href="#6-6-2-从缓存中找sd下的图" class="headerlink" title="6.6.2.从缓存中找sd下的图"></a>6.6.2.从缓存中找sd下的图</h2><p><img src="京贝尔开发记录.assets/Snip20200601_9.png" alt="Snip20200601_9"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200601_6.png" alt="Snip20200601_6"></p>
+<h3 id="6-6-3-不需要缩放-用aspactFill-因为在总控制器设定的尺寸不对"><a href="#6-6-3-不需要缩放-用aspactFill-因为在总控制器设定的尺寸不对" class="headerlink" title="6.6.3.不需要缩放,用aspactFill,因为在总控制器设定的尺寸不对"></a>6.6.3.不需要缩放,用aspactFill,因为在总控制器设定的尺寸不对</h3><h2 id="6-7-添加locationLabel-调节约束"><a href="#6-7-添加locationLabel-调节约束" class="headerlink" title="6.7.添加locationLabel.调节约束."></a>6.7.添加locationLabel.调节约束.</h2><h2 id="6-8-设置圆角在LayoutSubviews"><a href="#6-8-设置圆角在LayoutSubviews" class="headerlink" title="6.8.设置圆角在LayoutSubviews"></a>6.8.设置圆角在LayoutSubviews</h2><p><img src="京贝尔开发记录.assets/Snip20200601_11.png" alt="Snip20200601_11"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200601_12.png" alt="Snip20200601_12"></p>
+<h2 id="6-9-添加header"><a href="#6-9-添加header" class="headerlink" title="6.9.添加header"></a>6.9.添加header</h2><p><img src="京贝尔开发记录.assets/Snip20200601_15.png" alt="Snip20200601_15"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200601_17.png" alt="Snip20200601_17"></p>
+<h2 id="6-10-注册"><a href="#6-10-注册" class="headerlink" title="6.10.注册"></a>6.10.注册<img src="京贝尔开发记录.assets/Snip20200601_19.png" alt="Snip20200601_19"></h2><p><img src="京贝尔开发记录.assets/Snip20200601_20.png" alt="Snip20200601_20"></p>
+<h2 id="6-11-设置尺寸"><a href="#6-11-设置尺寸" class="headerlink" title="6.11.设置尺寸"></a>6.11.设置尺寸</h2><p><img src="京贝尔开发记录.assets/Snip20200601_21.png" alt="Snip20200601_21"></p>
+<div style="page-break-after: always;"></div>
+
+<h1 id="7-大牌甄选"><a href="#7-大牌甄选" class="headerlink" title="7.大牌甄选"></a>7.大牌甄选</h1><h2 id="7-1-type"><a href="#7-1-type" class="headerlink" title="7.1.type"></a>7.1.type</h2><p><img src="京贝尔开发记录.assets/Snip20200601_22.png" alt="Snip20200601_22"></p>
+<h2 id="7-2-用type取-self-homeViewModel-getDataArray-type"><a href="#7-2-用type取-self-homeViewModel-getDataArray-type" class="headerlink" title="7.2.用type取[self.homeViewModel  getDataArray:_type]"></a>7.2.用type取[self.homeViewModel  getDataArray:_type]</h2><p><img src="京贝尔开发记录.assets/Snip20200601_23.png" alt="Snip20200601_23"></p>
+<h2 id="7-3-设置type给子cell-分别取不同数据"><a href="#7-3-设置type给子cell-分别取不同数据" class="headerlink" title="7.3.设置type给子cell,分别取不同数据"></a>7.3.设置type给子cell,分别取不同数据</h2><p><img src="京贝尔开发记录.assets/Snip20200601_24.png" alt="Snip20200601_24"></p>
+<h2 id="7-4-设置header"><a href="#7-4-设置header" class="headerlink" title="7.4.设置header"></a>7.4.设置header</h2><p><img src="京贝尔开发记录.assets/Snip20200601_26.png" alt="Snip20200601_26"></p>
+<h2 id="7-5-设置动态颜色"><a href="#7-5-设置动态颜色" class="headerlink" title="7.5.设置动态颜色"></a>7.5.设置动态颜色</h2><p><img src="京贝尔开发记录.assets/Snip20200601_27.png" alt="Snip20200601_27"></p>
+<h2 id="7-6-设置总尺寸和头部约束"><a href="#7-6-设置总尺寸和头部约束" class="headerlink" title="7.6.设置总尺寸和头部约束"></a>7.6.设置总尺寸和头部约束</h2><p><img src="京贝尔开发记录.assets/Snip20200601_28.png" alt="Snip20200601_28"></p>
+<h1 id="8-设置单例HomeViewModel-防止内存一直增加"><a href="#8-设置单例HomeViewModel-防止内存一直增加" class="headerlink" title="8.设置单例HomeViewModel,防止内存一直增加."></a>8.设置单例HomeViewModel,防止内存一直增加.</h1><p><img src="京贝尔开发记录.assets/Snip20200601_29.png" alt="Snip20200601_29"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200601_30.png" alt="Snip20200601_30"></p>
+<div style="page-break-after: always;"></div>
+
+<h2 id="9-推荐店"><a href="#9-推荐店" class="headerlink" title="9.推荐店"></a>9.推荐店</h2><h2 id="1-建cell类和xib"><a href="#1-建cell类和xib" class="headerlink" title="1.建cell类和xib"></a>1.建cell类和xib</h2><p><img src="京贝尔开发记录.assets/Snip20200602_3.png" alt="Snip20200602_3"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200602_4.png" alt="Snip20200602_4"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200602_9.png" alt="Snip20200602_9"></p>
+<h2 id="1-1-initWithFrame-loadNibNamed"><a href="#1-1-initWithFrame-loadNibNamed" class="headerlink" title="1.1.initWithFrame,loadNibNamed"></a>1.1.initWithFrame,loadNibNamed</h2><p><img src="京贝尔开发记录.assets/Snip20200602_6.png" alt="Snip20200602_6"></p>
+<h2 id="1-2-layourSubviews"><a href="#1-2-layourSubviews" class="headerlink" title="1.2.layourSubviews"></a>1.2.layourSubviews</h2><p><img src="京贝尔开发记录.assets/Snip20200602_8.png" alt="Snip20200602_8"></p>
+<h2 id="1-3-setStoreModel"><a href="#1-3-setStoreModel" class="headerlink" title="1.3.setStoreModel"></a>1.3.setStoreModel</h2><p><img src="京贝尔开发记录.assets/Snip20200602_11.png" alt="Snip20200602_11"></p>
+<h2 id="2-注册ReuserIdentifier-nibWithName-registerNib-nib-forReuseIdentifier"><a href="#2-注册ReuserIdentifier-nibWithName-registerNib-nib-forReuseIdentifier" class="headerlink" title="2.注册ReuserIdentifier,nibWithName, registerNib:nib forReuseIdentifier:"></a>2.注册ReuserIdentifier,nibWithName, registerNib:nib forReuseIdentifier:</h2><p><img src="京贝尔开发记录.assets/Snip20200602_12.png" alt="Snip20200602_12"></p>
+<h2 id="3-加属性"><a href="#3-加属性" class="headerlink" title="3.加属性"></a>3.加属性</h2><p><img src="京贝尔开发记录.assets/Snip20200602_15.png" alt="Snip20200602_15"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200602_16.png" alt="Snip20200602_16"></p>
+<h2 id="4-懒加载初始化"><a href="#4-懒加载初始化" class="headerlink" title="4.懒加载初始化"></a>4.懒加载初始化</h2><h3 id="-1"><a href="#-1" class="headerlink" title=""></a><img src="京贝尔开发记录.assets/Snip20200602_17.png" alt="Snip20200602_17"></h3><h2 id="5-读模型的方法JSON-to-模型数组"><a href="#5-读模型的方法JSON-to-模型数组" class="headerlink" title="5.读模型的方法JSON to 模型数组"></a>5.读模型的方法JSON to 模型数组</h2><p><img src="京贝尔开发记录.assets/Snip20200602_19.png" alt="Snip20200602_19"></p>
+<h2 id="6-模型类建模"><a href="#6-模型类建模" class="headerlink" title="6.模型类建模"></a>6.模型类建模</h2><p><img src="京贝尔开发记录.assets/Snip20200602_2.png" alt="Snip20200602_2"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200602_20.png" alt="Snip20200602_20"></p>
+<h2 id="7-给collect数据"><a href="#7-给collect数据" class="headerlink" title="7.给collect数据"></a>7.给collect数据</h2><p><img src="京贝尔开发记录.assets/Snip20200602_21.png" alt="Snip20200602_21"></p>
+<h2 id="8-设置item大小"><a href="#8-设置item大小" class="headerlink" title="8.设置item大小"></a>8.设置item大小</h2><p><img src="京贝尔开发记录.assets/Snip20200602_22.png" alt="Snip20200602_22"></p>
+<h2 id="9-调整子控件位置-添加下边线"><a href="#9-调整子控件位置-添加下边线" class="headerlink" title="9.调整子控件位置,添加下边线,"></a>9.调整子控件位置,添加下边线,</h2><p><img src="京贝尔开发记录.assets/Snip20200602_23.png" alt="Snip20200602_23"></p>
+<div style="page-break-after: always;"></div>
+
+<h2 id="10-设置navbar颜色-滑动通知改变背景色"><a href="#10-设置navbar颜色-滑动通知改变背景色" class="headerlink" title="10.设置navbar颜色,滑动通知改变背景色"></a>10.设置navbar颜色,滑动通知改变背景色</h2><p><img src="京贝尔开发记录.assets/Snip20200603_6.png" alt="Snip20200603_6"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200603_7.png" alt="Snip20200603_7"></p>
+<h2 id="11-深色监控"><a href="#11-深色监控" class="headerlink" title="11.深色监控"></a>11.深色监控</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取当前模式</span></span><br><span class="line"><span class="keyword">let</span> currentMode = <span class="type">UITraitCollection</span>.current.userInterfaceStyle</span><br><span class="line"><span class="keyword">if</span> (currentMode == .dark) &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"深色模式"</span>)</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (currentMode == .light) &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"浅色模式"</span>)</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"未知模式"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">open</span> <span class="keyword">var</span> userInterfaceStyle: <span class="type">UIUserInterfaceStyle</span> &#123; <span class="keyword">get</span> &#125; </span><br><span class="line"></span><br><span class="line"><span class="comment">// 所有模式</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">enum</span> <span class="title">UIUserInterfaceStyle</span> : <span class="title">Int</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 未指明的</span></span><br><span class="line">    <span class="keyword">case</span> unspecified</span><br><span class="line">    <span class="comment">// 浅色模式</span></span><br><span class="line">    <span class="keyword">case</span> light</span><br><span class="line">    <span class="comment">// 深色模式</span></span><br><span class="line">    <span class="keyword">case</span> dark</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="12-设置tabBar"><a href="#12-设置tabBar" class="headerlink" title="12.设置tabBar"></a>12.设置tabBar</h2><h2 id="1-中间按钮用圆角去掉黑边-需要自定义tabbar-在layouSubViews里"><a href="#1-中间按钮用圆角去掉黑边-需要自定义tabbar-在layouSubViews里" class="headerlink" title="1.中间按钮用圆角去掉黑边,需要自定义tabbar,在layouSubViews里."></a>1.中间按钮用圆角去掉黑边,需要自定义tabbar,在layouSubViews里.</h2><p><img src="京贝尔开发记录.assets/Snip20200602_29.png" alt="Snip20200602_29"></p>
+<h2 id="2-设置文字颜色和背景色-使用SF-Symbel-作图标-可以改变颜色"><a href="#2-设置文字颜色和背景色-使用SF-Symbel-作图标-可以改变颜色" class="headerlink" title="2.设置文字颜色和背景色,使用SF Symbel,作图标,可以改变颜色."></a>2.设置文字颜色和背景色,使用SF Symbel,作图标,可以改变颜色.</h2><p><img src="京贝尔开发记录.assets/Snip20200602_34.png" alt="Snip20200602_34"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200602_39.png" alt="Snip20200602_39"></p>
+<h2 id="3-控制器属性数组"><a href="#3-控制器属性数组" class="headerlink" title="3.控制器属性数组"></a>3.控制器属性数组</h2><p><img src="京贝尔开发记录.assets/Snip20200603_2.png" alt="Snip20200603_2"></p>
+<h2 id="4-用数组添加子控制器和items"><a href="#4-用数组添加子控制器和items" class="headerlink" title="4.用数组添加子控制器和items"></a>4.用数组添加子控制器和items</h2><p><img src="京贝尔开发记录.assets/Snip20200603_3.png" alt="Snip20200603_3"></p>
+<h2 id="5-中间按钮添加事件"><a href="#5-中间按钮添加事件" class="headerlink" title="5.中间按钮添加事件"></a>5.中间按钮添加事件</h2><p><img src="京贝尔开发记录.assets/Snip20200603_4.png" alt="Snip20200603_4"></p>
+<p>\break</p>
+<h1 id="13-附近nearBy-横向跨屏滑动的效果-用的是DCPagerController做到了"><a href="#13-附近nearBy-横向跨屏滑动的效果-用的是DCPagerController做到了" class="headerlink" title="13.附近nearBy,横向跨屏滑动的效果,用的是DCPagerController做到了"></a>13.附近nearBy,横向跨屏滑动的效果,用的是DCPagerController做到了</h1><h2 id="1-新建控制器"><a href="#1-新建控制器" class="headerlink" title="1.新建控制器."></a>1.新建控制器.</h2><p><img src="京贝尔开发记录.assets/Snip20200604_1.png" alt="Snip20200604_1"></p>
+<h2 id="2-修改DCPagerController-总体背景色"><a href="#2-修改DCPagerController-总体背景色" class="headerlink" title="2.修改DCPagerController,总体背景色"></a>2.修改DCPagerController,总体背景色</h2><p><img src="京贝尔开发记录.assets/Snip20200604_2.png" alt="Snip20200604_2"></p>
+<h2 id="3-去掉底部一条黑线"><a href="#3-去掉底部一条黑线" class="headerlink" title="3.去掉底部一条黑线"></a>3.去掉底部一条黑线</h2><p><img src="京贝尔开发记录.assets/Snip20200604_4.png" alt="Snip20200604_4"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200604_5.png" alt="Snip20200604_5"></p>
+<h2 id="4-获取网络数据-URL-没有length错误"><a href="#4-获取网络数据-URL-没有length错误" class="headerlink" title="4.获取网络数据,URL 没有length错误."></a>4.获取网络数据,URL 没有length错误.</h2><h2 id="5-标签没字-要看赋值那里是不是有问题-尤其第一个显示了最后一个-可能就是全都赋给了第一个"><a href="#5-标签没字-要看赋值那里是不是有问题-尤其第一个显示了最后一个-可能就是全都赋给了第一个" class="headerlink" title="5.标签没字,要看赋值那里是不是有问题,尤其第一个显示了最后一个,可能就是全都赋给了第一个."></a>5.标签没字,要看赋值那里是不是有问题,尤其第一个显示了最后一个,可能就是全都赋给了第一个.</h2><h2 id="6-MR-NearByViewController-m"><a href="#6-MR-NearByViewController-m" class="headerlink" title="6.MR_NearByViewController.m"></a>6.MR_NearByViewController.m</h2><h3 id="7-创建子控制器"><a href="#7-创建子控制器" class="headerlink" title="7.创建子控制器"></a><img src="京贝尔开发记录.assets/Snip20200604_6.png" alt="Snip20200604_6">7.创建子控制器</h3><p><img src="京贝尔开发记录.assets/Snip20200604_7.png" alt="Snip20200604_7"></p>
+<h2 id="13-6-pagerController添加子控制器"><a href="#13-6-pagerController添加子控制器" class="headerlink" title="13.6.pagerController添加子控制器"></a>13.6.pagerController添加子控制器</h2><h3 id="1-旧版-四种控制器麻烦"><a href="#1-旧版-四种控制器麻烦" class="headerlink" title="1.旧版:四种控制器麻烦"></a>1.旧版:四种控制器麻烦</h3><p><img src="京贝尔开发记录.assets/Snip20200604_24.png" alt="Snip20200604_24"></p>
+<h3 id="2-新版一个类-四个对象-少三个类-便于修改-就是一个类加了个对象"><a href="#2-新版一个类-四个对象-少三个类-便于修改-就是一个类加了个对象" class="headerlink" title="2.新版一个类,四个对象.少三个类,便于修改,就是一个类加了个对象."></a>2.新版一个类,四个对象.少三个类,便于修改,就是一个类加了个对象.</h3><p><img src="京贝尔开发记录.assets/Snip20200604_25.png" alt="Snip20200604_25"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200604_27.png" alt="Snip20200604_27"></p>
+<h3 id="3-用自己的对象"><a href="#3-用自己的对象" class="headerlink" title="3.用自己的对象"></a>3.用自己的对象</h3><p><img src="京贝尔开发记录.assets/Snip20200604_29.png" alt="Snip20200604_29"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200604_23.png" alt="Snip20200604_23"></p>
+<h2 id="7-在init里建collectview"><a href="#7-在init里建collectview" class="headerlink" title="7.在init里建collectview"></a>7.在init里建collectview</h2><p><img src="京贝尔开发记录.assets/Snip20200604_8.png" alt="Snip20200604_8"></p>
+<h2 id="8-CollectView数据源"><a href="#8-CollectView数据源" class="headerlink" title="8.CollectView数据源"></a>8.CollectView数据源</h2><p><img src="京贝尔开发记录.assets/Snip20200604_10.png" alt="Snip20200604_10"></p>
+<h2 id="9-给Cell赋值"><a href="#9-给Cell赋值" class="headerlink" title="9.给Cell赋值"></a>9.给Cell赋值</h2><p><img src="京贝尔开发记录.assets/Snip20200604_13.png" alt="Snip20200604_13"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200604_14.png" alt="Snip20200604_14"></p>
+<h2 id="10-附近商店模型"><a href="#10-附近商店模型" class="headerlink" title="10.附近商店模型"></a>10.附近商店模型</h2><p><img src="京贝尔开发记录.assets/Snip20200604_16.png" alt="Snip20200604_16"></p>
+<h2 id="11-从模型数组中取出附近模型数组-lt-HomeViewModel"><a href="#11-从模型数组中取出附近模型数组-lt-HomeViewModel" class="headerlink" title="11.从模型数组中取出附近模型数组&lt;-HomeViewModel"></a>11.从模型数组中取出附近模型数组&lt;-HomeViewModel</h2><p><img src="京贝尔开发记录.assets/Snip20200604_18.png" alt="Snip20200604_18"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200604_19.png" alt="Snip20200604_19"></p>
+<h2 id="13-12-四个模型数组对应四组店-lt-HomeViewModel-改了"><a href="#13-12-四个模型数组对应四组店-lt-HomeViewModel-改了" class="headerlink" title="13.12. 四个模型数组对应四组店&lt;-HomeViewModel 改了"></a>13.12. 四个模型数组对应四组店&lt;-HomeViewModel 改了</h2><p><img src="京贝尔开发记录.assets/Snip20200604_20.png" alt="Snip20200604_20"></p>
+<h3 id="13-12-1新版控制器一个类-四个对象-少三个类-便于修改-就是一个类加了个对象"><a href="#13-12-1新版控制器一个类-四个对象-少三个类-便于修改-就是一个类加了个对象" class="headerlink" title="13.12.1新版控制器一个类,四个对象.少三个类,便于修改,就是一个类加了个对象."></a>13.12.1新版控制器一个类,四个对象.少三个类,便于修改,就是一个类加了个对象.</h3><p><img src="京贝尔开发记录.assets/Snip20200604_25.png" alt="Snip20200604_25"></p>
+<h3 id="13-12-2-统一控制器-添加模型数组属性"><a href="#13-12-2-统一控制器-添加模型数组属性" class="headerlink" title="13.12.2.统一控制器,添加模型数组属性"></a>13.12.2.统一控制器,添加模型数组属性</h3><p><img src="京贝尔开发记录.assets/Snip20200604_27.png" alt="Snip20200604_27"></p>
+<h4 id="13-12-3-用自己的模型数组当数据源"><a href="#13-12-3-用自己的模型数组当数据源" class="headerlink" title="13.12.3.用自己的模型数组当数据源"></a>13.12.3.用自己的模型数组当数据源</h4><p><img src="京贝尔开发记录.assets/Snip20200604_29.png" alt="Snip20200604_29"></p>
+<h2 id="13-13-设置title-导航栏的设了不好使-lt-MR-NearByViewController-m"><a href="#13-13-设置title-导航栏的设了不好使-lt-MR-NearByViewController-m" class="headerlink" title="13.13.设置title,导航栏的设了不好使 &lt;-.MR_NearByViewController.m"></a>13.13.设置title,导航栏的设了不好使 &lt;-.MR_NearByViewController.m</h2><p><img src="京贝尔开发记录.assets/Snip20200604_22.png" alt="Snip20200604_22"></p>
+<h2 id="13-14-设置滑页控制器颜色和模式"><a href="#13-14-设置滑页控制器颜色和模式" class="headerlink" title="13.14.设置滑页控制器颜色和模式"></a>13.14.设置滑页控制器颜色和模式</h2><h3 id="-2"><a href="#-2" class="headerlink" title=""></a><img src="京贝尔开发记录.assets/Snip20200604_26.png" alt="Snip20200604_26"></h3><h2 id="13-15-更改podfile-防止自动更新pagerController"><a href="#13-15-更改podfile-防止自动更新pagerController" class="headerlink" title="13.15.更改podfile,防止自动更新pagerController"></a>13.15.更改podfile,防止自动更新pagerController</h2><h1 id="14-地图计算距离用原生CoreLocation"><a href="#14-地图计算距离用原生CoreLocation" class="headerlink" title="14.地图计算距离用原生CoreLocation"></a>14.地图计算距离用原生CoreLocation</h1><h2 id="1-加框架"><a href="#1-加框架" class="headerlink" title="1.加框架"></a>1.加框架</h2><p><img src="京贝尔开发记录.assets/Snip20200604_9.png" alt="Snip20200604_9"></p>
+<h2 id="2-遵守协议CLLocationManagerDelegate"><a href="#2-遵守协议CLLocationManagerDelegate" class="headerlink" title="2.遵守协议CLLocationManagerDelegate"></a>2.遵守协议CLLocationManagerDelegate</h2><p><img src="京贝尔开发记录.assets/Snip20200604_11.png" alt="Snip20200604_11"></p>
+<h2 id="3-请求使用位置"><a href="#3-请求使用位置" class="headerlink" title="3.请求使用位置"></a>3.请求使用位置</h2><h3 id="-3"><a href="#-3" class="headerlink" title=""></a><img src="京贝尔开发记录.assets/Snip20200604_15.png" alt="Snip20200604_11"></h3><h2 id="4-添加用户位置属性"><a href="#4-添加用户位置属性" class="headerlink" title="4.添加用户位置属性"></a>4.添加用户位置属性</h2><p><img src="京贝尔开发记录.assets/Snip20200604_17.png" alt="Snip20200604_17"></p>
+<h2 id="5-懒加载中开始update位置-改了"><a href="#5-懒加载中开始update位置-改了" class="headerlink" title="5.懒加载中开始update位置 ,改了"></a>5.懒加载中开始update位置 ,改了</h2><p><img src="京贝尔开发记录.assets/Snip20200604_21.png" alt="Snip20200604_21"></p>
+<h2 id="6-update完就停止-delegate"><a href="#6-update完就停止-delegate" class="headerlink" title="6.update完就停止.delegate"></a>6.update完就停止.delegate</h2><h2 id="7-iOS获得用户位置"><a href="#7-iOS获得用户位置" class="headerlink" title="7.iOS获得用户位置"></a>7.<strong><a href="https://www.cnblogs.com/StevenHuSir/p/OC_GETUSERLOCATION.html" target="_blank" rel="noopener">iOS获得用户位置</a></strong></h2><h2 id="8-Please-note-that-in-iOS-11-and-later"><a href="#8-Please-note-that-in-iOS-11-and-later" class="headerlink" title="8.Please note that in iOS 11 and later, "></a>8.<strong>Please note that in iOS 11 and later, </strong></h2><h4 id="a-third-key-has-to-be-supplied-to-your-info-plist-NSLocationAlwaysAndWhenInUseUsageDescription"><a href="#a-third-key-has-to-be-supplied-to-your-info-plist-NSLocationAlwaysAndWhenInUseUsageDescription" class="headerlink" title="a third key has to be supplied to your info.plist: NSLocationAlwaysAndWhenInUseUsageDescription"></a><strong>a third key has to be supplied to your info.plist: NSLocationAlwaysAndWhenInUseUsageDescription</strong></h4><h2 id="9-Location-and-Maps-Programming-Guide"><a href="#9-Location-and-Maps-Programming-Guide" class="headerlink" title="9.Location and Maps Programming Guide"></a>9.<a href="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/LocationAwarenessPG/CoreLocation/CoreLocation.html#//apple_ref/doc/uid/TP40009497-CH2-SW1" target="_blank" rel="noopener">Location and Maps Programming Guide</a></h2><h2 id="10-教程里的代码都不好使-也许只是有延迟"><a href="#10-教程里的代码都不好使-也许只是有延迟" class="headerlink" title="10.教程里的代码都不好使,也许只是有延迟"></a>10.<strong>教程里的代码都不好使,也许只是有延迟</strong></h2><h2 id="11-使用的是高德地图"><a href="#11-使用的是高德地图" class="headerlink" title="11.使用的是高德地图."></a>11.使用的是高德地图.</h2><h3 id="1-百度开发者网站-http-lbsyun-baidu-com"><a href="#1-百度开发者网站-http-lbsyun-baidu-com" class="headerlink" title="1.百度开发者网站:http://lbsyun.baidu.com/"></a>1.百度开发者网站:<a href="http://lbsyun.baidu.com/" target="_blank" rel="noopener">http://lbsyun.baidu.com/</a></h3><h3 id="2-cocoapod安装有182M-太大了-换单独的包"><a href="#2-cocoapod安装有182M-太大了-换单独的包" class="headerlink" title="2.cocoapod安装有182M,太大了,换单独的包."></a>2.cocoapod安装有182M,太大了,换单独的包.</h3><h3 id="3-注册app"><a href="#3-注册app" class="headerlink" title="3.注册app"></a>3.注册app</h3><p><img src="京贝尔开发记录.assets/Snip20200604_3.png" alt="Snip20200604_3"></p>
+<h3 id="4-导入库"><a href="#4-导入库" class="headerlink" title="4.导入库"></a>4.导入库</h3><p><img src="京贝尔开发记录.assets/Snip20200605_1.png" alt="Snip20200605_1"></p>
+<h3 id="5-距离计算在服务器端"><a href="#5-距离计算在服务器端" class="headerlink" title="5.距离计算在服务器端."></a>5.距离计算在服务器端.</h3><h2 id="15-详情页"><a href="#15-详情页" class="headerlink" title="15.详情页"></a>15.详情页</h2><h2 id="1-导航"><a href="#1-导航" class="headerlink" title="1.导航"></a>1.导航</h2><p><img src="京贝尔开发记录.assets/Snip20200605_8.png" alt="Snip20200605_8"></p>
+<h2 id="2-颜色"><a href="#2-颜色" class="headerlink" title="2.颜色"></a>2.颜色</h2><h3 id="-4"><a href="#-4" class="headerlink" title=""></a><img src="京贝尔开发记录.assets/Snip20200605_9.png" alt="Snip20200605_9"></h3><h2 id="3-修改naviCtrl"><a href="#3-修改naviCtrl" class="headerlink" title="3.修改naviCtrl"></a>3.修改naviCtrl</h2><p><img src="京贝尔开发记录.assets/Snip20200605_11.png" alt="Snip20200605_11"></p>
+<h2 id="15-4-初始化-背景色"><a href="#15-4-初始化-背景色" class="headerlink" title="15.4.初始化 背景色"></a>15.4.初始化 背景色</h2><p><img src="京贝尔开发记录.assets/Snip20200605_17.png" alt="Snip20200605_17"></p>
+<h2 id="16-模型数据"><a href="#16-模型数据" class="headerlink" title="16.模型数据"></a>16.模型数据</h2><h2 id="1-MS-StoreInfo-and-MR-DetailModel"><a href="#1-MS-StoreInfo-and-MR-DetailModel" class="headerlink" title="1.MS_StoreInfo and MR_DetailModel"></a>1.MS_StoreInfo and MR_DetailModel</h2><p><img src="京贝尔开发记录.assets/Snip20200605_13.png" alt="Snip20200605_13"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200605_12.png" alt="Snip20200605_12"></p>
+<h2 id="2-懒加载数据到模型"><a href="#2-懒加载数据到模型" class="headerlink" title="2.懒加载数据到模型"></a>2.懒加载数据到模型</h2><p><img src="京贝尔开发记录.assets/Snip20200605_18.png" alt="Snip20200605_18"></p>
+<h2 id="3-传indexPath取数据"><a href="#3-传indexPath取数据" class="headerlink" title="3.传indexPath取数据."></a>3.传indexPath取数据.</h2><p><img src="京贝尔开发记录.assets/Snip20200605_19.png" alt="Snip20200605_19"></p>
+<h2 id="17-详情-MR-StoreDetailViewController-m-gt-添加View"><a href="#17-详情-MR-StoreDetailViewController-m-gt-添加View" class="headerlink" title="17.详情:MR_StoreDetailViewController.m-&gt;添加View."></a>17.详情:MR_StoreDetailViewController.m-&gt;添加View.</h2><p><img src="京贝尔开发记录.assets/Snip20200606_18.png" alt="Snip20200606_18"></p>
+<h2 id="17-1-setupCollectView"><a href="#17-1-setupCollectView" class="headerlink" title="17.1.setupCollectView"></a>17.1.setupCollectView</h2><p><img src="京贝尔开发记录.assets/Snip20200606_4.png" alt="Snip20200606_4"></p>
+<h2 id="17-2-导入头文件"><a href="#17-2-导入头文件" class="headerlink" title="17.2.导入头文件"></a>17.2.导入头文件</h2><p><img src="京贝尔开发记录.assets/Snip20200606_5.png" alt="Snip20200606_5"></p>
+<h2 id="17-3-定义重用ID"><a href="#17-3-定义重用ID" class="headerlink" title="17.3.定义重用ID"></a>17.3.定义重用ID</h2><p><img src="京贝尔开发记录.assets/Snip20200606_6.png" alt="Snip20200606_6"></p>
+<h2 id="17-4-创建CollectionView"><a href="#17-4-创建CollectionView" class="headerlink" title="17.4.创建CollectionView"></a>17.4.创建CollectionView</h2><p><img src="京贝尔开发记录.assets/Snip20200606_7.png" alt="Snip20200606_7"></p>
+<h2 id="17-5UICollectionViewDataSource"><a href="#17-5UICollectionViewDataSource" class="headerlink" title="17.5UICollectionViewDataSource"></a>17.5UICollectionViewDataSource</h2><p><img src="京贝尔开发记录.assets/Snip20200606_9.png" alt="Snip20200606_9"></p>
+<h2 id="17-6-MR-ShuffleCollectionViewCell"><a href="#17-6-MR-ShuffleCollectionViewCell" class="headerlink" title="17.6.MR_ShuffleCollectionViewCell"></a>17.6.MR_ShuffleCollectionViewCell</h2><p><img src="京贝尔开发记录.assets/Snip20200606_10.png" alt="Snip20200606_10"></p>
+<h2 id="17-7-设置使用的cell"><a href="#17-7-设置使用的cell" class="headerlink" title="17.7.设置使用的cell"></a>17.7.设置使用的cell</h2><p><img src="京贝尔开发记录.assets/Snip20200606_11.png" alt="Snip20200606_11"></p>
+<h2 id="17-8-MR-ShuffleCollectionViewCell-m"><a href="#17-8-MR-ShuffleCollectionViewCell-m" class="headerlink" title="17.8.MR_ShuffleCollectionViewCell.m"></a>17.8.MR_ShuffleCollectionViewCell.m</h2><p><img src="京贝尔开发记录.assets/Snip20200606_12.png" alt="Snip20200606_12"></p>
+<h2 id="17-9-设置button-圆角"><a href="#17-9-设置button-圆角" class="headerlink" title="17.9.设置button,圆角"></a>17.9.设置button,圆角</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> *  从图片中按指定的位置大小截取图片的一部分</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment"> *  @param image UIImage image 原始的图片</span></span><br><span class="line"><span class="comment"> *  @param rect  CGRect rect 要截取的区域</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment"> *  @return UIImage</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line"></span><br><span class="line">+ (<span class="built_in">UIImage</span> *)mr_imageFromImage:(<span class="built_in">UIImage</span> *)image inRect:(<span class="built_in">CGRect</span>)rect&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//把像 素rect 转化为 点rect（如无转化则按原图像素取部分图片）</span></span><br><span class="line">  <span class="built_in">CGFloat</span> scale = [<span class="built_in">UIScreen</span> mainScreen].scale;</span><br><span class="line">  <span class="built_in">CGFloat</span> x= rect.origin.x*scale,y=rect.origin.y*scale,w=rect.size.width*scale,h=rect.size.height*scale;</span><br><span class="line">  <span class="built_in">CGRect</span> dianRect = <span class="built_in">CGRectMake</span>(x, y, w, h);</span><br><span class="line"></span><br><span class="line">  <span class="comment">//截取部分图片并生成新图片</span></span><br><span class="line">  <span class="built_in">CGImageRef</span> sourceImageRef = [image <span class="built_in">CGImage</span>];</span><br><span class="line">  <span class="built_in">CGImageRef</span> newImageRef = <span class="built_in">CGImageCreateWithImageInRect</span>(sourceImageRef, dianRect);</span><br><span class="line">  <span class="built_in">UIImage</span> *newImage = [<span class="built_in">UIImage</span> imageWithCGImage:newImageRef scale:[<span class="built_in">UIScreen</span> mainScreen].scale orientation:<span class="built_in">UIImageOrientationUp</span>];</span><br><span class="line">  <span class="keyword">return</span> newImage;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="京贝尔开发记录.assets/Snip20200606_13.png" alt="Snip20200606_12"></p>
+<h2 id="17-10-通知打开新控制器"><a href="#17-10-通知打开新控制器" class="headerlink" title="17.10.通知打开新控制器"></a>17.10.通知打开新控制器</h2><p><img src="京贝尔开发记录.assets/Snip20200606_14.png" alt="Snip20200606_14"></p>
+<h2 id="18-详情相册-MR-DetailImagesCollectionViewController"><a href="#18-详情相册-MR-DetailImagesCollectionViewController" class="headerlink" title="18.详情相册,MR_DetailImagesCollectionViewController"></a>18.详情相册,MR_DetailImagesCollectionViewController</h2><h3 id="18-0-带字典参数的通知"><a href="#18-0-带字典参数的通知" class="headerlink" title="18.0.带字典参数的通知"></a>18.0.带字典参数的通知</h3><p><img src="京贝尔开发记录.assets/Snip20200606_24.png" alt="Snip20200606_24"></p>
+<h3 id="18-1-接受通知处理点击"><a href="#18-1-接受通知处理点击" class="headerlink" title="18.1.接受通知处理点击"></a>18.1.接受通知处理点击</h3><p><img src="京贝尔开发记录.assets/Snip20200606_19.png" alt="Snip20200606_19"></p>
+<h3 id="18-2-点击推出图片展示控制器"><a href="#18-2-点击推出图片展示控制器" class="headerlink" title="18.2.点击推出图片展示控制器"></a>18.2.点击推出图片展示控制器</h3><p><img src="京贝尔开发记录.assets/Snip20200606_20.png" alt="Snip20200606_20"></p>
+<h3 id="18-3-建MR-DetailImagesCollectionViewController"><a href="#18-3-建MR-DetailImagesCollectionViewController" class="headerlink" title="18.3.建MR_DetailImagesCollectionViewController"></a>18.3.建MR_DetailImagesCollectionViewController</h3><p><img src="京贝尔开发记录.assets/Snip20200606_26.png" alt="Snip20200606_26"></p>
+<h3 id="18-5-声明id"><a href="#18-5-声明id" class="headerlink" title="18.5 声明id"></a>18.5 声明id</h3><p><img src="京贝尔开发记录.assets/Snip20200606_27.png" alt="Snip20200606_27"></p>
+<h3 id="18-6-初始化collectView"><a href="#18-6-初始化collectView" class="headerlink" title="18.6.初始化collectView"></a>18.6.初始化collectView</h3><p><img src="京贝尔开发记录.assets/Snip20200606_29.png" alt="Snip20200606_29"></p>
+<h3 id="18-7-建模型-有值的都写才行"><a href="#18-7-建模型-有值的都写才行" class="headerlink" title="18.7.建模型,有值的都写才行"></a>18.7.建模型,有值的都写才行</h3><p><img src="京贝尔开发记录.assets/Snip20200606_34.png" alt="Snip20200606_34"></p>
+<h3 id="18-8-JSON-转模型section模型的数组"><a href="#18-8-JSON-转模型section模型的数组" class="headerlink" title="18.8.JSON 转模型section模型的数组"></a>18.8.JSON 转模型section模型的数组</h3><p><img src="京贝尔开发记录.assets/Snip20200606_35.png" alt="Snip20200606_35"></p>
+<h3 id="18-9-为数据源写方法-到时按组取数组就好"><a href="#18-9-为数据源写方法-到时按组取数组就好" class="headerlink" title="18.9.为数据源写方法,到时按组取数组就好"></a>18.9.为数据源写方法,到时按组取数组就好</h3><p><img src="京贝尔开发记录.assets/Snip20200606_35.png" alt="Snip20200606_35"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200606_38.png" alt="Snip20200606_38"></p>
+<h3 id="18-10-数据源-从模型数组中取就好"><a href="#18-10-数据源-从模型数组中取就好" class="headerlink" title="18.10 数据源,从模型数组中取就好"></a>18.10 数据源,从模型数组中取就好</h3><p><img src="京贝尔开发记录.assets/Snip20200606_40.png" alt="Snip20200606_40"></p>
+<h3 id="18-11-section-头"><a href="#18-11-section-头" class="headerlink" title="18.11 section 头"></a>18.11 section 头</h3><p><img src="京贝尔开发记录.assets/Snip20200606_41.png" alt="Snip20200606_41"></p>
+<h3 id="18-12-sectionLabel-有了模型-在DetailImageVC中处理不需要这个方法了"><a href="#18-12-sectionLabel-有了模型-在DetailImageVC中处理不需要这个方法了" class="headerlink" title="18.12. sectionLabel,有了模型,在DetailImageVC中处理不需要这个方法了"></a>18.12. sectionLabel,有了模型,在DetailImageVC中处理不需要这个方法了</h3><p><img src="京贝尔开发记录.assets/Snip20200606_42.png" alt="Snip20200606_42"></p>
+<h3 id="18-13-这里设不到text"><a href="#18-13-这里设不到text" class="headerlink" title="18.13.这里设不到text"></a>18.13.这里设不到text</h3><p><img src="京贝尔开发记录.assets/Snip20200606_44.png" alt="Snip20200606_44"></p>
+<h3 id="18-14-必须在这setter这里设text-否则不刷新-18-商品图片集end"><a href="#18-14-必须在这setter这里设text-否则不刷新-18-商品图片集end" class="headerlink" title="18.14.必须在这setter这里设text,否则不刷新 18.商品图片集end."></a>18.14.必须在这setter这里设text,否则不刷新 18.商品图片集end.</h3><h2 id="19-详情第一组-商店信息模"><a href="#19-详情第一组-商店信息模" class="headerlink" title="19.详情第一组,商店信息模"></a>19.详情第一组,商店信息模</h2><h3 id="19-1-添加模型"><a href="#19-1-添加模型" class="headerlink" title="19.1.添加模型"></a>19.1.添加模型</h3><p><img src="京贝尔开发记录.assets/Snip20200607_1.png" alt="Snip20200607_1"></p>
+<h3 id="19-2找到了QuickType-pasteJsonAsCode-复制然后菜单里找就好"><a href="#19-2找到了QuickType-pasteJsonAsCode-复制然后菜单里找就好" class="headerlink" title="19.2找到了QuickType,pasteJsonAsCode,复制然后菜单里找就好"></a>19.2<strong>找到了QuickType,pasteJsonAsCode</strong>,复制然后菜单里找就好</h3><p><img src="京贝尔开发记录.assets/Snip20200607_4.png" alt="Snip20200607_4"></p>
+<p><strong>120个Key,手动写手累坏了</strong></p>
+<h3 id="19-3-在首页选中item时赋值getStoreInfoForIndexPath-NSIndexPath-indexPath"><a href="#19-3-在首页选中item时赋值getStoreInfoForIndexPath-NSIndexPath-indexPath" class="headerlink" title="19.3.在首页选中item时赋值getStoreInfoForIndexPath:(NSIndexPath *)indexPath"></a>19.3.在首页选中item时赋值getStoreInfoForIndexPath:(NSIndexPath *)indexPath</h3><p><img src="京贝尔开发记录.assets/Snip20200607_6.png" alt="Snip20200607_6"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200607_5.png" alt="Snip20200607_5"></p>
+<h3 id="19-4-添加Views"><a href="#19-4-添加Views" class="headerlink" title="19.4.添加Views"></a>19.4.添加Views</h3><p>_imageButtonImage    __NSCFString *    @”<a href="https://jd-img.gbei.cn/upload/storeImage/yqbXfqxVtkh.jpeg&quot;" target="_blank" rel="noopener">https://jd-img.gbei.cn/upload/storeImage/yqbXfqxVtkh.jpeg&quot;</a>    0x0000000282dfa850</p>
+<h3 id="19-5-LayoutSubviews"><a href="#19-5-LayoutSubviews" class="headerlink" title="19.5.LayoutSubviews"></a>19.5.LayoutSubviews</h3><p><img src="京贝尔开发记录.assets/Snip20200609_2.png" alt="Snip20200609_2"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200609_4.png" alt="Snip20200609_3"></p>
+<h2 id="20-带下划线可放大分组标题菜单-MR-SectionMenuFooter"><a href="#20-带下划线可放大分组标题菜单-MR-SectionMenuFooter" class="headerlink" title="20.带下划线可放大分组标题菜单-MR_SectionMenuFooter"></a>20.带下划线可放大分组标题菜单-MR_SectionMenuFooter</h2><h3 id="20-1-bolck设置属性"><a href="#20-1-bolck设置属性" class="headerlink" title="20.1.bolck设置属性"></a>20.1.bolck设置属性</h3><p><img src="京贝尔开发记录.assets/Snip20200610_1.png" alt="Snip20200610_1"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200610_2.png" alt="Snip20200610_2"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200610_3.png" alt="Snip20200610_1"></p>
+<h3 id="20-2-设置进度是宽度的倍数"><a href="#20-2-设置进度是宽度的倍数" class="headerlink" title="20.2.设置进度是宽度的倍数"></a>20.2.设置进度是宽度的倍数</h3><p><img src="京贝尔开发记录.assets/Snip20200610_5.png" alt="Snip20200610_5"></p>
+<h2 id="21-添加滚动可停住的组菜单-可以滚动悬停"><a href="#21-添加滚动可停住的组菜单-可以滚动悬停" class="headerlink" title="21.添加滚动可停住的组菜单(可以滚动悬停)"></a>21.添加滚动可停住的组菜单(可以滚动悬停)</h2><h3 id="21-1-添加属性"><a href="#21-1-添加属性" class="headerlink" title="21.1.添加属性"></a>21.1.添加属性</h3><p><img src="京贝尔开发记录.assets/Snip20200610_6.png" alt="Snip20200610_6"></p>
+<h3 id="21-2-懒加载悬停组菜单"><a href="#21-2-懒加载悬停组菜单" class="headerlink" title="21.2.懒加载悬停组菜单"></a>21.2.懒加载悬停组菜单</h3><h3 id="-5"><a href="#-5" class="headerlink" title=""></a><img src="京贝尔开发记录.assets/Snip20200610_7.png" alt="Snip20200610_7"></h3><h3 id="21-3-根据滚动位置设置设置组菜单显示隐藏"><a href="#21-3-根据滚动位置设置设置组菜单显示隐藏" class="headerlink" title="21.3.根据滚动位置设置设置组菜单显示隐藏"></a>21.3.根据滚动位置设置设置组菜单显示隐藏</h3><p><img src="京贝尔开发记录.assets/Snip20200610_8.png" alt="Snip20200610_8"></p>
+<h2 id="22-选中按钮滚到指定的View"><a href="#22-选中按钮滚到指定的View" class="headerlink" title="22.选中按钮滚到指定的View"></a>22.选中按钮滚到指定的View</h2><h3 id="22-1-选中按钮滚到指定的View-选中按钮发送通知-并且带着index"><a href="#22-1-选中按钮滚到指定的View-选中按钮发送通知-并且带着index" class="headerlink" title="22.1.选中按钮滚到指定的View,选中按钮发送通知,并且带着index"></a>22.1.选中按钮滚到指定的View,选中按钮发送通知,并且带着index</h3><p><img src="京贝尔开发记录.assets/Snip20200610_9.png" alt="Snip20200610_9"></p>
+<h3 id="22-1-选中按钮滚到指定的View-接收通知"><a href="#22-1-选中按钮滚到指定的View-接收通知" class="headerlink" title="22.1.选中按钮滚到指定的View,接收通知"></a>22.1.选中按钮滚到指定的View,接收通知</h3><p><img src="京贝尔开发记录.assets/Snip20200610_11.png" alt="Snip20200610_10"></p>
+<h3 id="22-3-选中按钮滚到指定的View-通知处理"><a href="#22-3-选中按钮滚到指定的View-通知处理" class="headerlink" title="22.3.选中按钮滚到指定的View,通知处理"></a>22.3.选中按钮滚到指定的View,通知处理</h3><p><img src="京贝尔开发记录.assets/Snip20200610_11.png" alt="Snip20200610_11"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200617_2.png" alt="Snip20200617_2"></p>
+<h3 id="22-4-选中按钮滚到指定的View-滚到指定组"><a href="#22-4-选中按钮滚到指定的View-滚到指定组" class="headerlink" title="22.4.选中按钮滚到指定的View,滚到指定组"></a>22.4.选中按钮滚到指定的View,滚到指定组</h3><p><img src="京贝尔开发记录.assets/Snip20200610_12.png" alt="Snip20200610_12"></p>
+<h2 id="23-组菜单根据滑动选中按钮"><a href="#23-组菜单根据滑动选中按钮" class="headerlink" title="23.组菜单根据滑动选中按钮"></a>23.组菜单根据滑动选中按钮</h2><h3 id="23-1-组菜单根据滑动选中按钮-组菜单被拉下来-选中第一个"><a href="#23-1-组菜单根据滑动选中按钮-组菜单被拉下来-选中第一个" class="headerlink" title="23.1.组菜单根据滑动选中按钮,组菜单被拉下来,选中第一个"></a>23.1.组菜单根据滑动选中按钮,组菜单被拉下来,选中第一个</h3><p><img src="京贝尔开发记录.assets/Snip20200617_1.png" alt="Snip20200617_1"></p>
+<h3 id="23-2-根据滚动的位置和记录的headerY值们对比确定选中哪个按钮"><a href="#23-2-根据滚动的位置和记录的headerY值们对比确定选中哪个按钮" class="headerlink" title="23.2.根据滚动的位置和记录的headerY值们对比确定选中哪个按钮"></a>23.2.根据滚动的位置和记录的headerY值们对比确定选中哪个按钮</h3><p><img src="京贝尔开发记录.assets/Snip20200617_5.png" alt="Snip20200617_3"></p>
+<h3 id="23-2-旧-组菜单根据滑动选中按钮-停止减速时设置选中哪个-这个不好使"><a href="#23-2-旧-组菜单根据滑动选中按钮-停止减速时设置选中哪个-这个不好使" class="headerlink" title="23.2(旧).组菜单根据滑动选中按钮,停止减速时设置选中哪个,这个不好使"></a>23.2(旧).组菜单根据滑动选中按钮,停止减速时设置选中哪个,这个不好使<img src="京贝尔开发记录.assets/Snip20200610_14.png" alt="Snip20200610_14"></h3><h2 id="24-首页第二三组详情"><a href="#24-首页第二三组详情" class="headerlink" title="24.首页第二三组详情"></a>24.首页第二三组详情</h2><h3 id="24-1-首页第二三组-详情页URL"><a href="#24-1-首页第二三组-详情页URL" class="headerlink" title="24.1.首页第二三组,详情页URL"></a>24.1.首页第二三组,详情页URL</h3><h3 id="24-2-用URL获得详情页面数据并显示"><a href="#24-2-用URL获得详情页面数据并显示" class="headerlink" title="24.2.用URL获得详情页面数据并显示"></a>24.2.用URL获得详情页面数据并显示</h3><p><img src="京贝尔开发记录.assets/Snip20200617_9.png" alt="Snip20200617_9"></p>
+<h2 id="25-首页上拉刷新"><a href="#25-首页上拉刷新" class="headerlink" title="25.首页上拉刷新"></a>25.首页上拉刷新</h2><p><img src="京贝尔开发记录.assets/Snip20200619_3.png" alt="Snip20200619_3"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200619_2.png" alt="Snip20200619_3"></p>
+<h2 id="26-订单"><a href="#26-订单" class="headerlink" title="26.订单"></a>26.订单</h2><h3 id="26-1-MR-OrderSubMenu"><a href="#26-1-MR-OrderSubMenu" class="headerlink" title="26.1.MR_OrderSubMenu"></a>26.1.MR_OrderSubMenu</h3><h3 id="26-2-MR-OrderViewController"><a href="#26-2-MR-OrderViewController" class="headerlink" title="26.2.MR_OrderViewController"></a>26.2.MR_OrderViewController</h3><h3 id="26-3-MR-OrderSubViewController"><a href="#26-3-MR-OrderSubViewController" class="headerlink" title="26.3.MR_OrderSubViewController"></a>26.3.MR_OrderSubViewController</h3><h2 id="27-个人中心颜色"><a href="#27-个人中心颜色" class="headerlink" title="27.个人中心颜色"></a>27.个人中心颜色</h2><h2 id="28-分类颜色DCCommodityViewController"><a href="#28-分类颜色DCCommodityViewController" class="headerlink" title="28.分类颜色DCCommodityViewController"></a>28.分类颜色DCCommodityViewController</h2><h2 id="29-显示地图"><a href="#29-显示地图" class="headerlink" title="29.显示地图"></a>29.显示地图</h2><h3 id="29-0-定义常量"><a href="#29-0-定义常量" class="headerlink" title="29.0.定义常量"></a>29.0.定义常量</h3><p><img src="京贝尔开发记录.assets/Snip20200624_2.png" alt="Snip20200624_2"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200624_3.png" alt="Snip20200624_3"></p>
+<h3 id="29-1-发通知"><a href="#29-1-发通知" class="headerlink" title="29.1.发通知"></a>29.1.发通知</h3><p><img src="京贝尔开发记录.assets/Snip20200624_4.png" alt="Snip20200624_4"></p>
+<h3 id="29-2-按钮添加动作"><a href="#29-2-按钮添加动作" class="headerlink" title="29.2.按钮添加动作"></a>29.2.按钮添加动作</h3><p><img src="京贝尔开发记录.assets/Snip20200624_6.png" alt="Snip20200624_6"></p>
+<h3 id="29-3-接收通知"><a href="#29-3-接收通知" class="headerlink" title="29.3.接收通知"></a>29.3.接收通知</h3><p><img src="京贝尔开发记录.assets/Snip20200624_7.png" alt="Snip20200624_7"></p>
+<h3 id="29-4-地图-加载控制器-传坐标"><a href="#29-4-地图-加载控制器-传坐标" class="headerlink" title="29.4.地图,加载控制器,传坐标"></a>29.4.地图,加载控制器,传坐标</h3><p><img src="京贝尔开发记录.assets/Snip20200624_9.png" alt="Snip20200624_9"></p>
+<h3 id="29-5-接收坐标"><a href="#29-5-接收坐标" class="headerlink" title="29.5.接收坐标"></a>29.5.接收坐标</h3><p><img src="京贝尔开发记录.assets/Snip20200624_10.png" alt="Snip20200624_10"></p>
+<h3 id="29-6-添加地图-并定位到指定位置"><a href="#29-6-添加地图-并定位到指定位置" class="headerlink" title="29.6.添加地图,并定位到指定位置"></a>29.6.添加地图,并定位到指定位置</h3><p><img src="京贝尔开发记录.assets/Snip20200624_11.png" alt="Snip20200624_11"></p>
+<h3 id="29-7-自定义大头针图片"><a href="#29-7-自定义大头针图片" class="headerlink" title="29.7.自定义大头针图片"></a>29.7.自定义大头针图片</h3><p><img src="京贝尔开发记录.assets/Snip20200624_12.png" alt="Snip20200624_12"></p>
+<h2 id="30-地图气泡"><a href="#30-地图气泡" class="headerlink" title="30.地图气泡"></a>30.地图气泡</h2><h3 id="1-Label文字-CustomAnnotationViewController"><a href="#1-Label文字-CustomAnnotationViewController" class="headerlink" title="1.Label文字 CustomAnnotationViewController"></a>1.Label文字 CustomAnnotationViewController</h3><p><img src="京贝尔开发记录.assets/Snip20200625_1.png" alt="Snip20200625_1"></p>
+<h3 id="30-2-地图气泡文字-CustomAnnotationView"><a href="#30-2-地图气泡文字-CustomAnnotationView" class="headerlink" title="30.2 地图气泡文字 CustomAnnotationView"></a>30.2 地图气泡文字 CustomAnnotationView</h3><p><img src="京贝尔开发记录.assets/Snip20200625_5.png" alt="Snip20200625_5"></p>
+<h3 id="30-3-Construct-custom-callout"><a href="#30-3-Construct-custom-callout" class="headerlink" title="30.3.Construct custom callout."></a>30.3.Construct custom callout.</h3><p><img src="京贝尔开发记录.assets/Snip20200625_7.png" alt="Snip20200625_7"></p>
+<h3 id="30-5-地图气泡设置文字和直接显示气泡"><a href="#30-5-地图气泡设置文字和直接显示气泡" class="headerlink" title="30.5.地图气泡设置文字和直接显示气泡"></a>30.5.地图气泡设置文字和直接显示气泡</h3><p><img src="京贝尔开发记录.assets/Snip20200625_10.png" alt="Snip20200625_10"><img src="京贝尔开发记录.assets/Snip20200625_13.png" alt="Snip20200625_13"></p>
+<h2 id="31-跳转外部地图导航"><a href="#31-跳转外部地图导航" class="headerlink" title="31.跳转外部地图导航"></a>31.跳转外部地图导航</h2><h3 id="31-1-添加白名单"><a href="#31-1-添加白名单" class="headerlink" title="31.1.添加白名单"></a>31.1.添加白名单</h3><p><img src="京贝尔开发记录.assets/Snip20200625_15.png" alt="Snip20200625_15"></p>
+<h3 id="31-2-发通知"><a href="#31-2-发通知" class="headerlink" title="31.2.发通知"></a>31.2.发通知</h3><h3 id="31-3-接收通知"><a href="#31-3-接收通知" class="headerlink" title="31.3.接收通知"></a>31.3.接收通知</h3><h3 id="31-4-alertVc-lazy-load"><a href="#31-4-alertVc-lazy-load" class="headerlink" title="31.4.alertVc lazy load"></a>31.4.alertVc lazy load</h3><p><img src="京贝尔开发记录.assets/Snip20200625_21.png" alt="Snip20200625_21"></p>
+<h3 id="31-5-建立动作菜单"><a href="#31-5-建立动作菜单" class="headerlink" title="31.5.建立动作菜单"></a>31.5.建立动作菜单</h3><h3 id="31-6-显示动作菜单"><a href="#31-6-显示动作菜单" class="headerlink" title="31.6.显示动作菜单"></a>31.6.显示动作菜单</h3><p><img src="京贝尔开发记录.assets/Snip20200625_20.png" alt="Snip20200625_20"></p>
+<h3 id="31-7-解除通知监听"><a href="#31-7-解除通知监听" class="headerlink" title="31.7.解除通知监听"></a>31.7.解除通知监听</h3><h3 id="31-8-调用苹果地图"><a href="#31-8-调用苹果地图" class="headerlink" title="31.8 调用苹果地图"></a>31.8 调用苹果地图</h3><p><img src="京贝尔开发记录.assets/Snip20200625_23.png" alt="Snip20200625_23"></p>
+<h3 id="31-9-调用高德地图"><a href="#31-9-调用高德地图" class="headerlink" title="31.9 调用高德地图"></a>31.9 调用高德地图</h3><p><img src="京贝尔开发记录.assets/Snip20200625_25.png" alt="Snip20200625_25"></p>
+<h3 id="31-10-调用百度地图"><a href="#31-10-调用百度地图" class="headerlink" title="31.10 调用百度地图"></a>31.10 调用百度地图</h3><p><img src="京贝尔开发记录.assets/Snip20200625_26.png" alt="Snip20200625_26"></p>
+<h2 id="32-根据坐标获得地点名"><a href="#32-根据坐标获得地点名" class="headerlink" title="32.根据坐标获得地点名"></a>32.根据坐标获得地点名</h2><p><img src="京贝尔开发记录.assets/Snip20200625_27.png" alt="Snip20200625_27"></p>
+<h2 id="33-在设置模型时用高德地图计算距离MAMetersBetweenMapPoints"><a href="#33-在设置模型时用高德地图计算距离MAMetersBetweenMapPoints" class="headerlink" title="33.在设置模型时用高德地图计算距离MAMetersBetweenMapPoints"></a>33.在设置模型时用高德地图计算距离MAMetersBetweenMapPoints</h2><p><img src="京贝尔开发记录.assets/Snip20200626_1.png" alt="Snip20200626_1"></p>
+<h2 id="34-用户位置用高德地图获得"><a href="#34-用户位置用高德地图获得" class="headerlink" title="34.用户位置用高德地图获得"></a>34.用户位置用高德地图获得</h2><h3 id="34-1-用户位置用高德地图获得-管理者"><a href="#34-1-用户位置用高德地图获得-管理者" class="headerlink" title="34.1.用户位置用高德地图获得,管理者"></a>34.1.用户位置用高德地图获得,管理者</h3><p><img src="京贝尔开发记录.assets/Snip20200626_2.png" alt="Snip20200626_2"></p>
+<h3 id="33-2-aMaplocationManager高德位置管理者"><a href="#33-2-aMaplocationManager高德位置管理者" class="headerlink" title="33.2.aMaplocationManager高德位置管理者"></a>33.2.aMaplocationManager高德位置管理者</h3><p><img src="京贝尔开发记录.assets/Snip20200626_3.png" alt="Snip20200626_3"></p>
+<h3 id="34-3-隐私请求获取位置信息，和定位"><a href="#34-3-隐私请求获取位置信息，和定位" class="headerlink" title="34.3.隐私请求获取位置信息，和定位"></a>34.3.隐私请求获取位置信息，和定位</h3><p><img src="京贝尔开发记录.assets/Snip20200626_4.png" alt="Snip20200626_4"></p>
+<h3 id="34-4-懒加载时高德地图获取位置"><a href="#34-4-懒加载时高德地图获取位置" class="headerlink" title="34.4.懒加载时高德地图获取位置"></a>34.4.懒加载时高德地图获取位置</h3><p><img src="京贝尔开发记录.assets/Snip20200626_5.png" alt="Snip20200626_5"></p>
+<h3 id="34-5-高德地图获取到位置"><a href="#34-5-高德地图获取到位置" class="headerlink" title="34.5.高德地图获取到位置"></a>34.5.高德地图获取到位置</h3><p><img src="京贝尔开发记录.assets/Snip20200626_6.png" alt="Snip20200626_6"></p>
+<h3 id="34-6-高德地图获取失败报错"><a href="#34-6-高德地图获取失败报错" class="headerlink" title="34.6.高德地图获取失败报错"></a>34.6.高德地图获取失败报错</h3><h3 id="-6"><a href="#-6" class="headerlink" title=""></a><img src="京贝尔开发记录.assets/Snip20200626_7.png" alt="Snip20200626_7"></h3><h2 id="35-高德地理编码-地名得坐标"><a href="#35-高德地理编码-地名得坐标" class="headerlink" title="35.高德地理编码(地名得坐标)"></a>35.高德地理编码(地名得坐标)</h2><h3 id="35-1高德地理编码-地名得坐标-1-API对象"><a href="#35-1高德地理编码-地名得坐标-1-API对象" class="headerlink" title="35.1高德地理编码(地名得坐标) 1.API对象"></a>35.1高德地理编码(地名得坐标) 1.API对象</h3><h3 id="35-2-protocol-AMapSearchDelegate"><a href="#35-2-protocol-AMapSearchDelegate" class="headerlink" title="35.2. protocol AMapSearchDelegate"></a>35.2. protocol AMapSearchDelegate</h3><h3 id="35-3-AMapGeocodeSearchRequest-created"><a href="#35-3-AMapGeocodeSearchRequest-created" class="headerlink" title="35.3 AMapGeocodeSearchRequest created"></a>35.3 AMapGeocodeSearchRequest created</h3><h3 id="35-4-aMapSearchApi-make-a-request-will-get-a-response"><a href="#35-4-aMapSearchApi-make-a-request-will-get-a-response" class="headerlink" title="35.4.aMapSearchApi make a request, will get a response"></a>35.4.aMapSearchApi make a request, will get a response</h3><h3 id="35-5-AMapSearchDelegate-method-onGeocodeSearchDone-需要滚动才能刷新-在设置model那里不用"><a href="#35-5-AMapSearchDelegate-method-onGeocodeSearchDone-需要滚动才能刷新-在设置model那里不用" class="headerlink" title="35.5 AMapSearchDelegate method onGeocodeSearchDone 需要滚动才能刷新,在设置model那里不用"></a>35.5 AMapSearchDelegate method onGeocodeSearchDone 需要滚动才能刷新,在设置model那里不用</h3><h3 id="35-6-分类增加属性-用于保存距离"><a href="#35-6-分类增加属性-用于保存距离" class="headerlink" title="35.6.分类增加属性,用于保存距离"></a>35.6.分类增加属性,用于保存距离</h3><h3 id="35-7-分类增加属性-用于保存距离"><a href="#35-7-分类增加属性-用于保存距离" class="headerlink" title="35.7.分类增加属性,用于保存距离"></a>35.7.分类增加属性,用于保存距离</h3><h3 id="35-8-获取StoreModel解析时地理编码并计算距离-这个需要滚动-不如在setModel时计算"><a href="#35-8-获取StoreModel解析时地理编码并计算距离-这个需要滚动-不如在setModel时计算" class="headerlink" title="35.8 获取StoreModel解析时地理编码并计算距离,这个需要滚动,不如在setModel时计算"></a>35.8 获取StoreModel解析时地理编码并计算距离,这个需要滚动,不如在setModel时计算</h3><h2 id="36-个人中心颜色"><a href="#36-个人中心颜色" class="headerlink" title="36.个人中心颜色"></a>36.个人中心颜色</h2><h2 id="37-个人中心正弦曲线分割"><a href="#37-个人中心正弦曲线分割" class="headerlink" title="37.个人中心正弦曲线分割"></a>37.个人中心正弦曲线分割</h2><p><img src="京贝尔开发记录.assets/9CD7BB63-3A52-45C1-9D5D-CE17C7467E67_1_201_a.jpeg" alt="9CD7BB63-3A52-45C1-9D5D-CE17C7467E67_1_201_a"></p>
+<p><img src="京贝尔开发记录.assets/Snip20200628_2.png" alt="Snip20200628_2"></p>
+<h2 id="38-监控暗黑模式切换-更换图片-traitCollectionDidChange"><a href="#38-监控暗黑模式切换-更换图片-traitCollectionDidChange" class="headerlink" title="38.监控暗黑模式切换,更换图片.traitCollectionDidChange"></a>38.监控暗黑模式切换,更换图片.traitCollectionDidChange</h2><p><img src="京贝尔开发记录.assets/Snip20200628_1.png" alt="Snip20200628_1"></p>
+<h2 id="39-打电话"><a href="#39-打电话" class="headerlink" title="39.打电话"></a>39.打电话</h2><h2 id="-7"><a href="#-7" class="headerlink" title=""></a><img src="京贝尔开发记录.assets/Snip20200628_4.png" alt="Snip20200628_4"></h2><h2 id="40-百度地图"><a href="#40-百度地图" class="headerlink" title="40.百度地图"></a>40.百度地图</h2>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/" rel="tag"># iOS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/05/29/京贝debug/" rel="next" title="京贝debug">
+                <i class="fa fa-chevron-left"></i> 京贝debug
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/06/04/京贝高德地图集成/" rel="prev" title="京贝高德地图集成">
+                京贝高德地图集成 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">MichaelRich</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:gg1956756@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://kate.heavenyu.com/" title="NewHome" target="_blank">NewHome</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-京贝尔数据"><span class="nav-text">1.京贝尔数据</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-数据模型"><span class="nav-text">1.数据模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-初始化加载数据"><span class="nav-text">2.初始化加载数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-轮播"><span class="nav-text">3.轮播</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-gridItem分类"><span class="nav-text">4.gridItem分类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-获取gridItem分类数据模型"><span class="nav-text">4.1.获取gridItem分类数据模型.</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-在数据源方法-设置模型-返回三排三种cell"><span class="nav-text">4.2.在数据源方法,设置模型,返回三排三种cell</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-gridCell-添加子控件"><span class="nav-text">4.3.gridCell.添加子控件.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4-layoutSubviews"><span class="nav-text">4.4.layoutSubviews</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-5-中间grid-Masonry设置约束"><span class="nav-text">4.5.中间grid Masonry设置约束</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-6下边图靠上-图设小-字靠紧"><span class="nav-text">4.6下边图靠上,图设小,字靠紧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-7-不再继承自gridCell-单独建类-不会继承到Masonry约束-非常流畅"><span class="nav-text">4.7.不再继承自gridCell,单独建类,不会继承到Masonry约束,非常流畅.</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-主题推荐"><span class="nav-text">5.主题推荐</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1模型数组"><span class="nav-text">5.1模型数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-ViewModel"><span class="nav-text">5.2.ViewModel</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-热门好店"><span class="nav-text">6.热门好店</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-数据源"><span class="nav-text">1.数据源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-从模型数组中取出热门-好店模型数组"><span class="nav-text">6.2.从模型数组中取出热门 好店模型数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-UICollectionViewDataSource"><span class="nav-text">6.3.UICollectionViewDataSource</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4-设置inset-itemsize"><span class="nav-text">6.4.设置inset,itemsize</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-5-PS测量尺寸-BC-scale-计算比例"><span class="nav-text">6.5.PS测量尺寸,BC,scale,计算比例.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-6-设置图片-需要缩放-不需要"><span class="nav-text">6.6.设置图片,需要缩放(不需要)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-6-2-从缓存中找sd下的图"><span class="nav-text">6.6.2.从缓存中找sd下的图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-6-3-不需要缩放-用aspactFill-因为在总控制器设定的尺寸不对"><span class="nav-text">6.6.3.不需要缩放,用aspactFill,因为在总控制器设定的尺寸不对</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-7-添加locationLabel-调节约束"><span class="nav-text">6.7.添加locationLabel.调节约束.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-8-设置圆角在LayoutSubviews"><span class="nav-text">6.8.设置圆角在LayoutSubviews</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-9-添加header"><span class="nav-text">6.9.添加header</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-10-注册"><span class="nav-text">6.10.注册</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-11-设置尺寸"><span class="nav-text">6.11.设置尺寸</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-大牌甄选"><span class="nav-text">7.大牌甄选</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#7-1-type"><span class="nav-text">7.1.type</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-2-用type取-self-homeViewModel-getDataArray-type"><span class="nav-text">7.2.用type取[self.homeViewModel  getDataArray:_type]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-3-设置type给子cell-分别取不同数据"><span class="nav-text">7.3.设置type给子cell,分别取不同数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-4-设置header"><span class="nav-text">7.4.设置header</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-5-设置动态颜色"><span class="nav-text">7.5.设置动态颜色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-6-设置总尺寸和头部约束"><span class="nav-text">7.6.设置总尺寸和头部约束</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-设置单例HomeViewModel-防止内存一直增加"><span class="nav-text">8.设置单例HomeViewModel,防止内存一直增加.</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#9-推荐店"><span class="nav-text">9.推荐店</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-建cell类和xib"><span class="nav-text">1.建cell类和xib</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-initWithFrame-loadNibNamed"><span class="nav-text">1.1.initWithFrame,loadNibNamed</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-layourSubviews"><span class="nav-text">1.2.layourSubviews</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-setStoreModel"><span class="nav-text">1.3.setStoreModel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-注册ReuserIdentifier-nibWithName-registerNib-nib-forReuseIdentifier"><span class="nav-text">2.注册ReuserIdentifier,nibWithName, registerNib:nib forReuseIdentifier:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-加属性"><span class="nav-text">3.加属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-懒加载初始化"><span class="nav-text">4.懒加载初始化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#-1"><span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-读模型的方法JSON-to-模型数组"><span class="nav-text">5.读模型的方法JSON to 模型数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-模型类建模"><span class="nav-text">6.模型类建模</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-给collect数据"><span class="nav-text">7.给collect数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-设置item大小"><span class="nav-text">8.设置item大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-调整子控件位置-添加下边线"><span class="nav-text">9.调整子控件位置,添加下边线,</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-设置navbar颜色-滑动通知改变背景色"><span class="nav-text">10.设置navbar颜色,滑动通知改变背景色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-深色监控"><span class="nav-text">11.深色监控</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-设置tabBar"><span class="nav-text">12.设置tabBar</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-中间按钮用圆角去掉黑边-需要自定义tabbar-在layouSubViews里"><span class="nav-text">1.中间按钮用圆角去掉黑边,需要自定义tabbar,在layouSubViews里.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-设置文字颜色和背景色-使用SF-Symbel-作图标-可以改变颜色"><span class="nav-text">2.设置文字颜色和背景色,使用SF Symbel,作图标,可以改变颜色.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-控制器属性数组"><span class="nav-text">3.控制器属性数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-用数组添加子控制器和items"><span class="nav-text">4.用数组添加子控制器和items</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-中间按钮添加事件"><span class="nav-text">5.中间按钮添加事件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#13-附近nearBy-横向跨屏滑动的效果-用的是DCPagerController做到了"><span class="nav-text">13.附近nearBy,横向跨屏滑动的效果,用的是DCPagerController做到了</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-新建控制器"><span class="nav-text">1.新建控制器.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-修改DCPagerController-总体背景色"><span class="nav-text">2.修改DCPagerController,总体背景色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-去掉底部一条黑线"><span class="nav-text">3.去掉底部一条黑线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-获取网络数据-URL-没有length错误"><span class="nav-text">4.获取网络数据,URL 没有length错误.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-标签没字-要看赋值那里是不是有问题-尤其第一个显示了最后一个-可能就是全都赋给了第一个"><span class="nav-text">5.标签没字,要看赋值那里是不是有问题,尤其第一个显示了最后一个,可能就是全都赋给了第一个.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-MR-NearByViewController-m"><span class="nav-text">6.MR_NearByViewController.m</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-创建子控制器"><span class="nav-text">7.创建子控制器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-6-pagerController添加子控制器"><span class="nav-text">13.6.pagerController添加子控制器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-旧版-四种控制器麻烦"><span class="nav-text">1.旧版:四种控制器麻烦</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-新版一个类-四个对象-少三个类-便于修改-就是一个类加了个对象"><span class="nav-text">2.新版一个类,四个对象.少三个类,便于修改,就是一个类加了个对象.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-用自己的对象"><span class="nav-text">3.用自己的对象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-在init里建collectview"><span class="nav-text">7.在init里建collectview</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-CollectView数据源"><span class="nav-text">8.CollectView数据源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-给Cell赋值"><span class="nav-text">9.给Cell赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-附近商店模型"><span class="nav-text">10.附近商店模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-从模型数组中取出附近模型数组-lt-HomeViewModel"><span class="nav-text">11.从模型数组中取出附近模型数组&lt;-HomeViewModel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-12-四个模型数组对应四组店-lt-HomeViewModel-改了"><span class="nav-text">13.12. 四个模型数组对应四组店&lt;-HomeViewModel 改了</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#13-12-1新版控制器一个类-四个对象-少三个类-便于修改-就是一个类加了个对象"><span class="nav-text">13.12.1新版控制器一个类,四个对象.少三个类,便于修改,就是一个类加了个对象.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-12-2-统一控制器-添加模型数组属性"><span class="nav-text">13.12.2.统一控制器,添加模型数组属性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#13-12-3-用自己的模型数组当数据源"><span class="nav-text">13.12.3.用自己的模型数组当数据源</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-13-设置title-导航栏的设了不好使-lt-MR-NearByViewController-m"><span class="nav-text">13.13.设置title,导航栏的设了不好使 &lt;-.MR_NearByViewController.m</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-14-设置滑页控制器颜色和模式"><span class="nav-text">13.14.设置滑页控制器颜色和模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#-2"><span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-15-更改podfile-防止自动更新pagerController"><span class="nav-text">13.15.更改podfile,防止自动更新pagerController</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#14-地图计算距离用原生CoreLocation"><span class="nav-text">14.地图计算距离用原生CoreLocation</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-加框架"><span class="nav-text">1.加框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-遵守协议CLLocationManagerDelegate"><span class="nav-text">2.遵守协议CLLocationManagerDelegate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-请求使用位置"><span class="nav-text">3.请求使用位置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#-3"><span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-添加用户位置属性"><span class="nav-text">4.添加用户位置属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-懒加载中开始update位置-改了"><span class="nav-text">5.懒加载中开始update位置 ,改了</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-update完就停止-delegate"><span class="nav-text">6.update完就停止.delegate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-iOS获得用户位置"><span class="nav-text">7.iOS获得用户位置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-Please-note-that-in-iOS-11-and-later"><span class="nav-text">8.Please note that in iOS 11 and later, </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#a-third-key-has-to-be-supplied-to-your-info-plist-NSLocationAlwaysAndWhenInUseUsageDescription"><span class="nav-text">a third key has to be supplied to your info.plist: NSLocationAlwaysAndWhenInUseUsageDescription</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-Location-and-Maps-Programming-Guide"><span class="nav-text">9.Location and Maps Programming Guide</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-教程里的代码都不好使-也许只是有延迟"><span class="nav-text">10.教程里的代码都不好使,也许只是有延迟</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-使用的是高德地图"><span class="nav-text">11.使用的是高德地图.</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-百度开发者网站-http-lbsyun-baidu-com"><span class="nav-text">1.百度开发者网站:http://lbsyun.baidu.com/</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-cocoapod安装有182M-太大了-换单独的包"><span class="nav-text">2.cocoapod安装有182M,太大了,换单独的包.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-注册app"><span class="nav-text">3.注册app</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-导入库"><span class="nav-text">4.导入库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-距离计算在服务器端"><span class="nav-text">5.距离计算在服务器端.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-详情页"><span class="nav-text">15.详情页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-导航"><span class="nav-text">1.导航</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-颜色"><span class="nav-text">2.颜色</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#-4"><span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-修改naviCtrl"><span class="nav-text">3.修改naviCtrl</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-4-初始化-背景色"><span class="nav-text">15.4.初始化 背景色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-模型数据"><span class="nav-text">16.模型数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-MS-StoreInfo-and-MR-DetailModel"><span class="nav-text">1.MS_StoreInfo and MR_DetailModel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-懒加载数据到模型"><span class="nav-text">2.懒加载数据到模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-传indexPath取数据"><span class="nav-text">3.传indexPath取数据.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-详情-MR-StoreDetailViewController-m-gt-添加View"><span class="nav-text">17.详情:MR_StoreDetailViewController.m-&gt;添加View.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-1-setupCollectView"><span class="nav-text">17.1.setupCollectView</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-2-导入头文件"><span class="nav-text">17.2.导入头文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-3-定义重用ID"><span class="nav-text">17.3.定义重用ID</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-4-创建CollectionView"><span class="nav-text">17.4.创建CollectionView</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-5UICollectionViewDataSource"><span class="nav-text">17.5UICollectionViewDataSource</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-6-MR-ShuffleCollectionViewCell"><span class="nav-text">17.6.MR_ShuffleCollectionViewCell</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-7-设置使用的cell"><span class="nav-text">17.7.设置使用的cell</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-8-MR-ShuffleCollectionViewCell-m"><span class="nav-text">17.8.MR_ShuffleCollectionViewCell.m</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-9-设置button-圆角"><span class="nav-text">17.9.设置button,圆角</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-10-通知打开新控制器"><span class="nav-text">17.10.通知打开新控制器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18-详情相册-MR-DetailImagesCollectionViewController"><span class="nav-text">18.详情相册,MR_DetailImagesCollectionViewController</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#18-0-带字典参数的通知"><span class="nav-text">18.0.带字典参数的通知</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-1-接受通知处理点击"><span class="nav-text">18.1.接受通知处理点击</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-2-点击推出图片展示控制器"><span class="nav-text">18.2.点击推出图片展示控制器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-3-建MR-DetailImagesCollectionViewController"><span class="nav-text">18.3.建MR_DetailImagesCollectionViewController</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-5-声明id"><span class="nav-text">18.5 声明id</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-6-初始化collectView"><span class="nav-text">18.6.初始化collectView</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-7-建模型-有值的都写才行"><span class="nav-text">18.7.建模型,有值的都写才行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-8-JSON-转模型section模型的数组"><span class="nav-text">18.8.JSON 转模型section模型的数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-9-为数据源写方法-到时按组取数组就好"><span class="nav-text">18.9.为数据源写方法,到时按组取数组就好</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-10-数据源-从模型数组中取就好"><span class="nav-text">18.10 数据源,从模型数组中取就好</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-11-section-头"><span class="nav-text">18.11 section 头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-12-sectionLabel-有了模型-在DetailImageVC中处理不需要这个方法了"><span class="nav-text">18.12. sectionLabel,有了模型,在DetailImageVC中处理不需要这个方法了</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-13-这里设不到text"><span class="nav-text">18.13.这里设不到text</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-14-必须在这setter这里设text-否则不刷新-18-商品图片集end"><span class="nav-text">18.14.必须在这setter这里设text,否则不刷新 18.商品图片集end.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#19-详情第一组-商店信息模"><span class="nav-text">19.详情第一组,商店信息模</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#19-1-添加模型"><span class="nav-text">19.1.添加模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19-2找到了QuickType-pasteJsonAsCode-复制然后菜单里找就好"><span class="nav-text">19.2找到了QuickType,pasteJsonAsCode,复制然后菜单里找就好</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19-3-在首页选中item时赋值getStoreInfoForIndexPath-NSIndexPath-indexPath"><span class="nav-text">19.3.在首页选中item时赋值getStoreInfoForIndexPath:(NSIndexPath *)indexPath</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19-4-添加Views"><span class="nav-text">19.4.添加Views</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19-5-LayoutSubviews"><span class="nav-text">19.5.LayoutSubviews</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20-带下划线可放大分组标题菜单-MR-SectionMenuFooter"><span class="nav-text">20.带下划线可放大分组标题菜单-MR_SectionMenuFooter</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#20-1-bolck设置属性"><span class="nav-text">20.1.bolck设置属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20-2-设置进度是宽度的倍数"><span class="nav-text">20.2.设置进度是宽度的倍数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#21-添加滚动可停住的组菜单-可以滚动悬停"><span class="nav-text">21.添加滚动可停住的组菜单(可以滚动悬停)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#21-1-添加属性"><span class="nav-text">21.1.添加属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21-2-懒加载悬停组菜单"><span class="nav-text">21.2.懒加载悬停组菜单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-5"><span class="nav-text"></span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21-3-根据滚动位置设置设置组菜单显示隐藏"><span class="nav-text">21.3.根据滚动位置设置设置组菜单显示隐藏</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-选中按钮滚到指定的View"><span class="nav-text">22.选中按钮滚到指定的View</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#22-1-选中按钮滚到指定的View-选中按钮发送通知-并且带着index"><span class="nav-text">22.1.选中按钮滚到指定的View,选中按钮发送通知,并且带着index</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-1-选中按钮滚到指定的View-接收通知"><span class="nav-text">22.1.选中按钮滚到指定的View,接收通知</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-3-选中按钮滚到指定的View-通知处理"><span class="nav-text">22.3.选中按钮滚到指定的View,通知处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-4-选中按钮滚到指定的View-滚到指定组"><span class="nav-text">22.4.选中按钮滚到指定的View,滚到指定组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#23-组菜单根据滑动选中按钮"><span class="nav-text">23.组菜单根据滑动选中按钮</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#23-1-组菜单根据滑动选中按钮-组菜单被拉下来-选中第一个"><span class="nav-text">23.1.组菜单根据滑动选中按钮,组菜单被拉下来,选中第一个</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#23-2-根据滚动的位置和记录的headerY值们对比确定选中哪个按钮"><span class="nav-text">23.2.根据滚动的位置和记录的headerY值们对比确定选中哪个按钮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#23-2-旧-组菜单根据滑动选中按钮-停止减速时设置选中哪个-这个不好使"><span class="nav-text">23.2(旧).组菜单根据滑动选中按钮,停止减速时设置选中哪个,这个不好使</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#24-首页第二三组详情"><span class="nav-text">24.首页第二三组详情</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#24-1-首页第二三组-详情页URL"><span class="nav-text">24.1.首页第二三组,详情页URL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#24-2-用URL获得详情页面数据并显示"><span class="nav-text">24.2.用URL获得详情页面数据并显示</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#25-首页上拉刷新"><span class="nav-text">25.首页上拉刷新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#26-订单"><span class="nav-text">26.订单</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#26-1-MR-OrderSubMenu"><span class="nav-text">26.1.MR_OrderSubMenu</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#26-2-MR-OrderViewController"><span class="nav-text">26.2.MR_OrderViewController</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#26-3-MR-OrderSubViewController"><span class="nav-text">26.3.MR_OrderSubViewController</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#27-个人中心颜色"><span class="nav-text">27.个人中心颜色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#28-分类颜色DCCommodityViewController"><span class="nav-text">28.分类颜色DCCommodityViewController</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#29-显示地图"><span class="nav-text">29.显示地图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#29-0-定义常量"><span class="nav-text">29.0.定义常量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#29-1-发通知"><span class="nav-text">29.1.发通知</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#29-2-按钮添加动作"><span class="nav-text">29.2.按钮添加动作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#29-3-接收通知"><span class="nav-text">29.3.接收通知</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#29-4-地图-加载控制器-传坐标"><span class="nav-text">29.4.地图,加载控制器,传坐标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#29-5-接收坐标"><span class="nav-text">29.5.接收坐标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#29-6-添加地图-并定位到指定位置"><span class="nav-text">29.6.添加地图,并定位到指定位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#29-7-自定义大头针图片"><span class="nav-text">29.7.自定义大头针图片</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#30-地图气泡"><span class="nav-text">30.地图气泡</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Label文字-CustomAnnotationViewController"><span class="nav-text">1.Label文字 CustomAnnotationViewController</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#30-2-地图气泡文字-CustomAnnotationView"><span class="nav-text">30.2 地图气泡文字 CustomAnnotationView</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#30-3-Construct-custom-callout"><span class="nav-text">30.3.Construct custom callout.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#30-5-地图气泡设置文字和直接显示气泡"><span class="nav-text">30.5.地图气泡设置文字和直接显示气泡</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#31-跳转外部地图导航"><span class="nav-text">31.跳转外部地图导航</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#31-1-添加白名单"><span class="nav-text">31.1.添加白名单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#31-2-发通知"><span class="nav-text">31.2.发通知</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#31-3-接收通知"><span class="nav-text">31.3.接收通知</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#31-4-alertVc-lazy-load"><span class="nav-text">31.4.alertVc lazy load</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#31-5-建立动作菜单"><span class="nav-text">31.5.建立动作菜单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#31-6-显示动作菜单"><span class="nav-text">31.6.显示动作菜单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#31-7-解除通知监听"><span class="nav-text">31.7.解除通知监听</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#31-8-调用苹果地图"><span class="nav-text">31.8 调用苹果地图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#31-9-调用高德地图"><span class="nav-text">31.9 调用高德地图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#31-10-调用百度地图"><span class="nav-text">31.10 调用百度地图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#32-根据坐标获得地点名"><span class="nav-text">32.根据坐标获得地点名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#33-在设置模型时用高德地图计算距离MAMetersBetweenMapPoints"><span class="nav-text">33.在设置模型时用高德地图计算距离MAMetersBetweenMapPoints</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#34-用户位置用高德地图获得"><span class="nav-text">34.用户位置用高德地图获得</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#34-1-用户位置用高德地图获得-管理者"><span class="nav-text">34.1.用户位置用高德地图获得,管理者</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#33-2-aMaplocationManager高德位置管理者"><span class="nav-text">33.2.aMaplocationManager高德位置管理者</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#34-3-隐私请求获取位置信息，和定位"><span class="nav-text">34.3.隐私请求获取位置信息，和定位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#34-4-懒加载时高德地图获取位置"><span class="nav-text">34.4.懒加载时高德地图获取位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#34-5-高德地图获取到位置"><span class="nav-text">34.5.高德地图获取到位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#34-6-高德地图获取失败报错"><span class="nav-text">34.6.高德地图获取失败报错</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-6"><span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#35-高德地理编码-地名得坐标"><span class="nav-text">35.高德地理编码(地名得坐标)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#35-1高德地理编码-地名得坐标-1-API对象"><span class="nav-text">35.1高德地理编码(地名得坐标) 1.API对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#35-2-protocol-AMapSearchDelegate"><span class="nav-text">35.2. protocol AMapSearchDelegate</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#35-3-AMapGeocodeSearchRequest-created"><span class="nav-text">35.3 AMapGeocodeSearchRequest created</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#35-4-aMapSearchApi-make-a-request-will-get-a-response"><span class="nav-text">35.4.aMapSearchApi make a request, will get a response</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#35-5-AMapSearchDelegate-method-onGeocodeSearchDone-需要滚动才能刷新-在设置model那里不用"><span class="nav-text">35.5 AMapSearchDelegate method onGeocodeSearchDone 需要滚动才能刷新,在设置model那里不用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#35-6-分类增加属性-用于保存距离"><span class="nav-text">35.6.分类增加属性,用于保存距离</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#35-7-分类增加属性-用于保存距离"><span class="nav-text">35.7.分类增加属性,用于保存距离</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#35-8-获取StoreModel解析时地理编码并计算距离-这个需要滚动-不如在setModel时计算"><span class="nav-text">35.8 获取StoreModel解析时地理编码并计算距离,这个需要滚动,不如在setModel时计算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#36-个人中心颜色"><span class="nav-text">36.个人中心颜色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#37-个人中心正弦曲线分割"><span class="nav-text">37.个人中心正弦曲线分割</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#38-监控暗黑模式切换-更换图片-traitCollectionDidChange"><span class="nav-text">38.监控暗黑模式切换,更换图片.traitCollectionDidChange</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#39-打电话"><span class="nav-text">39.打电话</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#-7"><span class="nav-text"></span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#40-百度地图"><span class="nav-text">40.百度地图</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MichaelRich</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">23.6k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

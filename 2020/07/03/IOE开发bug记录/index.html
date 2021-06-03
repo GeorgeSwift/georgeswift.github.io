@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next mist" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+    <script>
+    (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/5a709d705.js","daovoice")
+    daovoice('init', {
+        app_id: "5a709d75"
+    });
+    daovoice('update');
+    </script>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="iOS,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="1. 监听UITextfield改变,方法要写在控制器.  [_contentView.passwordTF addTarget:self action:@selector(textDidChange:) forControlEvents:UIControlEventEditingChanged];">
+<meta name="keywords" content="iOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IOE开发bug记录">
+<meta property="og:url" content="https://www.heavenyu.com/2020/07/03/IOE开发bug记录/index.html">
+<meta property="og:site_name" content="MichaelRich">
+<meta property="og:description" content="1. 监听UITextfield改变,方法要写在控制器.  [_contentView.passwordTF addTarget:self action:@selector(textDidChange:) forControlEvents:UIControlEventEditingChanged];">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://www.heavenyu.com/2020/07/03/IOE开发bug记录/IOE开发bug记录.assets/Snip20200703_2.png">
+<meta property="og:updated_time" content="2020-07-28T09:53:34.441Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="IOE开发bug记录">
+<meta name="twitter:description" content="1. 监听UITextfield改变,方法要写在控制器.  [_contentView.passwordTF addTarget:self action:@selector(textDidChange:) forControlEvents:UIControlEventEditingChanged];">
+<meta name="twitter:image" content="https://www.heavenyu.com/2020/07/03/IOE开发bug记录/IOE开发bug记录.assets/Snip20200703_2.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.heavenyu.com/2020/07/03/IOE开发bug记录/">
+
+
+
+
+
+  <title>IOE开发bug记录 | MichaelRich</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MichaelRich</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Welcome to send messages on the right bottom!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.heavenyu.com/2020/07/03/IOE开发bug记录/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MichaelRich">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MichaelRich">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">IOE开发bug记录</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-03T14:50:50+08:00">
+                2020-07-03
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2020-07-28T17:53:34+08:00">
+                2020-07-28
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  299
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="1-监听UITextfield改变-方法要写在控制器"><a href="#1-监听UITextfield改变-方法要写在控制器" class="headerlink" title="1. 监听UITextfield改变,方法要写在控制器."></a>1. 监听UITextfield改变,方法要写在控制器.</h2><p>  <strong>[_contentView.passwordTF addTarget:self action:@selector(textDidChange:) forControlEvents:UIControlEventEditingChanged];</strong></p>
+<a id="more"></a>
+<h2 id="2-密码框输入密码"><a href="#2-密码框输入密码" class="headerlink" title="2.密码框输入密码,"></a>2.密码框输入密码,</h2><p><strong>[AutoFill] Cannot show Automatic Strong Passwords for app bundleID: -App-ID-Prefix-QP8UZV798L.com.loemarket.ios.ioe-ios due to error: iCloud Keychain is disabled</strong></p>
+<p><img src="IOE开发bug记录.assets/Snip20200703_2.png" alt="Snip20200703_2"></p>
+<h2 id="3-Terminating-app-due-to-uncaught-exception-‘NSInvalidArgumentException’-reason-‘-NSPlaceholderArray-initWithObjects-count-attempt-to-insert-nil-object-from-objects-0-’"><a href="#3-Terminating-app-due-to-uncaught-exception-‘NSInvalidArgumentException’-reason-‘-NSPlaceholderArray-initWithObjects-count-attempt-to-insert-nil-object-from-objects-0-’" class="headerlink" title="3.Terminating app due to uncaught exception ‘NSInvalidArgumentException’, reason: ‘\* -[__NSPlaceholderArray initWithObjects:count:]: attempt to insert nil object from objects[0]’**"></a>3.<strong>Terminating app due to uncaught exception ‘NSInvalidArgumentException’, reason: ‘\</strong>* -[__NSPlaceholderArray initWithObjects:count:]: attempt to insert nil object from objects[0]’**</h2><h2 id="4-Pushing-a-navigation-controller-is-not-supported"><a href="#4-Pushing-a-navigation-controller-is-not-supported" class="headerlink" title="4.Pushing a navigation controller is not supported"></a>4.<strong>Pushing a navigation controller is not supported</strong></h2><h2 id="5-‘-WSStoreAllData-copyWithZone-unrecognized-selector-sent-to-instance-0x28087dea0’"><a href="#5-‘-WSStoreAllData-copyWithZone-unrecognized-selector-sent-to-instance-0x28087dea0’" class="headerlink" title="5.‘-[WSStoreAllData copyWithZone:]: unrecognized selector sent to instance 0x28087dea0’"></a>5.<strong>‘-[WSStoreAllData copyWithZone:]: unrecognized selector sent to instance 0x28087dea0’</strong></h2><h2 id="6-height-for-footer-没设导致-button选不中"><a href="#6-height-for-footer-没设导致-button选不中" class="headerlink" title="6.height for footer 没设导致 button选不中."></a>6.height for footer 没设导致 button选不中.</h2><h2 id="7-storesArray莫名其妙清空了-需要重建一个数组-之前的控制器销毁了"><a href="#7-storesArray莫名其妙清空了-需要重建一个数组-之前的控制器销毁了" class="headerlink" title="7._storesArray莫名其妙清空了,需要重建一个数组,之前的控制器销毁了."></a>7._storesArray莫名其妙清空了,需要重建一个数组,之前的控制器销毁了.</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_storesArray = [<span class="built_in">NSArray</span> arrayWithArray:note.userInfo[<span class="string">@"selectedStores"</span>]];</span><br></pre></td></tr></table></figure>
+<h2 id="8-couldn’t-find-a-common-superview-frame-和Masonry冲突"><a href="#8-couldn’t-find-a-common-superview-frame-和Masonry冲突" class="headerlink" title="8.couldn’t find a common superview,frame 和Masonry冲突"></a>8.<strong>couldn’t find a common superview</strong>,frame 和Masonry冲突</h2><h2 id="9-WSGoodsIndexRequest-setSids-unrecognized-selector-sent-to-instance"><a href="#9-WSGoodsIndexRequest-setSids-unrecognized-selector-sent-to-instance" class="headerlink" title="9.-[WSGoodsIndexRequest setSids:]**unrecognized selector sent to instance**"></a>9.<strong>-[WSGoodsIndexRequest setSids:]**</strong>unrecognized selector sent to instance**</h2><h2 id="10-添加action在建立button之前-导致button点击没有反应"><a href="#10-添加action在建立button之前-导致button点击没有反应" class="headerlink" title="10.添加action在建立button之前,导致button点击没有反应."></a>10.添加action在建立button之前,导致button点击没有反应.</h2><h2 id="11-collectionView-不显示-datasource-没设置"><a href="#11-collectionView-不显示-datasource-没设置" class="headerlink" title="11.collectionView 不显示, datasource 没设置"></a>11.collectionView 不显示, datasource 没设置</h2><h2 id="12-collectionView重复添加"><a href="#12-collectionView重复添加" class="headerlink" title="12.collectionView重复添加."></a>12.collectionView重复添加.</h2><h2 id="13-‘unable-to-dequeue-a-cell-with-identifier-reuseIdentifier-must-register-a-nib-or-a-class-for-the-identifier-or-connect-a-prototype-cell-in-a-storyboard’"><a href="#13-‘unable-to-dequeue-a-cell-with-identifier-reuseIdentifier-must-register-a-nib-or-a-class-for-the-identifier-or-connect-a-prototype-cell-in-a-storyboard’" class="headerlink" title="13.‘unable to dequeue a cell with identifier reuseIdentifier - must register a nib or a class for the identifier or connect a prototype cell in a storyboard’"></a>13.<strong>‘unable to dequeue a cell with identifier reuseIdentifier - must register a nib or a class for the identifier or connect a prototype cell in a storyboard’</strong></h2><h2 id="14-单位点击取消后-再次点击选不中-必须点下其他单元格才行"><a href="#14-单位点击取消后-再次点击选不中-必须点下其他单元格才行" class="headerlink" title="14.单位点击取消后,再次点击选不中,必须点下其他单元格才行."></a>14.单位点击取消后,再次点击选不中,必须点下其他单元格才行.</h2><h2 id="15-图片大小导致masonry布局不合适"><a href="#15-图片大小导致masonry布局不合适" class="headerlink" title="15.图片大小导致masonry布局不合适"></a>15.图片大小导致masonry布局不合适</h2><h2 id="16-TVC里面的view和label滚动才显示-选中显示-滚出屏幕消失"><a href="#16-TVC里面的view和label滚动才显示-选中显示-滚出屏幕消失" class="headerlink" title="16.TVC里面的view和label滚动才显示,选中显示,滚出屏幕消失"></a>16.TVC里面的view和label滚动才显示,选中显示,滚出屏幕消失</h2><h3 id="1-被上面的cell里面的view高度大于cell高度挡住了"><a href="#1-被上面的cell里面的view高度大于cell高度挡住了" class="headerlink" title="1.被上面的cell里面的view高度大于cell高度挡住了"></a>1.被上面的cell里面的view高度大于cell高度挡住了</h3><h2 id="17-label和textfield-masonry-位置乱跑"><a href="#17-label和textfield-masonry-位置乱跑" class="headerlink" title="17.label和textfield masonry 位置乱跑"></a>17.label和textfield masonry 位置乱跑</h2>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/" rel="tag"># iOS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/07/03/IOE开发记录/" rel="next" title="IOE开发记录">
+                <i class="fa fa-chevron-left"></i> IOE开发记录
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/07/03/IOE业务逻辑记录/" rel="prev" title="IOE业务逻辑记录">
+                IOE业务逻辑记录 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">MichaelRich</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:gg1956756@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://kate.heavenyu.com/" title="NewHome" target="_blank">NewHome</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-监听UITextfield改变-方法要写在控制器"><span class="nav-text">1. 监听UITextfield改变,方法要写在控制器.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-密码框输入密码"><span class="nav-text">2.密码框输入密码,</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Terminating-app-due-to-uncaught-exception-‘NSInvalidArgumentException’-reason-‘-NSPlaceholderArray-initWithObjects-count-attempt-to-insert-nil-object-from-objects-0-’"><span class="nav-text">3.Terminating app due to uncaught exception ‘NSInvalidArgumentException’, reason: ‘\* -[__NSPlaceholderArray initWithObjects:count:]: attempt to insert nil object from objects[0]’**</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Pushing-a-navigation-controller-is-not-supported"><span class="nav-text">4.Pushing a navigation controller is not supported</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-‘-WSStoreAllData-copyWithZone-unrecognized-selector-sent-to-instance-0x28087dea0’"><span class="nav-text">5.‘-[WSStoreAllData copyWithZone:]: unrecognized selector sent to instance 0x28087dea0’</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-height-for-footer-没设导致-button选不中"><span class="nav-text">6.height for footer 没设导致 button选不中.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-storesArray莫名其妙清空了-需要重建一个数组-之前的控制器销毁了"><span class="nav-text">7._storesArray莫名其妙清空了,需要重建一个数组,之前的控制器销毁了.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-couldn’t-find-a-common-superview-frame-和Masonry冲突"><span class="nav-text">8.couldn’t find a common superview,frame 和Masonry冲突</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-WSGoodsIndexRequest-setSids-unrecognized-selector-sent-to-instance"><span class="nav-text">9.-[WSGoodsIndexRequest setSids:]**unrecognized selector sent to instance**</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-添加action在建立button之前-导致button点击没有反应"><span class="nav-text">10.添加action在建立button之前,导致button点击没有反应.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-collectionView-不显示-datasource-没设置"><span class="nav-text">11.collectionView 不显示, datasource 没设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-collectionView重复添加"><span class="nav-text">12.collectionView重复添加.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-‘unable-to-dequeue-a-cell-with-identifier-reuseIdentifier-must-register-a-nib-or-a-class-for-the-identifier-or-connect-a-prototype-cell-in-a-storyboard’"><span class="nav-text">13.‘unable to dequeue a cell with identifier reuseIdentifier - must register a nib or a class for the identifier or connect a prototype cell in a storyboard’</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14-单位点击取消后-再次点击选不中-必须点下其他单元格才行"><span class="nav-text">14.单位点击取消后,再次点击选不中,必须点下其他单元格才行.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-图片大小导致masonry布局不合适"><span class="nav-text">15.图片大小导致masonry布局不合适</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-TVC里面的view和label滚动才显示-选中显示-滚出屏幕消失"><span class="nav-text">16.TVC里面的view和label滚动才显示,选中显示,滚出屏幕消失</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-被上面的cell里面的view高度大于cell高度挡住了"><span class="nav-text">1.被上面的cell里面的view高度大于cell高度挡住了</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-label和textfield-masonry-位置乱跑"><span class="nav-text">17.label和textfield masonry 位置乱跑</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MichaelRich</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">23.6k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
