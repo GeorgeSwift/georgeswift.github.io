@@ -47,7 +47,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -55,21 +55,21 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+<link href="/blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=5.1.4">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.4" color="#222">
 
 
 
@@ -90,208 +90,208 @@
 <meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="京贝尔开发记录">
-<meta property="og:url" content="https://HeavenYuProgram.gitee.io/blog/2020/05/29/京贝尔开发记录/index.html">
+<meta property="og:url" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/index.html">
 <meta property="og:site_name" content="MichaelRich">
 <meta property="og:description" content="1.京贝尔数据1.数据模型">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_5.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_7.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_32.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_1.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_6.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_14.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_12.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_15.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_17.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_19.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_21.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_23.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_25.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_27.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_28.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_31.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_34.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_33.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_35.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_2.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_3.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_5.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_1.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_7.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_8.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_9.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_6.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_11.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_12.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_15.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_17.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_19.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_20.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_21.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_22.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_23.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_24.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_26.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_27.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_28.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_29.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_30.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_3.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_4.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_9.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_6.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_8.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_11.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_12.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_15.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_16.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_17.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_19.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_2.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_20.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_21.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_22.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_23.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200603_6.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200603_7.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_29.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_34.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_39.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200603_2.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200603_3.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200603_4.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_1.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_2.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_4.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_5.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_6.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_7.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_24.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_25.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_27.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_29.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_23.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_8.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_10.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_13.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_14.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_16.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_18.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_19.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_20.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_25.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_27.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_29.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_22.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_26.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_9.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_11.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_15.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_17.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_21.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_3.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200605_1.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200605_8.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200605_9.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200605_11.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200605_17.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200605_13.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200605_12.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200605_18.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200605_19.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_18.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_4.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_5.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_6.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_7.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_9.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_10.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_11.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_12.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_13.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_14.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_24.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_19.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_20.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_26.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_27.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_29.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_34.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_35.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_35.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_38.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_40.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_41.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_42.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_44.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200607_1.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200607_4.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200607_6.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200607_5.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200609_2.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200609_4.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_1.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_2.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_3.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_5.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_6.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_7.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_8.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_9.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_11.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_11.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200617_2.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_12.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200617_1.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200617_5.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_14.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200617_9.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200619_3.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200619_2.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200624_2.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200624_3.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200624_4.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200624_6.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200624_7.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200624_9.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200624_10.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200624_11.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200624_12.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_1.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_5.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_7.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_10.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_13.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_15.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_21.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_20.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_23.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_25.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_26.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_27.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200626_1.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200626_2.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200626_3.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200626_4.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200626_5.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200626_6.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200626_7.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/9CD7BB63-3A52-45C1-9D5D-CE17C7467E67_1_201_a.jpeg">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200628_2.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200628_1.png">
-<meta property="og:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200628_4.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_5.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_7.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_32.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_1.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_6.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_14.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_12.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_15.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_17.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_19.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_21.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_23.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_25.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_27.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_28.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_31.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_34.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_33.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_35.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_2.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_3.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_5.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_1.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_7.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_8.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_9.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_6.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_11.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_12.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_15.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_17.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_19.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_20.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_21.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_22.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_23.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_24.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_26.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_27.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_28.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_29.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200601_30.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_3.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_4.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_9.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_6.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_8.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_11.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_12.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_15.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_16.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_17.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_19.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_2.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_20.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_21.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_22.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_23.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200603_6.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200603_7.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_29.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_34.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200602_39.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200603_2.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200603_3.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200603_4.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_1.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_2.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_4.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_5.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_6.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_7.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_24.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_25.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_27.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_29.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_23.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_8.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_10.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_13.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_14.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_16.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_18.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_19.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_20.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_25.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_27.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_29.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_22.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_26.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_9.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_11.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_15.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_17.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_21.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200604_3.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200605_1.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200605_8.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200605_9.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200605_11.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200605_17.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200605_13.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200605_12.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200605_18.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200605_19.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_18.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_4.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_5.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_6.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_7.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_9.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_10.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_11.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_12.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_13.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_14.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_24.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_19.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_20.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_26.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_27.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_29.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_34.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_35.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_35.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_38.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_40.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_41.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_42.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200606_44.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200607_1.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200607_4.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200607_6.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200607_5.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200609_2.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200609_4.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_1.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_2.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_3.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_5.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_6.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_7.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_8.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_9.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_11.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_11.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200617_2.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_12.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200617_1.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200617_5.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200610_14.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200617_9.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200619_3.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200619_2.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200624_2.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200624_3.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200624_4.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200624_6.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200624_7.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200624_9.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200624_10.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200624_11.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200624_12.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_1.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_5.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_7.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_10.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_13.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_15.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_21.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_20.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_23.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_25.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_26.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200625_27.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200626_1.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200626_2.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200626_3.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200626_4.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200626_5.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200626_6.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200626_7.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/9CD7BB63-3A52-45C1-9D5D-CE17C7467E67_1_201_a.jpeg">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200628_2.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200628_1.png">
+<meta property="og:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200628_4.png">
 <meta property="og:updated_time" content="2020-06-29T03:41:00.134Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="京贝尔开发记录">
 <meta name="twitter:description" content="1.京贝尔数据1.数据模型">
-<meta name="twitter:image" content="https://heavenyuprogram.gitee.io/blog/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_5.png">
+<meta name="twitter:image" content="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/京贝尔开发记录.assets/Snip20200531_5.png">
 
 
 
 <script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/',
+    root: '/blog/',
     scheme: 'Mist',
     version: '5.1.4',
     sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
@@ -314,7 +314,7 @@
 
 
 
-  <link rel="canonical" href="https://HeavenYuProgram.gitee.io/blog/2020/05/29/京贝尔开发记录/">
+  <link rel="canonical" href="https://georgeswift.github.io/2020/05/29/京贝尔开发记录/">
 
 
 
@@ -348,7 +348,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
+      <a href="/blog/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">MichaelRich</span>
         <span class="logo-line-after"><i></i></span>
@@ -376,7 +376,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+          <a href="/blog/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
@@ -386,7 +386,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+          <a href="/blog/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
@@ -396,7 +396,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
+          <a href="/blog/categories/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
@@ -406,7 +406,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+          <a href="/blog/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
@@ -447,12 +447,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://HeavenYuProgram.gitee.io/blog/2020/05/29/京贝尔开发记录/">
+    <link itemprop="mainEntityOfPage" href="https://georgeswift.github.io/blog/2020/05/29/京贝尔开发记录/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="MichaelRich">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -511,7 +511,7 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                  <a href="/blog/categories/iOS/" itemprop="url" rel="index">
                     <span itemprop="name">iOS</span>
                   </a>
                 </span>
@@ -797,7 +797,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/iOS/" rel="tag"># iOS</a>
+            <a href="/blog/tags/iOS/" rel="tag"># iOS</a>
           
         </div>
       
@@ -810,7 +810,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/05/29/京贝debug/" rel="next" title="京贝debug">
+              <a href="/blog/2020/05/29/京贝debug/" rel="next" title="京贝debug">
                 <i class="fa fa-chevron-left"></i> 京贝debug
               </a>
             
@@ -820,7 +820,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/06/04/京贝高德地图集成/" rel="prev" title="京贝高德地图集成">
+              <a href="/blog/2020/06/04/京贝高德地图集成/" rel="prev" title="京贝高德地图集成">
                 京贝高德地图集成 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -899,7 +899,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                <a href="/blog/archives/">
               
                   <span class="site-state-item-count">44</span>
                   <span class="site-state-item-name">posts</span>
@@ -911,7 +911,7 @@
               
               
               <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
+                <a href="/blog/categories/index.html">
                   <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
@@ -922,7 +922,7 @@
               
               
               <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
+                <a href="/blog/tags/index.html">
                   <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
@@ -1100,57 +1100,57 @@
 
   
   
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.4"></script>
 
 
 
