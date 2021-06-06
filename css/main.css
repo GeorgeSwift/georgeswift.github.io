@@ -3,7 +3,7 @@ h1 {
 }
 @media (max-width: 767px) {
   h1 {
-    font-size: 24px !important;
+    font-size: 36px !important;
   }
 }
 h2 {
@@ -1946,7 +1946,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f78244;
+  background: #fcd209;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2990,7 +2990,7 @@ header.post-header {
   background: #222;
 }
 .posts-expand .post-body {
-  text-align: center;
+  text-align: left;
   position: relative;
 }
 @media (max-width: 767px) {
