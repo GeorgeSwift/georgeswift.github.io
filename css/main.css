@@ -31,7 +31,7 @@ h4 {
   }
 }
 h5 {
-  font-size: 20px !important;
+  font-size: 22px !important;
 }
 @media (max-width: 767px) {
   h5 {
@@ -39,12 +39,15 @@ h5 {
   }
 }
 h6 {
-  font-size: 16px !important;
+  font-size: 20px !important;
 }
 @media (max-width: 767px) {
   h6 {
     font-size: 12px !important;
   }
+}
+p {
+  font-size: 20px !important;
 }
 /* normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
@@ -234,7 +237,7 @@ th {
 body {
   position: relative;
   font-family: "Kaiti SC", "Microsoft YaHei", Verdana, sans-serif;
-  font-size: 32px;
+  font-size: 20px;
   line-height: 2;
   color: #89f502;
   background: #dbd8c7;
@@ -251,7 +254,7 @@ body {
 }
 @media (min-width: 1600px) {
   body {
-    font-size: 34px;
+    font-size: 22px;
   }
 }
 h1,
@@ -1369,7 +1372,7 @@ pre .javascript .function {
 .post-body .figure .caption {
   margin: -20px auto 15px;
   text-align: center;
-  font-size: 32px;
+  font-size: 20px;
   color: #999;
   font-weight: bold;
   line-height: 1;
@@ -1946,7 +1949,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #44fffa;
+  background: #d05075;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2978,12 +2981,12 @@ header.post-header {
 }
 @media (max-width: 767px) {
   .posts-expand .post-title {
-    font-size: 32px;
+    font-size: 32pxw;
   }
 }
 @media (min-width: 1600px) {
   .posts-expand .post-title {
-    font-size: 40px;
+    font-size: 40pxw;
   }
 }
 .posts-expand .post-title:hover:before {
@@ -3021,7 +3024,7 @@ header.post-header {
 }
 .post-button a {
   padding: 0;
-  font-size: 32px;
+  font-size: 20px;
   background: none;
   border: none;
   border-bottom: 2px solid #666;
@@ -3029,12 +3032,12 @@ header.post-header {
 }
 @media (max-width: 767px) {
   .post-button a {
-    font-size: 30px;
+    font-size: 18px;
   }
 }
 @media (min-width: 1600px) {
   .post-button a {
-    font-size: 34px;
+    font-size: 22px;
   }
 }
 .post-button a:hover {
