@@ -233,7 +233,7 @@ th {
 }
 body {
   position: relative;
-  font-family: KaiTi SC, "Microsoft YaHei", Verdana, sans-serif;
+  font-family: "Kaiti SC", "Microsoft YaHei", Verdana, sans-serif;
   font-size: 32px;
   line-height: 2;
   color: #89f502;
@@ -264,7 +264,7 @@ h6 {
   padding: 0;
   font-weight: bold;
   line-height: 1.5;
-  font-family: KaiTi SC, Georgia, sans;
+  font-family: "Kaiti SC", Georgia, sans;
 }
 h2,
 h3,
@@ -605,7 +605,7 @@ pre,
 }
 pre,
 code {
-  font-family: consolas, Menlo, $font-family-chinese, monospace;
+  font-family: consolas, Menlo, "Kaiti SC", "Microsoft YaHei", "PingFang SC", monospace;
 }
 code {
   padding: 2px 4px;
@@ -1263,7 +1263,7 @@ pre .javascript .function {
   line-height: 36px;
   font-size: 20px;
   font-weight: normal;
-  font-family: "KaiTi SC", "Times New Roman", "sans-serif", "Microsoft YaHei";
+  font-family: "Kaiti SC", "Microsoft YaHei", "PingFang SC", "Times New Roman", "sans-serif", "Microsoft YaHei";
 }
 .site-subtitle {
   margin-top: 10px;
@@ -1351,7 +1351,7 @@ pre .javascript .function {
   opacity: 0;
 }
 .post-body {
-  font-family: "KaiTi SC", "Times New Roman", "sans-serif", "Microsoft YaHei";
+  font-family: "Kaiti SC", "Microsoft YaHei", "PingFang SC", "Times New Roman", "sans-serif", "Microsoft YaHei";
 }
 @media (max-width: 767px) {
   .post-body {
@@ -1629,7 +1629,7 @@ pre .javascript .function {
 .posts-expand .post-meta {
   margin: 3px 0 60px 0;
   color: #89f502;
-  font-family: "KaiTi SC", "Times New Roman", "sans-serif", "Microsoft YaHei";
+  font-family: "Kaiti SC", "Microsoft YaHei", "PingFang SC", "Times New Roman", "sans-serif", "Microsoft YaHei";
   font-size: 14px;
   text-align: center;
 }
@@ -1946,7 +1946,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #feff7a;
+  background: #44fffa;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2978,12 +2978,12 @@ header.post-header {
 }
 @media (max-width: 767px) {
   .posts-expand .post-title {
-    font-size: 44px;
+    font-size: 32px;
   }
 }
 @media (min-width: 1600px) {
   .posts-expand .post-title {
-    font-size: 52px;
+    font-size: 40px;
   }
 }
 .posts-expand .post-title:hover:before {
